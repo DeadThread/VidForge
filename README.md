@@ -15,8 +15,6 @@ Features
 
 - Persistent UI states and theme support
 
-- Supports multiple video and audio formats (e.g., 1080p, FLAC, MP3)
-
 - Easy re-scan of template folders and live metadata refresh
 
 Installation
