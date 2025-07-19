@@ -3,7 +3,7 @@ VidForge
 VidForge is a powerful desktop application to organize, tag, and rename video files and video folders. It features dynamic, artist-aware Photoshop template selection, customizable naming schemes, and batch processing with a user-friendly Tkinter GUI.
 Features
 
-- Flexible tagging and renaming of music/video folders with customizable naming schemes
+- Flexible tagging and renaming of video files/folders with customizable naming schemes
 
 - Dynamic dropdown menus for selecting artists and Photoshop poster templates
 
