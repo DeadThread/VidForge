@@ -55,6 +55,7 @@ pip install -r requirements.txt
 * Use subfolders for artist-specific templates (e.g., `assets/Photoshop Templates/Phish/`)
 * Edit `Artists.txt`, `Venues.txt`, and `Cities.txt` for dropdown options
 * Configure output paths and other settings via the GUI or config file
+* Use Generic.psd as a starting point to create your own templates. Modify the background, reposition text layers as needed, and ensure the layers for Artist, Venue, and City remain intact so they can be read correctly by the application.
 
 ---
 
