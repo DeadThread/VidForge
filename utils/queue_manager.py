@@ -42,7 +42,6 @@ def _truthy(s: str) -> bool:
     return bool(s) and s.lower() not in {"0", "false", "off", "no", "null"}
 
 
-# NEW ────────────────────────────────────────────────────────────────────
 def resolve_output_base(output_dir: str | None, fallback_root: str) -> str:
     """
     Translate the sentinel '(Root)' (or blank) to the actual root directory
@@ -51,7 +50,6 @@ def resolve_output_base(output_dir: str | None, fallback_root: str) -> str:
     if not output_dir or output_dir.strip() == "(Root)":
         return fallback_root
     return output_dir
-# ────────────────────────────────────────────────────────────────────────
 
 
 def _apply_scheme(
@@ -63,6 +61,7 @@ def _apply_scheme(
     filename: str = ""
 ) -> str:
     """Replace %tokens% and $func(…) inside *pattern*."""
+
     year, month, day = md.get("year", ""), md.get("month", ""), md.get("day", "")
     date_tok = (
         f"{year}-{month.zfill(2)}-{day.zfill(2)}" if year and month and day else
@@ -82,7 +81,8 @@ def _apply_scheme(
     }
 
     fmt_parts = repl["%format%"].split()
-    add_parts = repl["%additional%"].split()
+    # Split additional on commas, trim spaces and trailing commas
+    add_parts = [x.strip().rstrip(",") for x in repl["%additional%"].split(",") if x.strip()]
 
     def _list_token(prefix: str, parts: list[str], idx: int | None):
         return " ".join(parts) if idx is None else (parts[idx] if 0 <= idx < len(parts) else "")
@@ -93,12 +93,16 @@ def _apply_scheme(
         src = fmt_parts if base.lower().startswith("format") else add_parts
         return _list_token(base, src, idx)
 
+    # Handle numbered tokens with brackets first: e.g. [%additionalN1%]
+    pattern = re.sub(r"\[%(formatN|additionalN)(\d*)%]", _num_token_sub, pattern, flags=re.I)
+    # Handle unbracketed numbered tokens: %additionalN2%
     pattern = re.sub(r"%(formatN|additionalN)(\d*)%", _num_token_sub, pattern, flags=re.I)
 
-    out = pattern
+    # Replace regular tokens %artist%, %date%, etc.
     for tok, val in repl.items():
-        out = out.replace(tok, val)
+        pattern = pattern.replace(tok, val)
 
+    # Evaluate $func(args) repeatedly until stable
     def _func_sub(m: re.Match) -> str:
         fn = m.group(1).lower()
         args = _split_args(m.group(2))
@@ -189,12 +193,14 @@ def _apply_scheme(
         return m.group(0)  # unknown function → leave untouched
 
     prev = None
+    out = pattern
     while prev != out:
-        prev, out = out, FUNC_RE.sub(_func_sub, out)
+        prev = out
+        out = FUNC_RE.sub(_func_sub, out)
 
     # Cleanup final string
-    out = re.sub(r"\s*\[\s*]\s*", " ", out)
-    out = re.sub(r"(?:\s*-\s*){2,}", " - ", out)
+    out = re.sub(r"\s*\[\s*]\s*", " ", out)  # remove empty brackets
+    out = re.sub(r"(?:\s*-\s*){2,}", " - ", out)  # repeated dashes
     out = re.sub(r"\s{2,}", " ", out).strip()
 
     for sep in (" - ", "--", "- -"):
@@ -206,7 +212,6 @@ def _apply_scheme(
     return out
 
 
-# ────────────────────────────────────────────────────────────────────────
 def process_queue(
     *,
     queue: Sequence[str],

@@ -1,3 +1,4 @@
+Mann Center
 XL Live
 Sweetwater Music Hall
 Ryman Auditorium
@@ -1226,7 +1227,6 @@ Majestic Valley Arena
 Malone Stadium
 Maltz Jupiter Theatre
 Mandeville Auditorium
-Mann Center
 Mansfield Theater
 Mansion Park
 Mansion Theater
