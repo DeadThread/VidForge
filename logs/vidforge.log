@@ -165,3 +165,85 @@
 2025-07-21 16:55:29,043 [INFO] [DEBUG] No theme file found in config.ini, applying default theme.
 2025-07-21 16:55:29,046 [INFO] Using default ttk theme: vista
 2025-07-21 16:55:29,079 [INFO] Reference metadata refreshed from text files.
+2025-07-21 16:55:38,500 [DEBUG] Loaded 241 entries from Artists.txt
+2025-07-21 16:55:38,535 [DEBUG] Loaded 29860 entries from Cities.txt
+2025-07-21 16:55:38,539 [DEBUG] Loaded 2278 entries from Venues.txt
+2025-07-21 16:55:38,545 [INFO] Loaded 2 artist aliases.
+2025-07-21 16:55:38,545 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 16:55:38,545 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 16:55:38,545 [DEBUG] Template folder 'Generic': ['Generic.psd']
+2025-07-21 16:55:38,545 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 16:55:38,699 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 16:55:38,699 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 16:55:40,278 [INFO] [DEBUG] No theme file found in config.ini, applying default theme.
+2025-07-21 16:55:40,281 [INFO] Using default ttk theme: vista
+2025-07-21 16:55:40,315 [INFO] Reference metadata refreshed from text files.
+2025-07-21 16:57:43,630 [INFO] Photoshop location set to: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 16:57:47,751 [DEBUG] Template combobox selected: 'Generic', current_mode=top, current_artist=None
+2025-07-21 16:57:49,806 [DEBUG] Template combobox selected: '← Back', current_mode=psd, current_artist=Generic
+2025-07-21 16:57:59,178 [INFO] Scanning Z:/New
+2025-07-21 16:58:02,242 [DEBUG] Attempting artist extraction from filename: 'Billy Strings - 2025-07-17 - ICC Sydney Theatre - [1080p]'
+2025-07-21 16:58:02,247 [DEBUG] extract_date('Billy Strings - 2025-07-17 - ICC Sydney Theatre - [1080p]') -> '2025-07-17'
+2025-07-21 16:58:02,247 [DEBUG] Matched venue substring: ICC Sydney Theatre
+2025-07-21 16:58:02,247 [DEBUG] split_tokens('Billy Strings - 2025-07-17 - ICC Sydney Theatre - [1080p]') -> ['billy', 'strings', '2025', '07', '17', 'icc', 'sydney', 'theatre', '1080p']
+2025-07-21 16:58:02,247 [DEBUG] Filename tokens: ['billy', 'strings', '2025', '07', '17', 'icc', 'sydney', 'theatre', '1080p']
+2025-07-21 16:58:02,247 [DEBUG] split_tokens('2025-07-17') -> ['2025', '07', '17']
+2025-07-21 16:58:02,248 [DEBUG] split_tokens('ICC Sydney Theatre') -> ['icc', 'sydney', 'theatre']
+2025-07-21 16:58:02,248 [DEBUG] Tokens to exclude from artist: {'2025', 'sydney', 'theatre', '1080p', 'icc', '17', '07'}
+2025-07-21 16:58:02,248 [DEBUG] [ARTIST] Matched from artists.txt: 'billystrings' → 'Billy Strings'
+2025-07-21 16:58:02,248 [DEBUG] Inferred info: {'artist': 'Billy Strings', 'date': '2025-07-17', 'venue': 'ICC Sydney Theatre', 'city': '', 'format': '1080p', 'additional': ''}
+2025-07-21 16:58:02,255 [INFO] Selected Z:\New\Billy Strings - 2025-07-17 - ICC Sydney Theatre - [1080p].mkv → {'artist': 'Billy Strings', 'date': '2025-07-17', 'venue': 'ICC Sydney Theatre', 'city': '', 'format': '1080p', 'additional': ''}
+2025-07-21 16:59:38,203 [DEBUG] Loaded 241 entries from Artists.txt
+2025-07-21 16:59:38,237 [DEBUG] Loaded 29860 entries from Cities.txt
+2025-07-21 16:59:38,241 [DEBUG] Loaded 2278 entries from Venues.txt
+2025-07-21 16:59:38,246 [INFO] Loaded 2 artist aliases.
+2025-07-21 16:59:38,246 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 16:59:38,246 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 16:59:38,246 [DEBUG] Template folder 'Generic': ['Generic.psd']
+2025-07-21 16:59:38,247 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 17:02:36,088 [DEBUG] Loaded 241 entries from Artists.txt
+2025-07-21 17:02:36,124 [DEBUG] Loaded 29860 entries from Cities.txt
+2025-07-21 17:02:36,127 [DEBUG] Loaded 2278 entries from Venues.txt
+2025-07-21 17:02:36,132 [INFO] Loaded 2 artist aliases.
+2025-07-21 17:02:36,132 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 17:02:36,132 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 17:02:36,133 [DEBUG] Template folder 'Generic': ['Generic.psd']
+2025-07-21 17:02:36,133 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 17:02:36,172 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 17:02:36,196 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 17:02:36,196 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 17:02:36,197 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 17:02:36,230 [INFO] Reference metadata refreshed from text files.
+2025-07-21 17:02:36,333 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 17:02:36,333 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 17:08:59,228 [DEBUG] Loaded 241 entries from Artists.txt
+2025-07-21 17:08:59,263 [DEBUG] Loaded 29860 entries from Cities.txt
+2025-07-21 17:08:59,267 [DEBUG] Loaded 2278 entries from Venues.txt
+2025-07-21 17:08:59,272 [INFO] Loaded 2 artist aliases.
+2025-07-21 17:08:59,272 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 17:08:59,272 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 17:08:59,272 [DEBUG] Template folder 'Generic': ['Generic.psd']
+2025-07-21 17:08:59,273 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 17:10:36,332 [DEBUG] Loaded 241 entries from Artists.txt
+2025-07-21 17:10:36,368 [DEBUG] Loaded 29860 entries from Cities.txt
+2025-07-21 17:10:36,371 [DEBUG] Loaded 2278 entries from Venues.txt
+2025-07-21 17:10:36,376 [INFO] Loaded 2 artist aliases.
+2025-07-21 17:10:36,377 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 17:10:36,377 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 17:10:36,377 [DEBUG] Template folder 'Generic': ['Generic.psd']
+2025-07-21 17:10:36,377 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)

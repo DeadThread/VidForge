@@ -23,7 +23,6 @@ def set_poster_controls_state(app, *, enabled: bool) -> None:
         app.v_make_poster.set("No")
         app.cb_make_poster.config(state="disabled")
 
-
 def prompt_photoshop_path_if_first_boot(app) -> None:
     """Ask once per install if the user wants to set a Photoshop path."""
     cfg = app.config_parser
@@ -71,6 +70,12 @@ def prompt_photoshop_path_if_first_boot(app) -> None:
     with open(CONFIG_FILE, "w", encoding="utf-8") as fh:
         cfg.write(fh)
 
+def _row(parent, lbl, var, r, col=0):
+    """Helper to create a label and combobox on the same row."""
+    tk.Label(parent, text=lbl).grid(row=r, column=col, sticky="w")
+    cb = ttk.Combobox(parent, textvariable=var, width=34, state="normal")  # editable combobox
+    cb.grid(row=r, column=col+1, sticky="w", padx=4)
+    return cb
 
 def build_template_dropdown(app, meta):
     """Main UI builder for template dropdown and poster toggle."""
@@ -106,12 +111,24 @@ def build_template_dropdown(app, meta):
     app.v_make_poster.trace_add("write", _template_state)
     _template_state()
 
-    def on_artist_changed(*_):
-        app.cb_template["values"] = ["Default", "Random"] + sorted(app.tpl_map.keys())
-        app.v_template.set("")
+    # We assume app.cb_artist and app.v_artist exist (built by build_metadata)
+    def on_artist_selected(event=None):
+        artist = app.v_artist.get()
+        psds = app.tpl_map.get(artist, [])
+        app.cb_template_psd['values'] = psds
+        if psds:
+            app.cb_template_psd.current(0)
+            app.v_template_psd.set(psds[0])
+        else:
+            app.cb_template_psd.set('')
 
-    app.v_artist.trace_add("write", on_artist_changed)
+    app.cb_artist.bind("<<ComboboxSelected>>", on_artist_selected)
 
+    app.v_venue = tk.StringVar()
+    app.cb_venue = _row(meta, "Venue:", app.v_venue, 1)
+
+    app.v_city = tk.StringVar()
+    app.cb_city = _row(meta, "City:", app.v_city, 2)
 
 def _select_random_template(app):
     """
@@ -151,3 +168,36 @@ def build_template_dropdown_values(app):
         values.append(f"  Random")  # optional per-artist random
 
     return values
+
+def build_metadata(meta, app):
+    """
+    Build the metadata section with artist, venue, and city comboboxes.
+    Also, set up the artist selection logic for template PSDs.
+
+    Args:
+    - meta: The parent frame where the widgets will be placed.
+    - app: The main app instance, used to bind comboboxes and manage state.
+    """
+    
+    # Reuse _row here
+    app.v_artist = tk.StringVar()
+    app.cb_artist = _row(meta, "Artist:", app.v_artist, 0)
+
+    def on_artist_selected(event=None):
+        """Handle artist selection and update the PSD template options."""
+        artist = app.v_artist.get()
+        psds = app.tpl_map.get(artist, [])
+        app.cb_template_psd['values'] = psds
+        if psds:
+            app.cb_template_psd.current(0)
+            app.v_template_psd.set(psds[0])
+        else:
+            app.cb_template_psd.set('')
+
+    app.cb_artist.bind("<<ComboboxSelected>>", on_artist_selected)
+
+    app.v_venue = tk.StringVar()
+    app.cb_venue = _row(meta, "Venue:", app.v_venue, 1)
+
+    app.v_city = tk.StringVar()
+    app.cb_city = _row(meta, "City:", app.v_city, 2)

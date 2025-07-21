@@ -16,7 +16,6 @@ from gui.build_folder_tree import build_folder_tree  # Import the build_folder_t
 from gui.build_date import build_date
 from gui.build_format import build_format
 from gui.build_menu_bar import build_menu_bar
-from gui.build_metadata import build_metadata
 from gui.gui_build_queue import setup_queue_tree
 from gui.gui_build_logs import setup_log_panel
 from gui.gui_helpers import setup_autocomplete, setup_custom_tab_order, setup_context_menu, prompt_photoshop_path_if_first_boot
@@ -36,6 +35,7 @@ from gui.template_dropdown import (
     _select_random_template,
     set_poster_controls_state,
     prompt_photoshop_path_if_first_boot,
+    build_metadata,
 )
 
 from utils.cache_manager import (

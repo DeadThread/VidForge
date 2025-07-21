@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 Margaret Court Arena
 ICC Sydney Theatre
 The Mann
-=======
 Mann Center
 XL Live
->>>>>>> caebc9973c4eac20499ef46e3893381975d2bd7f
 Sweetwater Music Hall
 Red Rocks Amphitheater
 XL Live

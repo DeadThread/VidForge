@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 Melbourne, Australia
 Philadelphia, PA
 Sydney, Australia
 Morrison, CO
-=======
 Philadelphia, PA
->>>>>>> caebc9973c4eac20499ef46e3893381975d2bd7f
 Harrisburg, PA
 Belleayre Mountain, NY
 North Charleston, SC
