@@ -30,7 +30,14 @@ from gui.naming_scheme_helpers import (
     save_naming_scheme,
     reset_naming_scheme_from_menu
 )
-from gui.template_dropdown import build_template_dropdown, _select_random_template, build_template_dropdown_values
+from gui.template_dropdown import (
+    build_template_dropdown,
+    build_template_dropdown_values,
+    _select_random_template,
+    set_poster_controls_state,
+    prompt_photoshop_path_if_first_boot,
+)
+
 from utils.cache_manager import (
     load_naming_scheme,
     load_cache,

@@ -55,6 +55,7 @@ from utils.template_manager import (
 from utils.text_utils import infer_from_name
 from utils.theme_manager import load_ttk_theme, remove_theme, restore_saved_theme, load_and_apply_theme
 from utils.tree_manager import fast_populate_tree as populate_tree
+from gui.template_dropdown import set_poster_controls_state  # <-- Add this import
 
 # ── ensure dirs ───────────────────────────────────────
 os.makedirs(CONFIG_DIR, exist_ok=True)
@@ -414,7 +415,7 @@ class VideoTagger(tk.Tk):
         """Menu‑bar handler: let the user pick / change the Photoshop exe."""
         path = filedialog.askopenfilename(
             title="Select Photoshop Executable",
-            filetypes=[("Executable files", "*.exe" if os.name == "nt" else "*"), ("All files", "*.*")],
+            filetypes=[("Executable files", "*.exe" if os.name == "nt" else "*"), ("All files", "*.*")]
         )
         if not path:
             self._log("Photoshop location unchanged.")
@@ -428,7 +429,7 @@ class VideoTagger(tk.Tk):
             self.config_parser.write(fh)
 
         self._log(f"Photoshop location set to: {path}")
-        _set_poster_controls_state(self, enabled=True)
+        set_poster_controls_state(self, enabled=True)  # This will work now
         self.update_idletasks()
 
     def _scan_templates(self):

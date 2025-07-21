@@ -3,6 +3,7 @@ import os
 from typing import Dict, List, Optional
 import logging
 import random
+from tkinter import messagebox, filedialog
 
 __all__ = ["scan_templates", "choose_psd", "update_template_dropdown", "on_template_selected"]
 
