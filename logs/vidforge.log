@@ -840,3 +840,209 @@
 2025-07-21 18:21:19,698 [INFO] Template selected → Billy-Strings-Poster-Template.psd
 2025-07-21 18:21:23,139 [INFO] Template selected → Billy-Strings-Poster-Template.psd
 2025-07-21 18:21:26,660 [INFO] Template selected → Generic.psd
+2025-07-21 18:28:13,992 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 18:28:14,028 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 18:28:14,031 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 18:28:14,036 [INFO] Loaded 2 artist aliases.
+2025-07-21 18:28:14,037 [DEBUG] Found 6 PSD(s) in folder 'Generic'
+2025-07-21 18:28:14,037 [INFO] Template scan complete: 6 PSD(s) in 1 folders
+2025-07-21 18:28:14,037 [DEBUG] Template folder 'Generic': ['Generic - Copy - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy.psd', 'Generic - Copy - Copy.psd', 'Generic - Copy.psd', 'Generic.psd']
+2025-07-21 18:28:14,038 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 18:28:14,077 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 18:28:14,100 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 18:28:14,100 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 18:28:14,100 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 18:28:14,133 [INFO] Reference metadata refreshed from text files.
+2025-07-21 18:28:14,237 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 18:28:14,237 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 18:28:33,395 [INFO] Scanning Z:/New
+2025-07-21 18:28:36,492 [DEBUG] Found 1 PSD(s) in folder 'Billy Strings'
+2025-07-21 18:28:36,493 [DEBUG] Found 1 PSD(s) in folder 'Daniel Donato'
+2025-07-21 18:28:36,493 [DEBUG] Found 1 PSD(s) in folder 'Dead & Company'
+2025-07-21 18:28:36,493 [DEBUG] Found 1 PSD(s) in folder 'Eggy'
+2025-07-21 18:28:36,493 [DEBUG] Found 6 PSD(s) in folder 'Generic'
+2025-07-21 18:28:36,493 [DEBUG] Found 1 PSD(s) in folder 'Gov't Mule'
+2025-07-21 18:28:36,493 [DEBUG] Found 1 PSD(s) in folder 'Grateful Dead'
+2025-07-21 18:28:36,494 [DEBUG] Found 1 PSD(s) in folder 'Joe Russo's Almost Dead'
+2025-07-21 18:28:36,494 [DEBUG] Found 1 PSD(s) in folder 'Karina Rykman'
+2025-07-21 18:28:36,494 [DEBUG] Found 1 PSD(s) in folder 'Khruangbin'
+2025-07-21 18:28:36,494 [DEBUG] Found 1 PSD(s) in folder 'lamp'
+2025-07-21 18:28:36,494 [DEBUG] Found 1 PSD(s) in folder 'lespecial'
+2025-07-21 18:28:36,494 [DEBUG] Found 1 PSD(s) in folder 'Mike Gordon Band'
+2025-07-21 18:28:36,494 [DEBUG] Found 1 PSD(s) in folder 'moe'
+2025-07-21 18:28:36,494 [DEBUG] Found 1 PSD(s) in folder 'Pearl Jam'
+2025-07-21 18:28:36,495 [DEBUG] Found 1 PSD(s) in folder 'Phil Lesh & Friends'
+2025-07-21 18:28:36,495 [DEBUG] Found 1 PSD(s) in folder 'Phish'
+2025-07-21 18:28:36,495 [DEBUG] Found 1 PSD(s) in folder 'Pink Floyd'
+2025-07-21 18:28:36,495 [DEBUG] Found 1 PSD(s) in folder 'Squeaky Feet'
+2025-07-21 18:28:36,495 [DEBUG] Found 1 PSD(s) in folder 'String Cheese Incident'
+2025-07-21 18:28:36,495 [DEBUG] Found 1 PSD(s) in folder 'The Allman Brothers Band'
+2025-07-21 18:28:36,495 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio'
+2025-07-21 18:28:36,495 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio Band'
+2025-07-21 18:28:36,496 [DEBUG] Found 1 PSD(s) in folder 'Umphrey's McGee'
+2025-07-21 18:28:36,496 [DEBUG] Found 2 PSD(s) in folder 'Widespread Panic'
+2025-07-21 18:28:36,496 [INFO] Template scan complete: 31 PSD(s) in 25 folders
+2025-07-21 18:28:36,496 [DEBUG] Template folder 'Billy Strings': ['Billy-Strings-Poster-Template.psd']
+2025-07-21 18:28:36,496 [DEBUG] Template folder 'Daniel Donato': ['Daniel-Donato-Template.psd']
+2025-07-21 18:28:36,496 [DEBUG] Template folder 'Dead & Company': ['Dead-Co-Template.psd']
+2025-07-21 18:28:36,496 [DEBUG] Template folder 'Eggy': ['Eggy-Template2.psd']
+2025-07-21 18:28:36,496 [DEBUG] Template folder 'Generic': ['Generic - Copy - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy.psd', 'Generic - Copy - Copy.psd', 'Generic - Copy.psd', 'Generic.psd']
+2025-07-21 18:28:36,496 [DEBUG] Template folder 'Gov't Mule': ["Gov't-Mule.psd"]
+2025-07-21 18:28:36,496 [DEBUG] Template folder 'Grateful Dead': ['Grateful-Dead-Template.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'Joe Russo's Almost Dead': ['Joe-Russo-Template.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'Karina Rykman': ['Karina-Rykman-Template.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'Khruangbin': ['Khruangbin-Template.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'lamp': ['lamp-template.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'lespecial': ['lespecial.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'Mike Gordon Band': ['MGB-Template-With-TeamHood.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'moe': ['moe-template.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'Pearl Jam': ['Pearl-Jam.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'Phil Lesh & Friends': ['Phil-Lesh-Friends-Template.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'Phish': ['Phish.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'Pink Floyd': ['Pink-Floyd-Template.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'Squeaky Feet': ['Squeaky-Feet-template.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'String Cheese Incident': ['SCI-template.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'The Allman Brothers Band': ['The Allman Brothers Band.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'Trey Anastasio': ['Trey-Anastasio-Template.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'Trey Anastasio Band': ['TAB-Template.psd']
+2025-07-21 18:28:36,497 [DEBUG] Template folder 'Umphrey's McGee': ['Umphreys-Mcgee-template.psd']
+2025-07-21 18:28:36,498 [DEBUG] Template folder 'Widespread Panic': ['Widespread Panic - Copy.psd', 'Widespread Panic.psd']
+2025-07-21 18:28:36,498 [INFO] Template folders re-scanned: 25 folders found
+2025-07-21 18:28:40,677 [INFO] Template selected → Generic - Copy.psd
+2025-07-21 18:32:24,800 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 18:32:24,836 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 18:32:24,841 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 18:32:24,847 [INFO] Loaded 2 artist aliases.
+2025-07-21 18:32:24,847 [DEBUG] Found 1 PSD(s) in folder 'Billy Strings'
+2025-07-21 18:32:24,847 [DEBUG] Found 1 PSD(s) in folder 'Daniel Donato'
+2025-07-21 18:32:24,848 [DEBUG] Found 1 PSD(s) in folder 'Dead & Company'
+2025-07-21 18:32:24,848 [DEBUG] Found 1 PSD(s) in folder 'Eggy'
+2025-07-21 18:32:24,848 [DEBUG] Found 6 PSD(s) in folder 'Generic'
+2025-07-21 18:32:24,848 [DEBUG] Found 1 PSD(s) in folder 'Gov't Mule'
+2025-07-21 18:32:24,848 [DEBUG] Found 1 PSD(s) in folder 'Grateful Dead'
+2025-07-21 18:32:24,848 [DEBUG] Found 1 PSD(s) in folder 'Joe Russo's Almost Dead'
+2025-07-21 18:32:24,848 [DEBUG] Found 1 PSD(s) in folder 'Karina Rykman'
+2025-07-21 18:32:24,849 [DEBUG] Found 1 PSD(s) in folder 'Khruangbin'
+2025-07-21 18:32:24,849 [DEBUG] Found 1 PSD(s) in folder 'lamp'
+2025-07-21 18:32:24,849 [DEBUG] Found 1 PSD(s) in folder 'lespecial'
+2025-07-21 18:32:24,849 [DEBUG] Found 1 PSD(s) in folder 'Mike Gordon Band'
+2025-07-21 18:32:24,849 [DEBUG] Found 1 PSD(s) in folder 'moe'
+2025-07-21 18:32:24,849 [DEBUG] Found 1 PSD(s) in folder 'Pearl Jam'
+2025-07-21 18:32:24,849 [DEBUG] Found 1 PSD(s) in folder 'Phil Lesh & Friends'
+2025-07-21 18:32:24,849 [DEBUG] Found 1 PSD(s) in folder 'Phish'
+2025-07-21 18:32:24,849 [DEBUG] Found 1 PSD(s) in folder 'Pink Floyd'
+2025-07-21 18:32:24,850 [DEBUG] Found 1 PSD(s) in folder 'Squeaky Feet'
+2025-07-21 18:32:24,850 [DEBUG] Found 1 PSD(s) in folder 'String Cheese Incident'
+2025-07-21 18:32:24,850 [DEBUG] Found 1 PSD(s) in folder 'The Allman Brothers Band'
+2025-07-21 18:32:24,850 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio'
+2025-07-21 18:32:24,850 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio Band'
+2025-07-21 18:32:24,850 [DEBUG] Found 1 PSD(s) in folder 'Umphrey's McGee'
+2025-07-21 18:32:24,850 [DEBUG] Found 2 PSD(s) in folder 'Widespread Panic'
+2025-07-21 18:32:24,850 [INFO] Template scan complete: 31 PSD(s) in 25 folders
+2025-07-21 18:32:24,851 [DEBUG] Template folder 'Billy Strings': ['Billy-Strings-Poster-Template.psd']
+2025-07-21 18:32:24,851 [DEBUG] Template folder 'Daniel Donato': ['Daniel-Donato-Template.psd']
+2025-07-21 18:32:24,851 [DEBUG] Template folder 'Dead & Company': ['Dead-Co-Template.psd']
+2025-07-21 18:32:24,851 [DEBUG] Template folder 'Eggy': ['Eggy-Template2.psd']
+2025-07-21 18:32:24,851 [DEBUG] Template folder 'Generic': ['Generic - Copy - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy.psd', 'Generic - Copy - Copy.psd', 'Generic - Copy.psd', 'Generic.psd']
+2025-07-21 18:32:24,851 [DEBUG] Template folder 'Gov't Mule': ["Gov't-Mule.psd"]
+2025-07-21 18:32:24,851 [DEBUG] Template folder 'Grateful Dead': ['Grateful-Dead-Template.psd']
+2025-07-21 18:32:24,851 [DEBUG] Template folder 'Joe Russo's Almost Dead': ['Joe-Russo-Template.psd']
+2025-07-21 18:32:24,851 [DEBUG] Template folder 'Karina Rykman': ['Karina-Rykman-Template.psd']
+2025-07-21 18:32:24,851 [DEBUG] Template folder 'Khruangbin': ['Khruangbin-Template.psd']
+2025-07-21 18:32:24,851 [DEBUG] Template folder 'lamp': ['lamp-template.psd']
+2025-07-21 18:32:24,852 [DEBUG] Template folder 'lespecial': ['lespecial.psd']
+2025-07-21 18:32:24,852 [DEBUG] Template folder 'Mike Gordon Band': ['MGB-Template-With-TeamHood.psd']
+2025-07-21 18:32:24,852 [DEBUG] Template folder 'moe': ['moe-template.psd']
+2025-07-21 18:32:24,852 [DEBUG] Template folder 'Pearl Jam': ['Pearl-Jam.psd']
+2025-07-21 18:32:24,852 [DEBUG] Template folder 'Phil Lesh & Friends': ['Phil-Lesh-Friends-Template.psd']
+2025-07-21 18:32:24,852 [DEBUG] Template folder 'Phish': ['Phish.psd']
+2025-07-21 18:32:24,852 [DEBUG] Template folder 'Pink Floyd': ['Pink-Floyd-Template.psd']
+2025-07-21 18:32:24,852 [DEBUG] Template folder 'Squeaky Feet': ['Squeaky-Feet-template.psd']
+2025-07-21 18:32:24,852 [DEBUG] Template folder 'String Cheese Incident': ['SCI-template.psd']
+2025-07-21 18:32:24,852 [DEBUG] Template folder 'The Allman Brothers Band': ['The Allman Brothers Band.psd']
+2025-07-21 18:32:24,852 [DEBUG] Template folder 'Trey Anastasio': ['Trey-Anastasio-Template.psd']
+2025-07-21 18:32:24,853 [DEBUG] Template folder 'Trey Anastasio Band': ['TAB-Template.psd']
+2025-07-21 18:32:24,853 [DEBUG] Template folder 'Umphrey's McGee': ['Umphreys-Mcgee-template.psd']
+2025-07-21 18:32:24,853 [DEBUG] Template folder 'Widespread Panic': ['Widespread Panic - Copy.psd', 'Widespread Panic.psd']
+2025-07-21 18:32:24,853 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 18:32:24,897 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 18:32:24,922 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 18:32:24,922 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 18:32:24,922 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 18:32:24,956 [INFO] Reference metadata refreshed from text files.
+2025-07-21 18:32:25,060 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 18:32:25,060 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 18:32:29,053 [INFO] Scanning Z:/New
+2025-07-21 18:32:30,840 [DEBUG] Attempting artist extraction from filename: 'Billy Strings - 2025-07-17 - ICC Sydney Theatre - [1080p]'
+2025-07-21 18:32:30,842 [DEBUG] extract_date('Billy Strings - 2025-07-17 - ICC Sydney Theatre - [1080p]') -> '2025-07-17'
+2025-07-21 18:32:30,842 [DEBUG] Matched venue substring: ICC Sydney Theatre
+2025-07-21 18:32:30,842 [DEBUG] split_tokens('Billy Strings - 2025-07-17 - ICC Sydney Theatre - [1080p]') -> ['billy', 'strings', '2025', '07', '17', 'icc', 'sydney', 'theatre', '1080p']
+2025-07-21 18:32:30,842 [DEBUG] Filename tokens: ['billy', 'strings', '2025', '07', '17', 'icc', 'sydney', 'theatre', '1080p']
+2025-07-21 18:32:30,843 [DEBUG] split_tokens('2025-07-17') -> ['2025', '07', '17']
+2025-07-21 18:32:30,843 [DEBUG] split_tokens('ICC Sydney Theatre') -> ['icc', 'sydney', 'theatre']
+2025-07-21 18:32:30,843 [DEBUG] Tokens to exclude from artist: {'theatre', '17', 'sydney', '1080p', 'icc', '2025', '07'}
+2025-07-21 18:32:30,843 [DEBUG] [ARTIST] Matched from artists.txt: 'billystrings' → 'Billy Strings'
+2025-07-21 18:32:30,843 [DEBUG] Inferred info: {'artist': 'Billy Strings', 'date': '2025-07-17', 'venue': 'ICC Sydney Theatre', 'city': '', 'format': '1080p', 'additional': ''}
+2025-07-21 18:32:30,844 [INFO] Selected Z:\New\Billy Strings - 2025-07-17 - ICC Sydney Theatre - [1080p].mkv → {'artist': 'Billy Strings', 'date': '2025-07-17', 'venue': 'ICC Sydney Theatre', 'city': '', 'format': '1080p', 'additional': ''}
+2025-07-21 18:32:35,210 [INFO] Template selected → Billy-Strings-Poster-Template.psd
+2025-07-21 18:32:38,700 [INFO] Template selected → Billy-Strings-Poster-Template.psd
+2025-07-21 18:32:42,766 [INFO] Template selected → Billy-Strings-Poster-Template.psd
+2025-07-21 18:33:05,369 [DEBUG] Found 6 PSD(s) in folder 'Billy Strings'
+2025-07-21 18:33:05,369 [DEBUG] Found 1 PSD(s) in folder 'Daniel Donato'
+2025-07-21 18:33:05,369 [DEBUG] Found 1 PSD(s) in folder 'Dead & Company'
+2025-07-21 18:33:05,369 [DEBUG] Found 1 PSD(s) in folder 'Eggy'
+2025-07-21 18:33:05,369 [DEBUG] Found 6 PSD(s) in folder 'Generic'
+2025-07-21 18:33:05,370 [DEBUG] Found 1 PSD(s) in folder 'Gov't Mule'
+2025-07-21 18:33:05,370 [DEBUG] Found 1 PSD(s) in folder 'Grateful Dead'
+2025-07-21 18:33:05,370 [DEBUG] Found 1 PSD(s) in folder 'Joe Russo's Almost Dead'
+2025-07-21 18:33:05,370 [DEBUG] Found 1 PSD(s) in folder 'Karina Rykman'
+2025-07-21 18:33:05,370 [DEBUG] Found 1 PSD(s) in folder 'Khruangbin'
+2025-07-21 18:33:05,370 [DEBUG] Found 1 PSD(s) in folder 'lamp'
+2025-07-21 18:33:05,370 [DEBUG] Found 1 PSD(s) in folder 'lespecial'
+2025-07-21 18:33:05,370 [DEBUG] Found 1 PSD(s) in folder 'Mike Gordon Band'
+2025-07-21 18:33:05,371 [DEBUG] Found 1 PSD(s) in folder 'moe'
+2025-07-21 18:33:05,371 [DEBUG] Found 1 PSD(s) in folder 'Pearl Jam'
+2025-07-21 18:33:05,371 [DEBUG] Found 1 PSD(s) in folder 'Phil Lesh & Friends'
+2025-07-21 18:33:05,371 [DEBUG] Found 1 PSD(s) in folder 'Phish'
+2025-07-21 18:33:05,371 [DEBUG] Found 1 PSD(s) in folder 'Pink Floyd'
+2025-07-21 18:33:05,371 [DEBUG] Found 1 PSD(s) in folder 'Squeaky Feet'
+2025-07-21 18:33:05,371 [DEBUG] Found 1 PSD(s) in folder 'String Cheese Incident'
+2025-07-21 18:33:05,371 [DEBUG] Found 1 PSD(s) in folder 'The Allman Brothers Band'
+2025-07-21 18:33:05,371 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio'
+2025-07-21 18:33:05,372 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio Band'
+2025-07-21 18:33:05,372 [DEBUG] Found 1 PSD(s) in folder 'Umphrey's McGee'
+2025-07-21 18:33:05,372 [DEBUG] Found 2 PSD(s) in folder 'Widespread Panic'
+2025-07-21 18:33:05,372 [INFO] Template scan complete: 36 PSD(s) in 25 folders
+2025-07-21 18:33:05,372 [DEBUG] Template folder 'Billy Strings': ['Billy-Strings-Poster-Template - Copy - Copy - Copy - Copy - Copy.psd', 'Billy-Strings-Poster-Template - Copy - Copy - Copy - Copy.psd', 'Billy-Strings-Poster-Template - Copy - Copy - Copy.psd', 'Billy-Strings-Poster-Template - Copy - Copy.psd', 'Billy-Strings-Poster-Template - Copy.psd', 'Billy-Strings-Poster-Template.psd']
+2025-07-21 18:33:05,372 [DEBUG] Template folder 'Daniel Donato': ['Daniel-Donato-Template.psd']
+2025-07-21 18:33:05,372 [DEBUG] Template folder 'Dead & Company': ['Dead-Co-Template.psd']
+2025-07-21 18:33:05,372 [DEBUG] Template folder 'Eggy': ['Eggy-Template2.psd']
+2025-07-21 18:33:05,372 [DEBUG] Template folder 'Generic': ['Generic - Copy - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy.psd', 'Generic - Copy - Copy.psd', 'Generic - Copy.psd', 'Generic.psd']
+2025-07-21 18:33:05,372 [DEBUG] Template folder 'Gov't Mule': ["Gov't-Mule.psd"]
+2025-07-21 18:33:05,372 [DEBUG] Template folder 'Grateful Dead': ['Grateful-Dead-Template.psd']
+2025-07-21 18:33:05,372 [DEBUG] Template folder 'Joe Russo's Almost Dead': ['Joe-Russo-Template.psd']
+2025-07-21 18:33:05,373 [DEBUG] Template folder 'Karina Rykman': ['Karina-Rykman-Template.psd']
+2025-07-21 18:33:05,373 [DEBUG] Template folder 'Khruangbin': ['Khruangbin-Template.psd']
+2025-07-21 18:33:05,373 [DEBUG] Template folder 'lamp': ['lamp-template.psd']
+2025-07-21 18:33:05,373 [DEBUG] Template folder 'lespecial': ['lespecial.psd']
+2025-07-21 18:33:05,373 [DEBUG] Template folder 'Mike Gordon Band': ['MGB-Template-With-TeamHood.psd']
+2025-07-21 18:33:05,373 [DEBUG] Template folder 'moe': ['moe-template.psd']
+2025-07-21 18:33:05,373 [DEBUG] Template folder 'Pearl Jam': ['Pearl-Jam.psd']
+2025-07-21 18:33:05,373 [DEBUG] Template folder 'Phil Lesh & Friends': ['Phil-Lesh-Friends-Template.psd']
+2025-07-21 18:33:05,373 [DEBUG] Template folder 'Phish': ['Phish.psd']
+2025-07-21 18:33:05,373 [DEBUG] Template folder 'Pink Floyd': ['Pink-Floyd-Template.psd']
+2025-07-21 18:33:05,373 [DEBUG] Template folder 'Squeaky Feet': ['Squeaky-Feet-template.psd']
+2025-07-21 18:33:05,373 [DEBUG] Template folder 'String Cheese Incident': ['SCI-template.psd']
+2025-07-21 18:33:05,374 [DEBUG] Template folder 'The Allman Brothers Band': ['The Allman Brothers Band.psd']
+2025-07-21 18:33:05,374 [DEBUG] Template folder 'Trey Anastasio': ['Trey-Anastasio-Template.psd']
+2025-07-21 18:33:05,374 [DEBUG] Template folder 'Trey Anastasio Band': ['TAB-Template.psd']
+2025-07-21 18:33:05,374 [DEBUG] Template folder 'Umphrey's McGee': ['Umphreys-Mcgee-template.psd']
+2025-07-21 18:33:05,374 [DEBUG] Template folder 'Widespread Panic': ['Widespread Panic - Copy.psd', 'Widespread Panic.psd']
+2025-07-21 18:33:05,374 [INFO] Template folders re-scanned: 25 folders found
+2025-07-21 18:33:09,494 [INFO] Template selected → Billy-Strings-Poster-Template - Copy.psd

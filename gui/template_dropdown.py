@@ -5,11 +5,14 @@ from pathlib import Path
 import random
 from constants import ASSETS_DIR, GENERIC_DIR, CONFIG_FILE
 from tkinter import messagebox
+import re
+
 
 def _load_template_from_path(app, template_path: str):
     """Function to load the template from the given path."""
     # Implement the logic to load the template, such as opening the file or applying it
     pass
+
 
 def set_poster_controls_state(app, *, enabled: bool) -> None:
     """Enable/disable template dropdown and 'Make Poster?' combo."""
@@ -22,6 +25,7 @@ def set_poster_controls_state(app, *, enabled: bool) -> None:
         app.cb_template.config(state="disabled")
         app.v_make_poster.set("No")
         app.cb_make_poster.config(state="disabled")
+
 
 def prompt_photoshop_path_if_first_boot(app) -> None:
     """Ask once per install if the user wants to set a Photoshop path."""
@@ -70,12 +74,19 @@ def prompt_photoshop_path_if_first_boot(app) -> None:
     with open(CONFIG_FILE, "w", encoding="utf-8") as fh:
         cfg.write(fh)
 
+
 def _row(parent, lbl, var, r, col=0):
     """Helper to create a label and combobox on the same row."""
     tk.Label(parent, text=lbl).grid(row=r, column=col, sticky="w")
     cb = ttk.Combobox(parent, textvariable=var, width=34, state="normal")  # editable combobox
-    cb.grid(row=r, column=col+1, sticky="w", padx=4)
+    cb.grid(row=r, column=col + 1, sticky="w", padx=4)
     return cb
+
+
+def _normalize_name(name: str) -> str:
+    """Normalize artist name for matching: lowercase, remove non-alphanum."""
+    return re.sub(r"[^a-z0-9]", "", name.lower())
+
 
 def on_template_selected(app, event=None):
     sel = app.v_template.get()
@@ -96,14 +107,37 @@ def on_template_selected(app, event=None):
             else:
                 app._log("⚠️ No PSDs found to randomize.")
             return
+
         elif sel == "Default":
             artist = app.v_artist.get()
-            psd = root / (artist if (root / artist).is_dir() else "Generic") / f"{artist}.psd"
-            if not psd.is_file():
-                psd = root / "Generic" / "Generic.psd"
-            _load_template_from_path(app, str(psd))
-            app._log(f"Template selected → {psd.name}")
+            artist_folder = root / artist
+
+            if artist_folder.is_dir():
+                psd_files = sorted(artist_folder.glob("*.psd"))
+                if psd_files:
+                    # Pick the first PSD file in artist folder
+                    psd = psd_files[0]
+                else:
+                    psd = None
+            else:
+                psd = None
+
+            # If no PSD found in artist folder, fallback to generic
+            if not psd:
+                generic_folder = root / "Generic"
+                generic_psds = sorted(generic_folder.glob("*.psd"))
+                if generic_psds:
+                    psd = generic_psds[0]
+                else:
+                    psd = None
+
+            if psd and psd.is_file():
+                _load_template_from_path(app, str(psd))
+                app._log(f"Template selected → {psd.name}")
+            else:
+                app._log("⚠️ No suitable PSD file found for Default template.")
             return
+
         else:
             app.tpl_artist = sel
             app.tpl_stage = "psds"
@@ -111,6 +145,7 @@ def on_template_selected(app, event=None):
             app.cb_template["values"] = ["← Back", "Random"] + psds
             app.v_template.set("")
             app.after(10, lambda: app.cb_template.event_generate("<Button-1>"))
+
     else:  # PSD selection stage
         if sel == "← Back":
             app.cb_template["values"] = ["Default", "Random"] + sorted(app.tpl_map.keys(), key=str.casefold)
@@ -187,6 +222,7 @@ def build_template_dropdown(app, meta):
     app.v_city = tk.StringVar()
     app.cb_city = _row(meta, "City:", app.v_city, 2)
 
+
 def _select_random_template(app):
     """
     Pick a random .psd from /assets/Photoshop Templates/Generic and
@@ -207,6 +243,7 @@ def _select_random_template(app):
     # You may want to trigger actual template loading here if applicable
     # e.g. _load_template_from_path(app, choice)
 
+
 def build_template_dropdown_values(app):
     """
     Constructs a nested dropdown list for templates:
@@ -226,6 +263,7 @@ def build_template_dropdown_values(app):
 
     return values
 
+
 def build_metadata(meta, app):
     """
     Build the metadata section with artist, venue, and city comboboxes.
@@ -235,7 +273,7 @@ def build_metadata(meta, app):
     - meta: The parent frame where the widgets will be placed.
     - app: The main app instance, used to bind comboboxes and manage state.
     """
-    
+
     # Reuse _row here
     app.v_artist = tk.StringVar()
     app.cb_artist = _row(meta, "Artist:", app.v_artist, 0)
