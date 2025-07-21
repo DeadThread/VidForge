@@ -1,136 +1,281 @@
-# SchemeEditor - README
+# VidForge + SchemeEditor - Complete README
 
 ## Overview
 
+**VidForge** is a powerful desktop application to organize, tag, and rename video files and folders using flexible naming schemes and artist-aware poster templates. It features a user-friendly Tkinter GUI, live logging, Photoshop integration, and dynamic queue processing.
+
+**SchemeEditor**, integrated into VidForge or usable standalone, enables users to define **custom folder and filename naming schemes** using a combination of **metadata tokens** and **formatting functions**. This allows total control over how your files and directories are named.
+
+---
+
+## Features
+
+* Flexible tagging and renaming of media using custom naming schemes
+* Integrated naming scheme editor with live preview and function/tokens list
+* Dynamic dropdowns for selecting artists and Photoshop templates
+* Batch processing and queue system
+* Real-time log output panel
+* Persistent theme and UI settings
+* Supports both per-artist and generic PSD templates
+* Quick access to edit lists: Artists, Venues, Cities
+* Right-click to copy preview
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/yourusername/vidforge.git
+cd vidforge
+```
+
+(Optional) Create and activate a virtual environment:
+
+```bash
+python -m venv venv
+source venv/bin/activate      # macOS/Linux
+venv\Scripts\activate         # Windows
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Configuration
+
+* Place Photoshop templates under:
+
+  ```
+  assets/Photoshop Templates/
+  ```
+* Use subfolders for artist-specific templates (e.g., `assets/Photoshop Templates/Phish/`)
+* Edit `Artists.txt`, `Venues.txt`, and `Cities.txt` for dropdown options
+* Configure output paths and other settings via the GUI or config file
+* Use Generic.psd as a starting point to create your own templates. Modify the background, reposition text layers as needed, and ensure the layers for Artist, Venue, and City remain intact so they can be read correctly by the application.
+
+## Usage
+
+```bash
+python VidForge.py
+```
+
+* Use **File > Open Root Folder** to select your media directory
+* Choose an artist and template using the dropdown menus
+* Enable or disable "Make Poster?" to control PSD selection
+* Use the **Edit** menu to modify metadata lists and naming schemes
+* View real-time logs in the side panel
+* Use **Tools > Set Photoshop Location** and **Rescan Templates** as needed
+* Process folders via the queue with Save/Process/Remove actions
+
+---
+
+## Folder Structure
+
+```
+vidforge/
+├── assets/
+│   └── Photoshop Templates/
+│       ├── Generic/
+│       │   └── Generic.psd
+│       ├── Artist1/
+│       │   └── Artist1.psd
+│       └── ...
+├── gui/
+├── utils/
+├── VidForge.py
+├── requirements.txt
+├── README.md
+└── ...
+```
+
+---
+
+## SchemeEditor - Custom Naming Schemes
+
+### Overview
+
 `SchemeEditor` is a Python script built with `Tkinter` that allows users to create and test customizable naming schemes for their media files. It provides a user-friendly interface for inserting tokens (placeholders for metadata), functions (for data manipulation), and conditional logic to format filenames based on various metadata fields.
 
-### Main Features:
-- **Tokens**: Insert placeholders for artist, date, venue, city, format, and additional metadata.
-- **Functions**: Perform various operations on text like changing case, trimming, padding, etc.
-- **Preview**: See a live preview of the resulting output as you build the naming scheme.
-- **Save Scheme**: Save the current scheme for later use or reference.
-- **Reset Default**: Return the editor to a default naming scheme layout.
-- **Right-click**: Copy the previewed naming scheme text to the clipboard with a simple right-click.
+### Main Features
+
+* **Tokens**: Insert placeholders for artist, date, venue, city, format, and additional metadata
+* **Functions**: Perform text, math, date, and logical operations
+* **Preview**: Live preview of evaluated filename/folder
+* **Save Scheme**: Store schemes for reuse
+* **Reset Default**: Revert to default layout
+* **Right-click**: Copy evaluated preview to clipboard
 
 ---
 
-## Components of the SchemeEditor
+### Tokens
 
-### 1. **Tokens / Functions List**:
-
-In the left pane, you’ll find a list of available tokens and functions that you can insert into your naming scheme.
-
-#### **Tokens**:
 Tokens represent pieces of metadata that will be dynamically replaced when evaluated. They are enclosed in `%` symbols.
 
-- `%artist%`: The artist name (e.g., `Phish`)
-- `%date%`: The date (in `YYYY-MM-DD` format, e.g., `2025-06-20`)
-- `%venue%`: The venue name (e.g., `SNHU Arena`)
-- `%city%`: The city and state (e.g., `Manchester, NH`)
-- `%format%`: The first format (e.g., `2160p`)
-- `%formatN%`: All formats combined from the comma-separated list (e.g., `2160p WEBRIP`)
-- `%formatN#%`: The number specified tag format in the list (e.g., `%formatN2%` → `WEBRIP`)
-- `%additional%`: The first additional metadata (e.g., `SBD`)
-- `%additionalN%`: All additional metadata combined (e.g., `SBD AUD DAT`)
-- `%additionalN#%`: The number specified additional metadata in the list (e.g., `%additionalN2%` → `AUD`)
-
-#### **Functions**:
-Functions allow you to manipulate text, math, or date/time.
-
-- `$upper(text)`: Converts text to uppercase.
-- `$lower(text)`: Converts text to lowercase.
-- `$title(text)`: Converts text to title case.
-- `$substr(text,start,end)`: Extracts a substring from the text.
-- `$left(text,n)`: Takes the leftmost `n` characters from the text.
-- `$right(text,n)`: Takes the rightmost `n` characters from the text.
-- `$replace(text,search,replace)`: Replaces a part of the text.
-- `$len(text)`: Returns the length of the text.
-- `$pad(text,n,ch)`: Pads the text to the right with the given character until it reaches length `n`.
-
-#### **Math Functions**:
-- `$add(x,y)`: Adds numbers.
-- `$sub(x,y)`: Subtracts numbers.
-- `$mul(x,y)`: Multiplies numbers.
-- `$div(x,y)`: Divides numbers.
-
-#### **Comparisons and Logic**:
-- `$eq(x,y)`: Checks if two values are equal.
-- `$lt(x,y)`: Checks if `x` is less than `y`.
-- `$gt(x,y)`: Checks if `x` is greater than `y`.
-- `$and(x,y,...)`: Returns true if all conditions are true.
-- `$or(x,y,...)`: Returns true if any condition is true.
-- `$not(x)`: Negates a condition.
-
-#### **Date/Time Functions**:
-- `$datetime()`: Returns the current date and time in ISO format.
-- `$year(date)`: Extracts the year from a date.
-- `$month(date)`: Extracts the month from a date.
-- `$day(date)`: Extracts the day from a date.
-
-#### **Conditionals**:
-- `$if(condition,true_value,false_value)`: Returns one of two values based on a condition.
-- `$if2(value1,value2,...,fallback)`: Returns the first non-empty value from the list or the fallback if all values are empty.
+| Token            | Description                         | Example          |
+| ---------------- | ----------------------------------- | ---------------- |
+| `%artist%`       | Artist name                         | `Phish`          |
+| `%date%`         | Full date (YYYY-MM-DD)              | `2025-06-20`     |
+| `%venue%`        | Venue of the event                  | `SNHU Arena`     |
+| `%city%`         | City + state                        | `Manchester, NH` |
+| `%format%`       | First format tag                    | `2160p`          |
+| `%formatN%`      | All format tags space-separated     | `2160p WEBRIP`   |
+| `%formatN#%`     | Nth format tag (e.g., `%formatN2%`) | `WEBRIP`         |
+| `%additional%`   | First additional tag                | `SBD`            |
+| `%additionalN%`  | All additional tags space-separated | `SBD AUD DAT`    |
+| `%additionalN#%` | Nth additional tag                  | `AUD`            |
+| `%year%`         | Year from date                      | `2025`           |
+| `%month%`        | Month from date                     | `06`             |
+| `%day%`          | Day from date                       | `20`             |
 
 ---
 
-### 2. **Scheme Editor**:
+### Functions
 
-The main section of the interface is the text editor where you define your naming scheme. This editor accepts tokens, functions, and regular text.
+Functions begin with `$` and use parentheses for arguments. They support nesting.
 
-- You can type any text and include tokens or functions for dynamic data replacement.
-- **Live Preview**: As you edit your scheme, the preview area on the right shows you what the final result would look like with the current sample metadata.
-- **Reset Default**: You can click the “Reset Default” button to revert the editor to a default naming scheme (e.g., `%artist% - %date% - %venue% - %city% [%format%] [%additional%]`).
+#### Text
+
+| Function                        | Description         | Example                      | Output       |
+| ------------------------------- | ------------------- | ---------------------------- | ------------ |
+| `$upper(text)`                  | Uppercase text      | `$upper(%artist%)`           | `PHISH`      |
+| `$lower(text)`                  | Lowercase text      | `$lower(%artist%)`           | `phish`      |
+| `$title(text)`                  | Title case          | `$title("live show")`        | `Live Show`  |
+| `$substr(text,start,end)`       | Substring           | `$substr(%artist%,0,3)`      | `Phi`        |
+| `$left(text,n)`                 | Leftmost `n` chars  | `$left(%artist%,3)`          | `Phi`        |
+| `$right(text,n)`                | Rightmost `n` chars | `$right(%artist%,3)`         | `ish`        |
+| `$replace(text,search,replace)` | Replace text        | `$replace(%city%,", NH","")` | `Manchester` |
+| `$len(text)`                    | Text length         | `$len(%artist%)`             | `5`          |
+| `$pad(text,n,ch)`               | Pad to length       | `$pad(%artist%,7,"_")`       | `Phish__`    |
+
+#### Math
+
+| Function    | Description | Example      | Output |
+| ----------- | ----------- | ------------ | ------ |
+| `$add(x,y)` | Addition    | `$add(10,5)` | `15`   |
+| `$sub(x,y)` | Subtraction | `$sub(10,2)` | `8`    |
+| `$mul(x,y)` | Multiply    | `$mul(4,5)`  | `20`   |
+| `$div(x,y)` | Divide      | `$div(10,2)` | `5`    |
+
+#### Logical
+
+| Function    | Description | Example               | Output |
+| ----------- | ----------- | --------------------- | ------ |
+| `$eq(x,y)`  | Equal       | `$eq(%artist%,Phish)` | `1`    |
+| `$gt(x,y)`  | Greater     | `$gt(5,2)`            | `1`    |
+| `$lt(x,y)`  | Less than   | `$lt(1,2)`            | `1`    |
+| `$and(x,y)` | All true    | `$and(1,1)`           | `1`    |
+| `$or(x,y)`  | Any true    | `$or(0,1)`            | `1`    |
+| `$not(x)`   | Negate      | `$not(0)`             | `1`    |
+
+#### Date
+
+| Function       | Description | Example          | Output                |
+| -------------- | ----------- | ---------------- | --------------------- |
+| `$datetime()`  | Now in ISO  | `$datetime()`    | `2025-07-19T14:32:00` |
+| `$year(date)`  | Year part   | `$year(%date%)`  | `2025`                |
+| `$month(date)` | Month part  | `$month(%date%)` | `06`                  |
+| `$day(date)`   | Day part    | `$day(%date%)`   | `20`                  |
+
+#### Conditionals
+
+| Function                   | Description      | Example                           | Output  |
+| -------------------------- | ---------------- | --------------------------------- | ------- |
+| `$if(cond,true,false)`     | Inline condition | `$if($eq(%artist%,Phish),YES,NO)` | `YES`   |
+| `$if2(val1,val2,fallback)` | First non-empty  | `$if2(%non%,%artist%,Unknown)`    | `Phish` |
 
 ---
 
-### 3. **Preview Area**:
+### Live Preview and Customization
 
-As you type or modify the naming scheme in the editor, a live preview is shown in the "Live Preview" section. This section dynamically updates based on the metadata you provide.
-
-- **Sample Metadata**: The preview uses a sample set of metadata (e.g., `artist`, `date`, `venue`, etc.) for rendering the preview. You can modify this sample metadata in the code or use the "get_live_metadata" function to fetch real-time data.
-  
-- **Context Menu**: You can right-click the preview text and select **Copy** to copy the result to your clipboard.
-
----
-
-## Customization
-
-You can customize the behavior of `SchemeEditor` by modifying the metadata, tokens, and functions:
-
-1. **Metadata**: Modify the `SAMPLE_META` dictionary at the top of the script to provide new sample metadata for the preview.
-2. **Tokens**: The list of tokens (`TOKENS`) is fully customizable. Add or remove tokens to suit your needs.
-3. **Functions**: Similarly, you can expand the available functions to include your own logic.
+* Preview area shows the evaluated result in real-time using sample metadata
+* Right-click to copy output
+* Modify `SAMPLE_META` in the script for different test data
+* All tokens/functions customizable via Python dictionaries/lists
 
 ---
 
 ## Example Schemes
 
-1. **Phish Naming Scheme**:
+1. **Basic Scheme:**
 
+```
 %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+```
 
-**Result**: `Phish - 2025-06-20 - SNHU Arena - Manchester, NH [2160p] [SBD]`
+**Output:**
 
-2. **Custom Format with Date Functions**:
+```
+Phish - 2025-06-20 - SNHU Arena - Manchester, NH [2160p] [SBD]
+```
 
+2. **Date Split:**
+
+```
 %artist% - $year(%date%)-%month(%date%)-%day(%date%) - %venue% - %city%
+```
 
-**Result**: `Phish - 2025-06-20 - SNHU Arena - Manchester, NH`
+**Output:**
 
-3. **Format N#**:
+```
+Phish - 2025-06-20 - SNHU Arena - Manchester, NH
+```
 
+3. **Advanced Format Parsing:**
+
+```
 %artist% - %date% - %venue% - %city% [%formatN%] [%formatN2%]
+```
 
-**Expected Result**: `Phish - 2025-06-20 - SNHU Arena - Manchester, NH [2160p WEBRIP] [WEBRIP]`
+**Output:**
 
-4. **All Formats Combined**:
+```
+Phish - 2025-06-20 - SNHU Arena - Manchester, NH [2160p WEBRIP] [WEBRIP]
+```
 
-%artist% - %date% - %venue% - %city% [%formatN%]
+4. **Fallback Example:**
 
-**Result**: `Phish - 2025-06-20 - SNHU Arena - Manchester, NH [2160p WEBRIP]`
+```
+%artist% - $if2(%nickname%,%artist%,Unknown)
+```
+
+**Output:**
+
+```
+Phish - Phish
+```
 
 ---
 
-## Conclusion
+## Dependencies
 
-The `SchemeEditor` script is a flexible tool for managing and organizing media files with custom naming conventions. You can experiment with tokens, functions, and conditionals to generate complex naming schemes for your files. Whether you're working with music, videos, or any other form of media, this tool offers a robust solution for automating file renaming and metadata embedding.
+* Python 3.10+
+* Tkinter (GUI)
+* Mutagen (tag handling)
+* Pillow (image support, optional)
+* See `requirements.txt` for full list
+
+---
+
+## Contributing
+
+* Open issues for bugs or suggestions
+* Fork and submit pull requests
+* Improve documentation or add examples
+
+---
+
+## License
+
+Licensed under the MIT License. See LICENSE file for full terms.
+
+---
+
+## Contact
+
+Created and maintained by **DeadThread**.
+
+*End of README*

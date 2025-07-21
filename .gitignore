@@ -100,7 +100,11 @@ cython_debug/
 # VS Code
 .vscode/
 
+<<<<<<< HEAD
 # Logs (all logs folders and files)
+=======
+# Logs
+>>>>>>> caebc9973c4eac20499ef46e3893381975d2bd7f
 logs/
 *.log
 *.log.*
@@ -115,9 +119,18 @@ config/dropdown_cache.json
 .DS_Store
 Thumbs.db
 
+<<<<<<< HEAD
 # Ignore all __pycache__ folders recursively
 __pycache__/
 
 # Ignore compiled python cache in utils/ and gui/ (redundant but explicit)
 utils/__pycache__/
 gui/__pycache__/
+=======
+# Ignore Python compiled bytecode caches in utils/ and gui/
+utils/__pycache__/
+gui/__pycache__/
+
+# Ignore deleted __pycache__ files globally
+**/__pycache__/
+>>>>>>> caebc9973c4eac20499ef46e3893381975d2bd7f
