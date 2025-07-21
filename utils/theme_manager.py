@@ -142,12 +142,11 @@ def restore_saved_theme(root, ini_parser, log_func) -> None:
 # ------------------------------------------------------------------
 # Legacy fallback for removing theme
 # ------------------------------------------------------------------
-def remove_theme(root, ini_parser, log_func) -> None:
-    """Legacy entry-point: clears saved theme and switches to default."""
+def remove_theme(root, ini_parser, config_file, log_func) -> None:
     _loaded_themes.clear()
     if ini_parser.has_section("Theme"):
         ini_parser.remove_section("Theme")
-    use_default_theme(root, ini_parser, log_func)
+    use_default_theme(root, ini_parser, config_file, log_func)
     log_func("Custom theme cleared; reverted to native look.")
 
 # ------------------------------------------------------------------

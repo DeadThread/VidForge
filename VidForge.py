@@ -52,6 +52,7 @@ from utils.template_manager import (
 )
 from utils.text_utils import infer_from_name
 from utils.theme_manager import load_ttk_theme, remove_theme, restore_saved_theme, load_and_apply_theme
+import utils.theme_manager as theme_manager
 from utils.tree_manager import fast_populate_tree as populate_tree
 from gui.template_dropdown import set_poster_controls_state, on_template_selected  # <-- Add this import
 
