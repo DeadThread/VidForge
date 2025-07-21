@@ -247,3 +247,512 @@
   Folder scheme : %artist%/$year(date)
   Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
   Output folder  : (Root)
+2025-07-21 17:11:50,601 [DEBUG] Loaded 241 entries from Artists.txt
+2025-07-21 17:11:50,636 [DEBUG] Loaded 29860 entries from Cities.txt
+2025-07-21 17:11:50,640 [DEBUG] Loaded 2278 entries from Venues.txt
+2025-07-21 17:11:50,645 [INFO] Loaded 2 artist aliases.
+2025-07-21 17:11:50,646 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 17:11:50,646 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 17:11:50,646 [DEBUG] Template folder 'Generic': ['Generic.psd']
+2025-07-21 17:11:50,646 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 17:11:50,686 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 17:11:50,709 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 17:11:50,710 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 17:11:50,710 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 17:11:50,743 [INFO] Reference metadata refreshed from text files.
+2025-07-21 17:11:50,848 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 17:11:50,848 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 17:12:08,871 [INFO] Saved sash position for left_right_split: 928
+2025-07-21 17:12:08,882 [INFO] Saved sash position for left_right_split: 925
+2025-07-21 17:12:08,882 [INFO] Saved sash position for left_right_split: 915
+2025-07-21 17:12:10,534 [DEBUG] Template combobox selected: 'Generic', current_mode=top, current_artist=None
+2025-07-21 17:12:12,149 [DEBUG] Template combobox selected: '← Back', current_mode=psd, current_artist=Generic
+2025-07-21 17:13:35,118 [INFO] Reference metadata refreshed from text files.
+2025-07-21 17:13:59,100 [INFO] Reference metadata refreshed from text files.
+2025-07-21 17:17:22,123 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 17:17:22,132 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 17:17:22,133 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 17:17:22,138 [INFO] Loaded 2 artist aliases.
+2025-07-21 17:17:22,139 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 17:17:22,139 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 17:17:22,139 [DEBUG] Template folder 'Generic': ['Generic.psd']
+2025-07-21 17:17:22,139 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 17:17:22,182 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 17:17:22,205 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 17:17:22,205 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 17:17:22,205 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 17:17:22,239 [INFO] Reference metadata refreshed from text files.
+2025-07-21 17:17:22,273 [INFO] Restored sash position for left_right_split: 915 (on configure)
+2025-07-21 17:17:22,342 [INFO] Pane width: 915, restoring sash pos: None
+2025-07-21 17:17:22,342 [INFO] Pane width: 1600, restoring sash pos: 915
+2025-07-21 17:17:22,343 [INFO] Restored sash position for left_right_split: 915
+2025-07-21 17:17:36,633 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 17:17:36,667 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 17:17:36,671 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 17:17:36,676 [INFO] Loaded 2 artist aliases.
+2025-07-21 17:17:36,676 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 17:17:36,676 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 17:17:36,676 [DEBUG] Template folder 'Generic': ['Generic.psd']
+2025-07-21 17:17:36,676 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 17:17:36,838 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 17:17:36,838 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 17:17:46,121 [INFO] [DEBUG] No theme file found in config.ini, applying default theme.
+2025-07-21 17:17:46,124 [INFO] Using default ttk theme: vista
+2025-07-21 17:17:46,157 [INFO] Reference metadata refreshed from text files.
+2025-07-21 17:18:48,496 [DEBUG] Template combobox selected: 'Generic', current_mode=top, current_artist=None
+2025-07-21 17:18:50,439 [DEBUG] Template combobox selected: '← Back', current_mode=psd, current_artist=Generic
+2025-07-21 17:24:49,259 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 17:24:49,296 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 17:24:49,300 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 17:24:49,306 [INFO] Loaded 2 artist aliases.
+2025-07-21 17:24:49,307 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 17:24:49,307 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 17:24:49,307 [DEBUG] Template folder 'Generic': ['Generic.psd']
+2025-07-21 17:24:49,307 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 17:24:49,349 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 17:24:49,372 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 17:24:49,373 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 17:24:49,373 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 17:24:49,406 [INFO] Reference metadata refreshed from text files.
+2025-07-21 17:24:49,510 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 17:24:49,510 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 17:24:52,387 [DEBUG] Template combobox selected: 'Generic', current_mode=top, current_artist=None
+2025-07-21 17:24:53,616 [DEBUG] Template combobox selected: '← Back', current_mode=psd, current_artist=Generic
+2025-07-21 17:25:33,246 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 17:25:33,280 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 17:25:33,284 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 17:25:33,289 [INFO] Loaded 2 artist aliases.
+2025-07-21 17:25:33,289 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 17:25:33,289 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 17:25:33,289 [DEBUG] Template folder 'Generic': ['Generic.psd']
+2025-07-21 17:25:33,290 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 17:25:33,330 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 17:25:33,354 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 17:25:33,354 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 17:25:33,354 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 17:25:33,387 [INFO] Reference metadata refreshed from text files.
+2025-07-21 17:25:33,493 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 17:25:33,493 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 17:29:32,555 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 17:29:32,590 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 17:29:32,594 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 17:29:32,599 [INFO] Loaded 2 artist aliases.
+2025-07-21 17:29:32,599 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 17:29:32,599 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 17:29:32,599 [DEBUG] Template folder 'Generic': ['Generic.psd']
+2025-07-21 17:29:32,600 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 17:29:32,641 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 17:29:32,665 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 17:29:32,665 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 17:29:32,665 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 17:29:32,699 [INFO] Reference metadata refreshed from text files.
+2025-07-21 17:29:32,806 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 17:29:32,806 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 17:29:35,128 [DEBUG] Template combobox selected: 'Generic', current_mode=top, current_artist=None
+2025-07-21 17:45:36,876 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 17:45:36,913 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 17:45:36,916 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 17:45:36,921 [INFO] Loaded 2 artist aliases.
+2025-07-21 17:45:36,922 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 17:45:36,922 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 17:45:36,922 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 17:45:36,966 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 17:45:45,262 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 17:45:45,296 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 17:45:45,300 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 17:45:45,305 [INFO] Loaded 2 artist aliases.
+2025-07-21 17:45:45,306 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 17:45:45,306 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 17:45:45,306 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 17:45:45,355 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 17:45:45,378 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 17:45:45,379 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 17:45:45,379 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 17:45:45,412 [INFO] Reference metadata refreshed from text files.
+2025-07-21 17:45:45,517 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 17:45:45,518 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 17:45:52,782 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 17:45:52,818 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 17:45:52,822 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 17:45:52,827 [INFO] Loaded 2 artist aliases.
+2025-07-21 17:45:52,828 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 17:45:52,828 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 17:45:52,828 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 17:45:52,984 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 17:45:52,984 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 17:45:54,211 [INFO] [DEBUG] No theme file found in config.ini, applying default theme.
+2025-07-21 17:45:54,215 [INFO] Using default ttk theme: vista
+2025-07-21 17:45:54,248 [INFO] Reference metadata refreshed from text files.
+2025-07-21 18:03:28,862 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 18:03:28,897 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 18:03:28,900 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 18:03:28,905 [INFO] Loaded 2 artist aliases.
+2025-07-21 18:03:28,906 [DEBUG] Found 1 PSD(s) in folder 'Generic'
+2025-07-21 18:03:28,906 [INFO] Template scan complete: 1 PSD(s) in 1 folders
+2025-07-21 18:03:28,906 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 18:03:28,946 [INFO] Poster creation disabled (remembered from previous run).
+2025-07-21 18:03:28,970 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 18:03:28,970 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 18:03:28,970 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 18:03:29,003 [INFO] Reference metadata refreshed from text files.
+2025-07-21 18:03:29,108 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 18:03:29,109 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 18:08:44,680 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 18:08:44,718 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 18:08:44,722 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 18:08:44,728 [INFO] Loaded 2 artist aliases.
+2025-07-21 18:08:44,729 [DEBUG] Found 1 PSD(s) in folder 'Billy Strings'
+2025-07-21 18:08:44,729 [DEBUG] Found 1 PSD(s) in folder 'Daniel Donato'
+2025-07-21 18:08:44,729 [DEBUG] Found 1 PSD(s) in folder 'Dead & Company'
+2025-07-21 18:08:44,729 [DEBUG] Found 1 PSD(s) in folder 'Eggy'
+2025-07-21 18:08:44,730 [DEBUG] Found 6 PSD(s) in folder 'Generic'
+2025-07-21 18:08:44,730 [DEBUG] Found 1 PSD(s) in folder 'Gov't Mule'
+2025-07-21 18:08:44,730 [DEBUG] Found 1 PSD(s) in folder 'Grateful Dead'
+2025-07-21 18:08:44,730 [DEBUG] Found 1 PSD(s) in folder 'Joe Russo's Almost Dead'
+2025-07-21 18:08:44,730 [DEBUG] Found 1 PSD(s) in folder 'Karina Rykman'
+2025-07-21 18:08:44,730 [DEBUG] Found 1 PSD(s) in folder 'Khruangbin'
+2025-07-21 18:08:44,730 [DEBUG] Found 1 PSD(s) in folder 'lamp'
+2025-07-21 18:08:44,730 [DEBUG] Found 1 PSD(s) in folder 'lespecial'
+2025-07-21 18:08:44,731 [DEBUG] Found 1 PSD(s) in folder 'Mike Gordon Band'
+2025-07-21 18:08:44,731 [DEBUG] Found 1 PSD(s) in folder 'moe'
+2025-07-21 18:08:44,731 [DEBUG] Found 1 PSD(s) in folder 'Pearl Jam'
+2025-07-21 18:08:44,731 [DEBUG] Found 1 PSD(s) in folder 'Phil Lesh & Friends'
+2025-07-21 18:08:44,731 [DEBUG] Found 1 PSD(s) in folder 'Phish'
+2025-07-21 18:08:44,731 [DEBUG] Found 1 PSD(s) in folder 'Pink Floyd'
+2025-07-21 18:08:44,731 [DEBUG] Found 1 PSD(s) in folder 'Squeaky Feet'
+2025-07-21 18:08:44,731 [DEBUG] Found 1 PSD(s) in folder 'String Cheese Incident'
+2025-07-21 18:08:44,732 [DEBUG] Found 1 PSD(s) in folder 'The Allman Brothers Band'
+2025-07-21 18:08:44,732 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio'
+2025-07-21 18:08:44,732 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio Band'
+2025-07-21 18:08:44,732 [DEBUG] Found 1 PSD(s) in folder 'Umphrey's McGee'
+2025-07-21 18:08:44,732 [DEBUG] Found 2 PSD(s) in folder 'Widespread Panic'
+2025-07-21 18:08:44,732 [INFO] Template scan complete: 31 PSD(s) in 25 folders
+2025-07-21 18:08:44,733 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 18:08:44,781 [INFO] Poster creation disabled (remembered from previous run).
+2025-07-21 18:08:44,805 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 18:08:44,805 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 18:08:44,805 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 18:08:44,841 [INFO] Reference metadata refreshed from text files.
+2025-07-21 18:08:44,945 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 18:08:44,946 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 18:08:50,943 [INFO] Photoshop location set to: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 18:08:52,427 [DEBUG] Template combobox selected: 'Billy Strings', current_mode=top, current_artist=None
+2025-07-21 18:09:03,564 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 18:09:03,600 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 18:09:03,604 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 18:09:03,609 [INFO] Loaded 2 artist aliases.
+2025-07-21 18:09:03,610 [DEBUG] Found 1 PSD(s) in folder 'Billy Strings'
+2025-07-21 18:09:03,610 [DEBUG] Found 1 PSD(s) in folder 'Daniel Donato'
+2025-07-21 18:09:03,610 [DEBUG] Found 1 PSD(s) in folder 'Dead & Company'
+2025-07-21 18:09:03,610 [DEBUG] Found 1 PSD(s) in folder 'Eggy'
+2025-07-21 18:09:03,610 [DEBUG] Found 6 PSD(s) in folder 'Generic'
+2025-07-21 18:09:03,610 [DEBUG] Found 1 PSD(s) in folder 'Gov't Mule'
+2025-07-21 18:09:03,610 [DEBUG] Found 1 PSD(s) in folder 'Grateful Dead'
+2025-07-21 18:09:03,610 [DEBUG] Found 1 PSD(s) in folder 'Joe Russo's Almost Dead'
+2025-07-21 18:09:03,611 [DEBUG] Found 1 PSD(s) in folder 'Karina Rykman'
+2025-07-21 18:09:03,611 [DEBUG] Found 1 PSD(s) in folder 'Khruangbin'
+2025-07-21 18:09:03,611 [DEBUG] Found 1 PSD(s) in folder 'lamp'
+2025-07-21 18:09:03,611 [DEBUG] Found 1 PSD(s) in folder 'lespecial'
+2025-07-21 18:09:03,611 [DEBUG] Found 1 PSD(s) in folder 'Mike Gordon Band'
+2025-07-21 18:09:03,611 [DEBUG] Found 1 PSD(s) in folder 'moe'
+2025-07-21 18:09:03,611 [DEBUG] Found 1 PSD(s) in folder 'Pearl Jam'
+2025-07-21 18:09:03,611 [DEBUG] Found 1 PSD(s) in folder 'Phil Lesh & Friends'
+2025-07-21 18:09:03,612 [DEBUG] Found 1 PSD(s) in folder 'Phish'
+2025-07-21 18:09:03,612 [DEBUG] Found 1 PSD(s) in folder 'Pink Floyd'
+2025-07-21 18:09:03,612 [DEBUG] Found 1 PSD(s) in folder 'Squeaky Feet'
+2025-07-21 18:09:03,612 [DEBUG] Found 1 PSD(s) in folder 'String Cheese Incident'
+2025-07-21 18:09:03,612 [DEBUG] Found 1 PSD(s) in folder 'The Allman Brothers Band'
+2025-07-21 18:09:03,612 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio'
+2025-07-21 18:09:03,612 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio Band'
+2025-07-21 18:09:03,613 [DEBUG] Found 1 PSD(s) in folder 'Umphrey's McGee'
+2025-07-21 18:09:03,613 [DEBUG] Found 2 PSD(s) in folder 'Widespread Panic'
+2025-07-21 18:09:03,613 [INFO] Template scan complete: 31 PSD(s) in 25 folders
+2025-07-21 18:09:03,613 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 18:09:03,660 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 18:09:03,684 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 18:09:03,684 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 18:09:03,684 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 18:09:03,718 [INFO] Reference metadata refreshed from text files.
+2025-07-21 18:09:03,823 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 18:09:03,823 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 18:09:18,627 [DEBUG] Template combobox selected: 'Generic', current_mode=top, current_artist=None
+2025-07-21 18:09:20,812 [DEBUG] Template combobox selected: '← Back', current_mode=psd, current_artist=Generic
+2025-07-21 18:09:25,151 [DEBUG] Template combobox selected: 'Billy Strings', current_mode=top, current_artist=None
+2025-07-21 18:09:45,481 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 18:09:45,517 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 18:09:45,521 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 18:09:45,526 [INFO] Loaded 2 artist aliases.
+2025-07-21 18:09:45,527 [DEBUG] Found 1 PSD(s) in folder 'Billy Strings'
+2025-07-21 18:09:45,527 [DEBUG] Found 1 PSD(s) in folder 'Daniel Donato'
+2025-07-21 18:09:45,527 [DEBUG] Found 1 PSD(s) in folder 'Dead & Company'
+2025-07-21 18:09:45,527 [DEBUG] Found 1 PSD(s) in folder 'Eggy'
+2025-07-21 18:09:45,527 [DEBUG] Found 6 PSD(s) in folder 'Generic'
+2025-07-21 18:09:45,527 [DEBUG] Found 1 PSD(s) in folder 'Gov't Mule'
+2025-07-21 18:09:45,527 [DEBUG] Found 1 PSD(s) in folder 'Grateful Dead'
+2025-07-21 18:09:45,527 [DEBUG] Found 1 PSD(s) in folder 'Joe Russo's Almost Dead'
+2025-07-21 18:09:45,528 [DEBUG] Found 1 PSD(s) in folder 'Karina Rykman'
+2025-07-21 18:09:45,528 [DEBUG] Found 1 PSD(s) in folder 'Khruangbin'
+2025-07-21 18:09:45,528 [DEBUG] Found 1 PSD(s) in folder 'lamp'
+2025-07-21 18:09:45,528 [DEBUG] Found 1 PSD(s) in folder 'lespecial'
+2025-07-21 18:09:45,528 [DEBUG] Found 1 PSD(s) in folder 'Mike Gordon Band'
+2025-07-21 18:09:45,528 [DEBUG] Found 1 PSD(s) in folder 'moe'
+2025-07-21 18:09:45,528 [DEBUG] Found 1 PSD(s) in folder 'Pearl Jam'
+2025-07-21 18:09:45,528 [DEBUG] Found 1 PSD(s) in folder 'Phil Lesh & Friends'
+2025-07-21 18:09:45,529 [DEBUG] Found 1 PSD(s) in folder 'Phish'
+2025-07-21 18:09:45,529 [DEBUG] Found 1 PSD(s) in folder 'Pink Floyd'
+2025-07-21 18:09:45,529 [DEBUG] Found 1 PSD(s) in folder 'Squeaky Feet'
+2025-07-21 18:09:45,529 [DEBUG] Found 1 PSD(s) in folder 'String Cheese Incident'
+2025-07-21 18:09:45,529 [DEBUG] Found 1 PSD(s) in folder 'The Allman Brothers Band'
+2025-07-21 18:09:45,529 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio'
+2025-07-21 18:09:45,529 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio Band'
+2025-07-21 18:09:45,529 [DEBUG] Found 1 PSD(s) in folder 'Umphrey's McGee'
+2025-07-21 18:09:45,530 [DEBUG] Found 2 PSD(s) in folder 'Widespread Panic'
+2025-07-21 18:09:45,530 [INFO] Template scan complete: 31 PSD(s) in 25 folders
+2025-07-21 18:09:45,530 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 18:09:45,577 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 18:09:45,600 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 18:09:45,600 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 18:09:45,601 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 18:09:45,634 [INFO] Reference metadata refreshed from text files.
+2025-07-21 18:09:45,741 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 18:09:45,741 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 18:15:09,772 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 18:15:09,808 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 18:15:09,812 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 18:15:09,817 [INFO] Loaded 2 artist aliases.
+2025-07-21 18:15:09,818 [DEBUG] Found 1 PSD(s) in folder 'Billy Strings'
+2025-07-21 18:15:09,818 [DEBUG] Found 1 PSD(s) in folder 'Daniel Donato'
+2025-07-21 18:15:09,818 [DEBUG] Found 1 PSD(s) in folder 'Dead & Company'
+2025-07-21 18:15:09,818 [DEBUG] Found 1 PSD(s) in folder 'Eggy'
+2025-07-21 18:15:09,818 [DEBUG] Found 6 PSD(s) in folder 'Generic'
+2025-07-21 18:15:09,819 [DEBUG] Found 1 PSD(s) in folder 'Gov't Mule'
+2025-07-21 18:15:09,819 [DEBUG] Found 1 PSD(s) in folder 'Grateful Dead'
+2025-07-21 18:15:09,819 [DEBUG] Found 1 PSD(s) in folder 'Joe Russo's Almost Dead'
+2025-07-21 18:15:09,819 [DEBUG] Found 1 PSD(s) in folder 'Karina Rykman'
+2025-07-21 18:15:09,819 [DEBUG] Found 1 PSD(s) in folder 'Khruangbin'
+2025-07-21 18:15:09,819 [DEBUG] Found 1 PSD(s) in folder 'lamp'
+2025-07-21 18:15:09,819 [DEBUG] Found 1 PSD(s) in folder 'lespecial'
+2025-07-21 18:15:09,819 [DEBUG] Found 1 PSD(s) in folder 'Mike Gordon Band'
+2025-07-21 18:15:09,820 [DEBUG] Found 1 PSD(s) in folder 'moe'
+2025-07-21 18:15:09,820 [DEBUG] Found 1 PSD(s) in folder 'Pearl Jam'
+2025-07-21 18:15:09,820 [DEBUG] Found 1 PSD(s) in folder 'Phil Lesh & Friends'
+2025-07-21 18:15:09,820 [DEBUG] Found 1 PSD(s) in folder 'Phish'
+2025-07-21 18:15:09,820 [DEBUG] Found 1 PSD(s) in folder 'Pink Floyd'
+2025-07-21 18:15:09,820 [DEBUG] Found 1 PSD(s) in folder 'Squeaky Feet'
+2025-07-21 18:15:09,820 [DEBUG] Found 1 PSD(s) in folder 'String Cheese Incident'
+2025-07-21 18:15:09,820 [DEBUG] Found 1 PSD(s) in folder 'The Allman Brothers Band'
+2025-07-21 18:15:09,821 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio'
+2025-07-21 18:15:09,821 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio Band'
+2025-07-21 18:15:09,821 [DEBUG] Found 1 PSD(s) in folder 'Umphrey's McGee'
+2025-07-21 18:15:09,821 [DEBUG] Found 2 PSD(s) in folder 'Widespread Panic'
+2025-07-21 18:15:09,821 [INFO] Template scan complete: 31 PSD(s) in 25 folders
+2025-07-21 18:15:09,821 [DEBUG] Template folder 'Billy Strings': ['Billy-Strings-Poster-Template.psd']
+2025-07-21 18:15:09,821 [DEBUG] Template folder 'Daniel Donato': ['Daniel-Donato-Template.psd']
+2025-07-21 18:15:09,821 [DEBUG] Template folder 'Dead & Company': ['Dead-Co-Template.psd']
+2025-07-21 18:15:09,821 [DEBUG] Template folder 'Eggy': ['Eggy-Template2.psd']
+2025-07-21 18:15:09,821 [DEBUG] Template folder 'Generic': ['Generic - Copy - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy.psd', 'Generic - Copy - Copy.psd', 'Generic - Copy.psd', 'Generic.psd']
+2025-07-21 18:15:09,821 [DEBUG] Template folder 'Gov't Mule': ["Gov't-Mule.psd"]
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'Grateful Dead': ['Grateful-Dead-Template.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'Joe Russo's Almost Dead': ['Joe-Russo-Template.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'Karina Rykman': ['Karina-Rykman-Template.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'Khruangbin': ['Khruangbin-Template.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'lamp': ['lamp-template.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'lespecial': ['lespecial.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'Mike Gordon Band': ['MGB-Template-With-TeamHood.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'moe': ['moe-template.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'Pearl Jam': ['Pearl-Jam.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'Phil Lesh & Friends': ['Phil-Lesh-Friends-Template.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'Phish': ['Phish.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'Pink Floyd': ['Pink-Floyd-Template.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'Squeaky Feet': ['Squeaky-Feet-template.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'String Cheese Incident': ['SCI-template.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'The Allman Brothers Band': ['The Allman Brothers Band.psd']
+2025-07-21 18:15:09,822 [DEBUG] Template folder 'Trey Anastasio': ['Trey-Anastasio-Template.psd']
+2025-07-21 18:15:09,823 [DEBUG] Template folder 'Trey Anastasio Band': ['TAB-Template.psd']
+2025-07-21 18:15:09,823 [DEBUG] Template folder 'Umphrey's McGee': ['Umphreys-Mcgee-template.psd']
+2025-07-21 18:15:09,823 [DEBUG] Template folder 'Widespread Panic': ['Widespread Panic - Copy.psd', 'Widespread Panic.psd']
+2025-07-21 18:15:09,823 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 18:15:09,865 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 18:15:09,889 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 18:15:09,889 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 18:15:09,889 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 18:15:09,924 [INFO] Reference metadata refreshed from text files.
+2025-07-21 18:15:10,029 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 18:15:10,029 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 18:15:11,770 [DEBUG] Template combobox selected: 'Billy Strings', current_mode=top, current_artist=None
+2025-07-21 18:15:13,424 [DEBUG] Template combobox selected: 'Billy-Strings-Poster-Template.psd', current_mode=psd, current_artist=Billy Strings
+2025-07-21 18:15:14,592 [DEBUG] Template combobox selected: '← Back', current_mode=psd, current_artist=Billy Strings
+2025-07-21 18:17:13,465 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 18:17:13,501 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 18:17:13,505 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 18:17:13,510 [INFO] Loaded 2 artist aliases.
+2025-07-21 18:17:13,510 [DEBUG] Found 1 PSD(s) in folder 'Billy Strings'
+2025-07-21 18:17:13,511 [DEBUG] Found 1 PSD(s) in folder 'Daniel Donato'
+2025-07-21 18:17:13,511 [DEBUG] Found 1 PSD(s) in folder 'Dead & Company'
+2025-07-21 18:17:13,511 [DEBUG] Found 1 PSD(s) in folder 'Eggy'
+2025-07-21 18:17:13,511 [DEBUG] Found 6 PSD(s) in folder 'Generic'
+2025-07-21 18:17:13,511 [DEBUG] Found 1 PSD(s) in folder 'Gov't Mule'
+2025-07-21 18:17:13,511 [DEBUG] Found 1 PSD(s) in folder 'Grateful Dead'
+2025-07-21 18:17:13,511 [DEBUG] Found 1 PSD(s) in folder 'Joe Russo's Almost Dead'
+2025-07-21 18:17:13,512 [DEBUG] Found 1 PSD(s) in folder 'Karina Rykman'
+2025-07-21 18:17:13,512 [DEBUG] Found 1 PSD(s) in folder 'Khruangbin'
+2025-07-21 18:17:13,512 [DEBUG] Found 1 PSD(s) in folder 'lamp'
+2025-07-21 18:17:13,512 [DEBUG] Found 1 PSD(s) in folder 'lespecial'
+2025-07-21 18:17:13,512 [DEBUG] Found 1 PSD(s) in folder 'Mike Gordon Band'
+2025-07-21 18:17:13,512 [DEBUG] Found 1 PSD(s) in folder 'moe'
+2025-07-21 18:17:13,512 [DEBUG] Found 1 PSD(s) in folder 'Pearl Jam'
+2025-07-21 18:17:13,512 [DEBUG] Found 1 PSD(s) in folder 'Phil Lesh & Friends'
+2025-07-21 18:17:13,513 [DEBUG] Found 1 PSD(s) in folder 'Phish'
+2025-07-21 18:17:13,513 [DEBUG] Found 1 PSD(s) in folder 'Pink Floyd'
+2025-07-21 18:17:13,513 [DEBUG] Found 1 PSD(s) in folder 'Squeaky Feet'
+2025-07-21 18:17:13,513 [DEBUG] Found 1 PSD(s) in folder 'String Cheese Incident'
+2025-07-21 18:17:13,513 [DEBUG] Found 1 PSD(s) in folder 'The Allman Brothers Band'
+2025-07-21 18:17:13,513 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio'
+2025-07-21 18:17:13,513 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio Band'
+2025-07-21 18:17:13,513 [DEBUG] Found 1 PSD(s) in folder 'Umphrey's McGee'
+2025-07-21 18:17:13,514 [DEBUG] Found 2 PSD(s) in folder 'Widespread Panic'
+2025-07-21 18:17:13,514 [INFO] Template scan complete: 31 PSD(s) in 25 folders
+2025-07-21 18:17:13,514 [DEBUG] Template folder 'Billy Strings': ['Billy-Strings-Poster-Template.psd']
+2025-07-21 18:17:13,514 [DEBUG] Template folder 'Daniel Donato': ['Daniel-Donato-Template.psd']
+2025-07-21 18:17:13,514 [DEBUG] Template folder 'Dead & Company': ['Dead-Co-Template.psd']
+2025-07-21 18:17:13,514 [DEBUG] Template folder 'Eggy': ['Eggy-Template2.psd']
+2025-07-21 18:17:13,514 [DEBUG] Template folder 'Generic': ['Generic - Copy - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy.psd', 'Generic - Copy - Copy.psd', 'Generic - Copy.psd', 'Generic.psd']
+2025-07-21 18:17:13,514 [DEBUG] Template folder 'Gov't Mule': ["Gov't-Mule.psd"]
+2025-07-21 18:17:13,514 [DEBUG] Template folder 'Grateful Dead': ['Grateful-Dead-Template.psd']
+2025-07-21 18:17:13,514 [DEBUG] Template folder 'Joe Russo's Almost Dead': ['Joe-Russo-Template.psd']
+2025-07-21 18:17:13,514 [DEBUG] Template folder 'Karina Rykman': ['Karina-Rykman-Template.psd']
+2025-07-21 18:17:13,514 [DEBUG] Template folder 'Khruangbin': ['Khruangbin-Template.psd']
+2025-07-21 18:17:13,514 [DEBUG] Template folder 'lamp': ['lamp-template.psd']
+2025-07-21 18:17:13,514 [DEBUG] Template folder 'lespecial': ['lespecial.psd']
+2025-07-21 18:17:13,515 [DEBUG] Template folder 'Mike Gordon Band': ['MGB-Template-With-TeamHood.psd']
+2025-07-21 18:17:13,515 [DEBUG] Template folder 'moe': ['moe-template.psd']
+2025-07-21 18:17:13,515 [DEBUG] Template folder 'Pearl Jam': ['Pearl-Jam.psd']
+2025-07-21 18:17:13,515 [DEBUG] Template folder 'Phil Lesh & Friends': ['Phil-Lesh-Friends-Template.psd']
+2025-07-21 18:17:13,515 [DEBUG] Template folder 'Phish': ['Phish.psd']
+2025-07-21 18:17:13,515 [DEBUG] Template folder 'Pink Floyd': ['Pink-Floyd-Template.psd']
+2025-07-21 18:17:13,515 [DEBUG] Template folder 'Squeaky Feet': ['Squeaky-Feet-template.psd']
+2025-07-21 18:17:13,515 [DEBUG] Template folder 'String Cheese Incident': ['SCI-template.psd']
+2025-07-21 18:17:13,515 [DEBUG] Template folder 'The Allman Brothers Band': ['The Allman Brothers Band.psd']
+2025-07-21 18:17:13,515 [DEBUG] Template folder 'Trey Anastasio': ['Trey-Anastasio-Template.psd']
+2025-07-21 18:17:13,515 [DEBUG] Template folder 'Trey Anastasio Band': ['TAB-Template.psd']
+2025-07-21 18:17:13,515 [DEBUG] Template folder 'Umphrey's McGee': ['Umphreys-Mcgee-template.psd']
+2025-07-21 18:17:13,515 [DEBUG] Template folder 'Widespread Panic': ['Widespread Panic - Copy.psd', 'Widespread Panic.psd']
+2025-07-21 18:17:13,516 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 18:17:13,561 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 18:17:13,584 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 18:17:13,584 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 18:17:13,585 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 18:17:13,618 [INFO] Reference metadata refreshed from text files.
+2025-07-21 18:17:13,722 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 18:17:13,723 [INFO] Pane width: 1600, restoring sash pos: None
+2025-07-21 18:20:39,074 [DEBUG] Loaded 238 entries from Artists.txt
+2025-07-21 18:20:39,110 [DEBUG] Loaded 29857 entries from Cities.txt
+2025-07-21 18:20:39,114 [DEBUG] Loaded 2275 entries from Venues.txt
+2025-07-21 18:20:39,119 [INFO] Loaded 2 artist aliases.
+2025-07-21 18:20:39,119 [DEBUG] Found 1 PSD(s) in folder 'Billy Strings'
+2025-07-21 18:20:39,120 [DEBUG] Found 1 PSD(s) in folder 'Daniel Donato'
+2025-07-21 18:20:39,120 [DEBUG] Found 1 PSD(s) in folder 'Dead & Company'
+2025-07-21 18:20:39,120 [DEBUG] Found 1 PSD(s) in folder 'Eggy'
+2025-07-21 18:20:39,120 [DEBUG] Found 6 PSD(s) in folder 'Generic'
+2025-07-21 18:20:39,120 [DEBUG] Found 1 PSD(s) in folder 'Gov't Mule'
+2025-07-21 18:20:39,120 [DEBUG] Found 1 PSD(s) in folder 'Grateful Dead'
+2025-07-21 18:20:39,120 [DEBUG] Found 1 PSD(s) in folder 'Joe Russo's Almost Dead'
+2025-07-21 18:20:39,121 [DEBUG] Found 1 PSD(s) in folder 'Karina Rykman'
+2025-07-21 18:20:39,121 [DEBUG] Found 1 PSD(s) in folder 'Khruangbin'
+2025-07-21 18:20:39,121 [DEBUG] Found 1 PSD(s) in folder 'lamp'
+2025-07-21 18:20:39,121 [DEBUG] Found 1 PSD(s) in folder 'lespecial'
+2025-07-21 18:20:39,121 [DEBUG] Found 1 PSD(s) in folder 'Mike Gordon Band'
+2025-07-21 18:20:39,121 [DEBUG] Found 1 PSD(s) in folder 'moe'
+2025-07-21 18:20:39,121 [DEBUG] Found 1 PSD(s) in folder 'Pearl Jam'
+2025-07-21 18:20:39,121 [DEBUG] Found 1 PSD(s) in folder 'Phil Lesh & Friends'
+2025-07-21 18:20:39,121 [DEBUG] Found 1 PSD(s) in folder 'Phish'
+2025-07-21 18:20:39,122 [DEBUG] Found 1 PSD(s) in folder 'Pink Floyd'
+2025-07-21 18:20:39,122 [DEBUG] Found 1 PSD(s) in folder 'Squeaky Feet'
+2025-07-21 18:20:39,122 [DEBUG] Found 1 PSD(s) in folder 'String Cheese Incident'
+2025-07-21 18:20:39,122 [DEBUG] Found 1 PSD(s) in folder 'The Allman Brothers Band'
+2025-07-21 18:20:39,122 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio'
+2025-07-21 18:20:39,122 [DEBUG] Found 1 PSD(s) in folder 'Trey Anastasio Band'
+2025-07-21 18:20:39,122 [DEBUG] Found 1 PSD(s) in folder 'Umphrey's McGee'
+2025-07-21 18:20:39,122 [DEBUG] Found 2 PSD(s) in folder 'Widespread Panic'
+2025-07-21 18:20:39,122 [INFO] Template scan complete: 31 PSD(s) in 25 folders
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Billy Strings': ['Billy-Strings-Poster-Template.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Daniel Donato': ['Daniel-Donato-Template.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Dead & Company': ['Dead-Co-Template.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Eggy': ['Eggy-Template2.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Generic': ['Generic - Copy - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy - Copy.psd', 'Generic - Copy - Copy - Copy.psd', 'Generic - Copy - Copy.psd', 'Generic - Copy.psd', 'Generic.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Gov't Mule': ["Gov't-Mule.psd"]
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Grateful Dead': ['Grateful-Dead-Template.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Joe Russo's Almost Dead': ['Joe-Russo-Template.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Karina Rykman': ['Karina-Rykman-Template.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Khruangbin': ['Khruangbin-Template.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'lamp': ['lamp-template.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'lespecial': ['lespecial.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Mike Gordon Band': ['MGB-Template-With-TeamHood.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'moe': ['moe-template.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Pearl Jam': ['Pearl-Jam.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Phil Lesh & Friends': ['Phil-Lesh-Friends-Template.psd']
+2025-07-21 18:20:39,123 [DEBUG] Template folder 'Phish': ['Phish.psd']
+2025-07-21 18:20:39,124 [DEBUG] Template folder 'Pink Floyd': ['Pink-Floyd-Template.psd']
+2025-07-21 18:20:39,124 [DEBUG] Template folder 'Squeaky Feet': ['Squeaky-Feet-template.psd']
+2025-07-21 18:20:39,124 [DEBUG] Template folder 'String Cheese Incident': ['SCI-template.psd']
+2025-07-21 18:20:39,124 [DEBUG] Template folder 'The Allman Brothers Band': ['The Allman Brothers Band.psd']
+2025-07-21 18:20:39,124 [DEBUG] Template folder 'Trey Anastasio': ['Trey-Anastasio-Template.psd']
+2025-07-21 18:20:39,124 [DEBUG] Template folder 'Trey Anastasio Band': ['TAB-Template.psd']
+2025-07-21 18:20:39,124 [DEBUG] Template folder 'Umphrey's McGee': ['Umphreys-Mcgee-template.psd']
+2025-07-21 18:20:39,124 [DEBUG] Template folder 'Widespread Panic': ['Widespread Panic - Copy.psd', 'Widespread Panic.psd']
+2025-07-21 18:20:39,124 [INFO] Naming scheme and output folder reset to default:
+  Folder scheme : %artist%/$year(date)
+  Filename scheme: %artist% - %date% - %venue% - %city% [%format%] [%additional%]
+  Output folder  : (Root)
+2025-07-21 18:20:39,165 [INFO] Photoshop path loaded from config: C:/Program Files/Adobe/Adobe Photoshop 2025/Photoshop.exe
+2025-07-21 18:20:39,188 [INFO] [DEBUG] Found theme file in config.ini: 'builtin:vista'
+2025-07-21 18:20:39,189 [ERROR] Failed to load theme builtin:vista: couldn't read file "S:\Projects\GitHub\VidForge\builtin:vista": no such file or directory
+2025-07-21 18:20:39,189 [INFO] [INFO] Activated saved theme: builtin:vista
+2025-07-21 18:20:39,222 [INFO] Reference metadata refreshed from text files.
+2025-07-21 18:20:39,325 [INFO] Pane width: 928, restoring sash pos: None
+2025-07-21 18:20:39,326 [INFO] Pane width: 1600, restoring sash pos: None

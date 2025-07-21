@@ -21,7 +21,6 @@ from gui.gui_builder import (
     save_dropdown_cache,
 )
 from gui.naming_editor import SchemeEditor
-from utils import theme_manager
 from utils.artist_aliases import load_artist_aliases, open_alias_editor, save_artist_aliases
 from utils.cache_manager import (
     cache_add_value,
@@ -48,14 +47,13 @@ from utils.queue_helpers import clear_queue, remove_selected, save_current
 from utils.queue_manager import process_queue, process_queue_with_ui
 from utils.ref_file_manager import load_reference_list
 from utils.template_manager import (
-    on_template_selected,
     scan_templates,
     update_template_dropdown,
 )
 from utils.text_utils import infer_from_name
 from utils.theme_manager import load_ttk_theme, remove_theme, restore_saved_theme, load_and_apply_theme
 from utils.tree_manager import fast_populate_tree as populate_tree
-from gui.template_dropdown import set_poster_controls_state  # <-- Add this import
+from gui.template_dropdown import set_poster_controls_state, on_template_selected  # <-- Add this import
 
 # ── ensure dirs ───────────────────────────────────────
 os.makedirs(CONFIG_DIR, exist_ok=True)

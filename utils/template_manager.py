@@ -159,41 +159,6 @@ def choose_psd(
     log.warning("No suitable PSD found (even Generic missing).")
     return None
 
-
-def on_template_selected(app, event=None):
-    """
-    Handle selection changes in the template combo box, supporting two-stage drilldown.
-
-    This function updates app._current_mode and app._current_artist,
-    updates the dropdown values accordingly, and resets selection as needed.
-    """
-    sel = app.v_template.get()
-    log.debug(f"Template combobox selected: '{sel}', current_mode={app._current_mode}, current_artist={app._current_artist}")
-
-    if app._current_mode == "top":
-        if sel in ("Default", "Random", ""):
-            # No drilldown, just update dropdown normally
-            update_template_dropdown(app)
-        else:
-            # User selected an artist folder → drill down to PSDs
-            app._current_artist = sel
-            app._current_mode = "psd"
-            update_template_dropdown(app)
-            # Reset selection to Random when drilling down
-            app.v_template.set("Random")
-
-    elif app._current_mode == "psd":
-        if sel == "← Back":
-            # Go back to top-level artist folder selection
-            app._current_mode = "top"
-            app._current_artist = None
-            update_template_dropdown(app)
-            app.v_template.set("Default")
-        else:
-            # Selecting a PSD or Random within the artist folder
-            # No UI change needed here, just accept the selection
-            pass
-
 def _load_template_from_path(app, path):
     """Load template from given path."""
     app._log(f"Loading template from: {path}")

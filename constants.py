@@ -32,6 +32,10 @@ ICON_PATH  = ASSETS_DIR / "TagForge.ico"
 CACHE_FILE = CONFIG_DIR / 'cache.json'
 CACHE_DROPDOWN_FILE = CONFIG_DIR / 'dropdown_cache.json'
 
+DEFAULT_FOLDER_SCHEME = "%artist%/$year(date)/%filename%"
+DEFAULT_FILENAME_SCHEME = "%artist% - %date% - %venue% - %city% [%format%] [%additional%]"
+
+
 # ── Text Files ──────────────────────────────────────────────────────
 TXT_FILES = ["Artists.txt", "Cities.txt", "Venues.txt"]
 

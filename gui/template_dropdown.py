@@ -77,8 +77,81 @@ def _row(parent, lbl, var, r, col=0):
     cb.grid(row=r, column=col+1, sticky="w", padx=4)
     return cb
 
+def on_template_selected(app, event=None):
+    sel = app.v_template.get()
+    root = Path(ASSETS_DIR) / "Photoshop Templates"
+
+    if app.tpl_stage == "folders":
+        if sel == "Random":
+            artist = app.v_artist.get()
+            folder = artist if (root / artist).is_dir() else "Generic"
+            psds = list((root / folder).glob("*.psd"))
+            if not psds:
+                psds = list((root / "Generic").glob("*.psd"))
+                folder = "Generic"
+            if psds:
+                chosen = random.choice(psds)
+                _load_template_from_path(app, str(chosen))
+                app._log(f"Template selected → {chosen.name}")
+            else:
+                app._log("⚠️ No PSDs found to randomize.")
+            return
+        elif sel == "Default":
+            artist = app.v_artist.get()
+            psd = root / (artist if (root / artist).is_dir() else "Generic") / f"{artist}.psd"
+            if not psd.is_file():
+                psd = root / "Generic" / "Generic.psd"
+            _load_template_from_path(app, str(psd))
+            app._log(f"Template selected → {psd.name}")
+            return
+        else:
+            app.tpl_artist = sel
+            app.tpl_stage = "psds"
+            psds = app.tpl_map.get(sel, [])
+            app.cb_template["values"] = ["← Back", "Random"] + psds
+            app.v_template.set("")
+            app.after(10, lambda: app.cb_template.event_generate("<Button-1>"))
+    else:  # PSD selection stage
+        if sel == "← Back":
+            app.cb_template["values"] = ["Default", "Random"] + sorted(app.tpl_map.keys(), key=str.casefold)
+            app.v_template.set("Default")
+            app.tpl_stage = "folders"
+            app.tpl_artist = None
+            app.after(10, lambda: app.cb_template.event_generate("<Button-1>"))
+        elif sel == "Random":
+            psds = app.tpl_map.get(app.tpl_artist, [])
+            if psds:
+                chosen = random.choice(psds)
+                path = root / app.tpl_artist / chosen
+                _load_template_from_path(app, str(path))
+                app._log(f"Template selected → {chosen}")
+            else:
+                app._log("⚠️ No PSDs found to randomize.")
+        else:
+            path = root / app.tpl_artist / sel
+            if path.is_file():
+                _load_template_from_path(app, str(path))
+                app._log(f"Template selected → {sel}")
+            else:
+                app._log(f"⚠️ Template not found: {sel}")
+
+
+def update_template_state(app, *_):
+    app.cb_template.config(state="readonly" if app.v_make_poster.get() == "Yes" else "disabled")
+
+
+def on_artist_selected(app, event=None):
+    artist = app.v_artist.get()
+    psds = app.tpl_map.get(artist, [])
+    app.cb_template_psd['values'] = psds
+    if psds:
+        app.cb_template_psd.current(0)
+        app.v_template_psd.set(psds[0])
+    else:
+        app.cb_template_psd.set('')
+
+
 def build_template_dropdown(app, meta):
-    """Main UI builder for template dropdown and poster toggle."""
     app.v_template = tk.StringVar(value="Default")
     tk.Label(meta, text="Template:").grid(row=3, column=2, sticky="w")
     app.cb_template = ttk.Combobox(meta, textvariable=app.v_template, width=40, state="readonly")
@@ -98,31 +171,15 @@ def build_template_dropdown(app, meta):
     )
     app.cb_make_poster.pack(side="left")
 
-    def _on_template_selected(event=None):
-        # internal logic...
-        pass  # keep your on_template_selected() logic here
-
+    # Setup values and bind event handlers
     app.cb_template["values"] = ["Default", "Random"] + sorted(app.tpl_map.keys())
-    app.cb_template.bind("<<ComboboxSelected>>", _on_template_selected)
+    app.cb_template.bind("<<ComboboxSelected>>", lambda e=None: on_template_selected(app, e))
 
-    def _template_state(*_):
-        app.cb_template.config(state="readonly" if app.v_make_poster.get() == "Yes" else "disabled")
+    app.v_make_poster.trace_add("write", lambda *args: update_template_state(app))
+    update_template_state(app)  # initial state
 
-    app.v_make_poster.trace_add("write", _template_state)
-    _template_state()
-
-    # We assume app.cb_artist and app.v_artist exist (built by build_metadata)
-    def on_artist_selected(event=None):
-        artist = app.v_artist.get()
-        psds = app.tpl_map.get(artist, [])
-        app.cb_template_psd['values'] = psds
-        if psds:
-            app.cb_template_psd.current(0)
-            app.v_template_psd.set(psds[0])
-        else:
-            app.cb_template_psd.set('')
-
-    app.cb_artist.bind("<<ComboboxSelected>>", on_artist_selected)
+    # We assume app.cb_artist and app.v_artist exist (built elsewhere)
+    app.cb_artist.bind("<<ComboboxSelected>>", lambda e=None: on_artist_selected(app, e))
 
     app.v_venue = tk.StringVar()
     app.cb_venue = _row(meta, "Venue:", app.v_venue, 1)

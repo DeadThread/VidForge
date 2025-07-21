@@ -1,12 +1,8 @@
 {
   "Artists.txt": [
-    "<<<<<<< HEAD",
     "Billy Strings",
     "Phish",
-    "=======",
-    "Phish",
     "Umphrey's McGee",
-    ">>>>>>> caebc9973c4eac20499ef46e3893381975d2bd7f",
     "Steve Kimock",
     "String Cheese Incident",
     "Umphrey's McGee",
@@ -245,12 +241,9 @@
     "ZZ Top"
   ],
   "normalized_Artists.txt": {
-    "head": "<<<<<<< HEAD",
     "billystrings": "Billy Strings",
     "phish": "Phish",
-    "": "=======",
     "umphreysmcgee": "Umphrey's McGee",
-    "caebc9973c4eac20499ef46e3893381975d2bd7f": ">>>>>>> caebc9973c4eac20499ef46e3893381975d2bd7f",
     "stevekimock": "Steve Kimock",
     "stringcheeseincident": "String Cheese Incident",
     "dogsinapile": "Dogs In A Pile",
@@ -488,14 +481,11 @@
     "zztop": "ZZ Top"
   },
   "Cities.txt": [
-    "<<<<<<< HEAD",
     "Melbourne, Australia",
     "Philadelphia, PA",
     "Sydney, Australia",
     "Morrison, CO",
-    "=======",
     "Philadelphia, PA",
-    ">>>>>>> caebc9973c4eac20499ef46e3893381975d2bd7f",
     "Harrisburg, PA",
     "Belleayre Mountain, NY",
     "North Charleston, SC",
@@ -30358,13 +30348,10 @@
     "Zwolle, LA"
   ],
   "normalized_Cities.txt": {
-    "head": "<<<<<<< HEAD",
     "melbourneaustralia": "Melbourne, Australia",
     "philadelphiapa": "Philadelphia, PA",
     "sydneyaustralia": "Sydney, Australia",
     "morrisonco": "Morrison, CO",
-    "": "=======",
-    "caebc9973c4eac20499ef46e3893381975d2bd7f": ">>>>>>> caebc9973c4eac20499ef46e3893381975d2bd7f",
     "harrisburgpa": "Harrisburg, PA",
     "belleayremountainny": "Belleayre Mountain, NY",
     "northcharlestonsc": "North Charleston, SC",
@@ -60220,14 +60207,11 @@
     "zwollela": "Zwolle, LA"
   },
   "Venues.txt": [
-    "<<<<<<< HEAD",
     "Margaret Court Arena",
     "ICC Sydney Theatre",
     "The Mann",
-    "=======",
     "Mann Center",
     "XL Live",
-    ">>>>>>> caebc9973c4eac20499ef46e3893381975d2bd7f",
     "Sweetwater Music Hall",
     "Red Rocks Amphitheater",
     "XL Live",
@@ -62505,14 +62489,11 @@
     "Morockshow"
   ],
   "normalized_Venues.txt": {
-    "head": "<<<<<<< HEAD",
     "margaretcourtarena": "Margaret Court Arena",
     "iccsydneytheatre": "ICC Sydney Theatre",
     "themann": "The Mann",
-    "": "=======",
     "manncenter": "Mann Center",
     "xllive": "XL Live",
-    "caebc9973c4eac20499ef46e3893381975d2bd7f": ">>>>>>> caebc9973c4eac20499ef46e3893381975d2bd7f",
     "sweetwatermusichall": "Sweetwater Music Hall",
     "redrocksamphitheater": "Red Rocks Amphitheater",
     "mountainjam": "Mountain Jam",
