@@ -4,7 +4,7 @@ from typing import Dict, List, Optional
 import logging
 import random
 
-__all__ = ["scan_templates", "choose_psd", "update_template_dropdown"]
+__all__ = ["scan_templates", "choose_psd", "update_template_dropdown", "on_template_selected"]
 
 log = logging.getLogger("vidforge")
 
@@ -53,14 +53,13 @@ def update_template_dropdown(app):
     - Top-level entries: Default, Random, then Artist folders
     - If an artist folder is selected, show its PSD files with a '← Back' and 'Random' option
 
-    This function should respect app._current_mode and app._current_artist to
-    determine what to display.
+    Uses app._current_mode and app._current_artist to determine the view.
 
-    Assumes the following attributes exist on app:
+    Assumes the following exist on app:
     - tpl_map (dict[str, list[str]])
     - cb_template (ttk.Combobox)
     - v_template (tk.StringVar)
-    - _current_mode (str): either "top" or "psd"
+    - _current_mode (str): "top" or "psd"
     - _current_artist (str or None)
     """
     TOP = "top"
@@ -76,24 +75,23 @@ def update_template_dropdown(app):
         artist_folders = sorted(app.tpl_map.keys())
         values = ["Default", "Random"] + artist_folders
         app.cb_template["values"] = values
-        # Reset selection to "Default" if current selection invalid
+        # Reset selection if invalid
         if app.v_template.get() not in values:
             app.v_template.set("Default")
 
     elif app._current_mode == PSD and app._current_artist:
-        # PSD-level: '← Back', 'Random', then PSD files for current artist
+        # PSD-level: ← Back, Random, PSD files for selected artist
         psds = app.tpl_map.get(app._current_artist, [])
         values = ["← Back", "Random"] + psds
         app.cb_template["values"] = values
-        # Reset selection if needed
         if app.v_template.get() not in values:
             app.v_template.set("Random")
 
     else:
-        # Fallback: show top-level
+        # Fallback: reset to top-level
         app._current_mode = TOP
         app._current_artist = None
-        update_template_dropdown(app)  # recursive call with corrected state
+        update_template_dropdown(app)  # recursive call to set correctly
 
 
 def _normalize(s: str) -> str:
@@ -108,13 +106,15 @@ def choose_psd(
     templates_root: str,
     generic_key: str = "Generic",
 ) -> Optional[str]:
-    """Return the *absolute* PSD path to use, or None → skip."""
+    """
+    Return the *absolute* PSD path to use, or None to skip.
+    """
 
     norm_artist = _normalize(poster_artist)
     log.debug(f"choose_psd called with poster_artist={poster_artist} (normalized={norm_artist})")
     log.debug(f"Available template folders: {list(tpl_map.keys())}")
 
-    # Explicitly chosen PSD file (not Default or Random)
+    # If the user selected an explicit PSD filename (not Default, Random, or ← Back)
     if template_sel not in ("Default", "Random", "← Back"):
         folder = template_folder or poster_artist
         candidate = os.path.join(templates_root, folder, template_sel)
@@ -125,14 +125,13 @@ def choose_psd(
 
     # Random selection
     if template_sel == "Random":
-        # If template_folder set and exists, pick from there
         folder_to_use = template_folder or generic_key
         if folder_to_use in tpl_map and tpl_map[folder_to_use]:
             chosen_psd = random.choice(tpl_map[folder_to_use])
             log.debug(f"Randomly picked PSD '{chosen_psd}' from folder '{folder_to_use}'")
             return os.path.join(templates_root, folder_to_use, chosen_psd)
         else:
-            # Fallback to generic_key
+            # fallback to generic_key
             if generic_key in tpl_map and tpl_map[generic_key]:
                 chosen_psd = random.choice(tpl_map[generic_key])
                 log.debug(f"Fallback random pick PSD '{chosen_psd}' from '{generic_key}'")
@@ -140,7 +139,7 @@ def choose_psd(
             log.warning("No templates available for random selection.")
             return None
 
-    # Default selection: try to auto-match artist folder
+    # Default selection: try to match artist folder by normalized name
     for artist_folder in tpl_map:
         if artist_folder == generic_key:
             continue
@@ -150,7 +149,7 @@ def choose_psd(
             log.debug(f"Matched artist folder '{artist_folder}' with PSD '{psd}'")
             return os.path.join(templates_root, artist_folder, psd)
 
-    # Fall back to Generic
+    # Fall back to Generic if no match found
     if generic_key in tpl_map and tpl_map[generic_key]:
         psd = tpl_map[generic_key][0]
         log.debug(f"No artist match found, falling back to generic PSD '{psd}'")
@@ -158,3 +157,43 @@ def choose_psd(
 
     log.warning("No suitable PSD found (even Generic missing).")
     return None
+
+
+def on_template_selected(app, event=None):
+    """
+    Handle selection changes in the template combo box, supporting two-stage drilldown.
+
+    This function updates app._current_mode and app._current_artist,
+    updates the dropdown values accordingly, and resets selection as needed.
+    """
+    sel = app.v_template.get()
+    log.debug(f"Template combobox selected: '{sel}', current_mode={app._current_mode}, current_artist={app._current_artist}")
+
+    if app._current_mode == "top":
+        if sel in ("Default", "Random", ""):
+            # No drilldown, just update dropdown normally
+            update_template_dropdown(app)
+        else:
+            # User selected an artist folder → drill down to PSDs
+            app._current_artist = sel
+            app._current_mode = "psd"
+            update_template_dropdown(app)
+            # Reset selection to Random when drilling down
+            app.v_template.set("Random")
+
+    elif app._current_mode == "psd":
+        if sel == "← Back":
+            # Go back to top-level artist folder selection
+            app._current_mode = "top"
+            app._current_artist = None
+            update_template_dropdown(app)
+            app.v_template.set("Default")
+        else:
+            # Selecting a PSD or Random within the artist folder
+            # No UI change needed here, just accept the selection
+            pass
+
+def _load_template_from_path(app, path):
+    """Load template from given path."""
+    app._log(f"Loading template from: {path}")
+    # TODO: Implement actual loading of the PSD template

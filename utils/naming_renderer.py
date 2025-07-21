@@ -25,3 +25,24 @@ def render_scheme(scheme: str, meta: dict[str, str]) -> str:
         return str(year)
 
     return _TOKEN_RE.sub(_sub, scheme)
+
+
+def build_proposed_name(meta: dict[str, str], scheme: str) -> str:
+    """Old-style replacement using fixed tokens, fallback if no scheme tokens used."""
+    year, month, day = meta.get("year", ""), meta.get("month", ""), meta.get("day", "")
+    date_str = f"{year}-{month.zfill(2)}-{day.zfill(2)}" if (year and month and day) else ""
+
+    name = scheme
+    name = name.replace("ARTIST", meta.get("artist", ""))
+    name = name.replace("VENUE",  meta.get("venue",  ""))
+    name = name.replace("DATE",   date_str)
+    name = name.replace("CITY",   meta.get("city",   ""))
+    name = name.replace("[FORMAT]",     f"[{meta.get('format','')}]"     if meta.get("format")     else "")
+    name = name.replace("[ADDITIONAL]", f"[{meta.get('additional','')}]" if meta.get("additional") else "")
+    name = " ".join(name.split()).strip()
+
+    for sep in (" - ", "--", "- -"):
+        if name.startswith(sep): name = name[len(sep):]
+        if name.endswith(sep):   name = name[:-len(sep)]
+
+    return name

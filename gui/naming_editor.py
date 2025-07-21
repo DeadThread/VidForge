@@ -8,215 +8,10 @@ import os, sys, subprocess, re, datetime, tkinter as tk
 from tkinter import ttk, font, messagebox
 import json
 from utils.logger_setup import logger
+from utils.evaluator import Evaluator
+from constants import TOKENS, SAMPLE_META
 
-# ── default preview data (used when the calling app has no live meta) ──
-SAMPLE_META = {
-    "artist":     "Phish",
-    "date":       "2025-06-20",
-    "venue":      "SNHU Arena",
-    "city":       "Manchester, NH",
-    "format":     "2160p WEBRIP",
-    "additional": "SBD",
-    # no output_folder here → we’ll fall back to the root_path argument
-}
-
-# ── recognised tokens (just for the list on the left) ──
-TOKENS = [
-    "%artist%", "%date%", "%venue%", "%city%", "%format%", "%additional%",
-    "%filename%", "%formatN%", "%formatN2%", "%additionalN%", "%additionalN2%",
-    "$upper(text)", "$lower(text)", "$title(text)", "$substr(text,start[,end])",
-    "$left(text,n)", "$right(text,n)", "$replace(text,search,replace)",
-    "$len(text)", "$pad(text,n,ch)", "$add(x,y)", "$sub(x,y)", "$mul(x,y)",
-    "$div(x,y)", "$eq(x,y)", "$lt(x,y)", "$gt(x,y)", "$and(x,y,…)",
-    "$or(x,y,…)", "$not(x)", "$datetime()", "$year(date)", "$month(date)",
-    "$day(date)", "$if(cond,T,F)", "$if2(v1,v2,…,fallback)",
-]
-
-# ════════════════════════════════════════════════════════════════════════
-#                               evaluator
-# ════════════════════════════════════════════════════════════════════════
-class _Evaluator:
-    """Evaluator for live preview with token & function support."""
-
-    FUNC_RE = re.compile(r"\$(\w+)\(([^)]*)\)")
-
-    def __init__(self, meta: dict[str, str]):
-        self.meta = meta
-
-    def _list_token(self, base: str, all_: list[str], idx: int | None = None) -> str:
-        if idx is None:
-            return " ".join(all_)
-        if 0 <= idx < len(all_):
-            return all_[idx]
-        return ""
-
-    def _eval_func(self, match: re.Match) -> str:
-        func = match.group(1).lower()
-        args_raw = match.group(2)
-        args = self._split_args(args_raw)
-
-        def resolve(arg: str) -> str:
-            arg = arg.strip()
-            if arg.startswith("%") and arg.endswith("%"):
-                return self.meta.get(arg[1:-1], "")
-            if arg in self.meta:
-                return self.meta.get(arg, "")
-            return arg
-
-        # ── string helpers ───────────────────────────────────────────
-        if func == "upper"  and len(args) == 1: return resolve(args[0]).upper()
-        if func == "lower"  and len(args) == 1: return resolve(args[0]).lower()
-        if func == "title"  and len(args) == 1: return resolve(args[0]).title()
-        if func == "len"    and len(args) == 1: return str(len(resolve(args[0])))
-
-        if func == "substr" and 2 <= len(args) <= 3:
-            txt = resolve(args[0]); start = int(args[1]); end = int(args[2]) if len(args)==3 else None
-            return txt[start:end]
-
-        if func == "left"   and len(args) == 2: return resolve(args[0])[:int(args[1])]
-        if func == "right"  and len(args) == 2: return resolve(args[0])[-int(args[1]):]
-
-        if func == "replace" and len(args) == 3:
-            return resolve(args[0]).replace(args[1], args[2])
-
-        if func == "pad" and len(args) >= 2:
-            txt, n   = resolve(args[0]), int(args[1])
-            ch       = args[2] if len(args) == 3 else " "
-            return txt.ljust(n, ch)
-
-        # ── date/time helpers ────────────────────────────────────────
-        if func == "datetime" and len(args) == 0:
-            return datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-
-        if func in ("year", "month", "day") and len(args) == 1:
-            val = resolve(args[0])
-            try:
-                dt = datetime.datetime.strptime(val, "%Y-%m-%d")
-                return {
-                    "year":  str(dt.year),
-                    "month": f"{dt.month:02d}",
-                    "day":   f"{dt.day:02d}"
-                }[func]
-            except Exception:
-                return ""
-
-        # ── math helpers (treat empty/non‑numeric as 0) ──────────────
-        def num(a): 
-            try:  return float(resolve(a))
-            except ValueError: return 0.0
-
-        if func == "add" and len(args)==2: return str(num(args[0]) + num(args[1]))
-        if func == "sub" and len(args)==2: return str(num(args[0]) - num(args[1]))
-        if func == "mul" and len(args)==2: return str(num(args[0]) * num(args[1]))
-        if func == "div" and len(args)==2:
-            denom = num(args[1])
-            return "∞" if denom == 0 else str(num(args[0]) / denom)
-
-        # ── comparisons / logic (truthy = non‑empty & not "0") ──────
-        def truth(a): return bool(resolve(a)) and resolve(a) != "0"
-
-        if func == "eq"  and len(args)==2: return str(resolve(args[0]) == resolve(args[1]))
-        if func == "lt"  and len(args)==2: return str(num(args[0]) <  num(args[1]))
-        if func == "gt"  and len(args)==2: return str(num(args[0]) >  num(args[1]))
-
-        if func == "and": return str(all(truth(a) for a in args))
-        if func == "or":  return str(any(truth(a) for a in args))
-        if func == "not" and len(args)==1: return str(not truth(args[0]))
-
-        # ── conditional helpers ─────────────────────────────────────
-        if func == "if" and len(args)==3:
-            return resolve(args[1]) if truth(args[0]) else resolve(args[2])
-
-        if func == "if2" and len(args) >= 2:
-            *candidates, fallback = args
-            for cand in candidates:
-                val = resolve(cand)
-                if val: return val
-            return resolve(fallback)
-
-        # unknown function → leave as‑is
-        return match.group(0)
-
-    def _split_args(self, s: str) -> list[str]:
-        parts = []
-        current = []
-        in_quotes = False
-        quote_char = None
-        for c in s:
-            if c in ('"', "'"):
-                if in_quotes:
-                    if c == quote_char:
-                        in_quotes = False
-                        quote_char = None
-                    else:
-                        current.append(c)
-                else:
-                    in_quotes = True
-                    quote_char = c
-            elif c == ',' and not in_quotes:
-                part = "".join(current).strip()
-                if part.startswith(("'", '"')) and part.endswith(("'", '"')):
-                    part = part[1:-1]
-                parts.append(part)
-                current = []
-            else:
-                current.append(c)
-        if current:
-            part = "".join(current).strip()
-            if part.startswith(("'", '"')) and part.endswith(("'", '"')):
-                part = part[1:-1]
-            parts.append(part)
-        return parts
-
-    def eval(self, text: str) -> str:
-        res = text
-
-        # Handle %formatN#% tokens and %format%
-        fmts = [f.strip() for f in self.meta.get("format", "").split(",") if f.strip()]
-        adds = [a.strip() for a in self.meta.get("additional", "").split(",") if a.strip()]
-
-        res = re.sub(
-            r"%formatN(\d+)%",
-            lambda m: self._list_token("formatN", fmts, int(m.group(1)) - 1),
-            res,
-        )
-        res = res.replace("%formatN%", ", ".join(fmts))
-        res = res.replace("%format%", fmts[0] if fmts else "")
-
-        res = re.sub(
-            r"%additionalN(\d+)%",
-            lambda m: self._list_token("additionalN", adds, int(m.group(1)) - 1),
-            res,
-        )
-        res = res.replace("%additionalN%", ", ".join(adds))
-        res = res.replace("%additional%", adds[0] if adds else "")
-
-        # Replace simple %token% except format/additional handled above
-        for k, v in self.meta.items():
-            if k in ("format", "additional"):
-                continue
-            res = res.replace(f"%{k}%", v)
-
-        # Recursively evaluate $func(...) tokens until no changes
-        prev = None
-        while prev != res:
-            prev = res
-            res = self.FUNC_RE.sub(self._eval_func, res)
-
-        return res
-
-# ════════════════════════════════════════════════════════════════════════
-#                             main widget
-# ════════════════════════════════════════════════════════════════════════
 class SchemeEditor(tk.Toplevel):
-    """
-    SchemeEditor(master,
-                 root_path=app.output_dir.get(),
-                 get_live_metadata=lambda: {...},
-                 initial_scheme="...",
-                 on_save=callable)
-    """
-
     def __init__(self, master=None, *, root_path: str = "(Root)",
                  get_live_metadata=None, initial_scheme=None, on_save=None):
         super().__init__(master)
@@ -225,12 +20,13 @@ class SchemeEditor(tk.Toplevel):
         self.minsize(720, 420)
 
         self._root_path = root_path or "(Root)"
-        self._get_meta = get_live_metadata or (lambda: SAMPLE_META)
+        self._get_meta = get_live_metadata  # Now accepts 'app'
         self._on_save = on_save
 
         self._build_gui()
         self._load_initial(initial_scheme)
         self._refresh_preview()  # first paint
+
 
     # ───────────────────────────────────────── UI
     def _build_gui(self):
@@ -374,39 +170,60 @@ class SchemeEditor(tk.Toplevel):
         self._refresh_preview()
 
     # ───────────────────────────────────────── preview
+
     def _refresh_preview(self):
+        """Refresh the preview of the naming scheme."""
         print("Refreshing preview...")
-        meta = self._get_meta() or {}
-        folder_scheme = self.txt_folder.get("1.0", "end-1c")
-        file_scheme = self.txt_file.get("1.0", "end-1c")
-        print(f"Folder scheme: {folder_scheme}")
-        print(f"File scheme: {file_scheme}")
-        
-        ev = _Evaluator(meta)
-        evaluated_file = ev.eval(file_scheme)
-        
-        meta_with_filename = meta.copy()
-        meta_with_filename["filename"] = evaluated_file
-        ev2 = _Evaluator(meta_with_filename)
-        evaluated_folder = ev2.eval(folder_scheme)
 
-        is_abs_path = os.path.isabs(evaluated_folder) or re.match(r"^[a-zA-Z]:[\\/]", evaluated_folder)
-        if is_abs_path:
-            preview_path = os.path.join(evaluated_folder, evaluated_file)
-        else:
-            root_folder = meta.get("output_folder") or self._root_path or "(Root)"
-            preview_path = os.path.join(root_folder, evaluated_folder, evaluated_file)
+        try:
+            # Ensure SAMPLE_META is merged with live metadata from self._get_meta()
+            meta = self._get_meta() or SAMPLE_META.copy()  # Use SAMPLE_META if _get_meta returns None
 
-        # Fix mixed slashes here:
-        preview_path = os.path.normpath(preview_path)
+            # Get folder and file schemes from text widgets
+            folder_scheme = self.txt_folder.get("1.0", "end-1c")
+            file_scheme = self.txt_file.get("1.0", "end-1c")
 
-        if len(preview_path) > 400:
-            preview_path = preview_path[:397] + "…"
+            print(f"Folder scheme: {folder_scheme}")
+            print(f"File scheme: {file_scheme}")
 
-        self.txt_prev.config(state="normal")
-        self.txt_prev.delete("1.0", "end")
-        self.txt_prev.insert("1.0", preview_path)
-        self.txt_prev.config(state="disabled")
+            # Create Evaluator instance for file scheme
+            ev = Evaluator(meta)
+            evaluated_file = ev.eval(file_scheme)
+
+            # Add filename to the metadata and create a new Evaluator for folder scheme
+            meta_with_filename = meta.copy()
+            meta_with_filename["filename"] = evaluated_file
+            ev2 = Evaluator(meta_with_filename)
+            evaluated_folder = ev2.eval(folder_scheme)
+
+            # Check if the evaluated folder path is an absolute path
+            is_abs_path = os.path.isabs(evaluated_folder) or re.match(r"^[a-zA-Z]:[\\/]", evaluated_folder)
+
+            if is_abs_path:
+                preview_path = os.path.join(evaluated_folder, evaluated_file)
+            else:
+                root_folder = meta.get("output_folder") or self._root_path or "(Root)"
+                preview_path = os.path.join(root_folder, evaluated_folder, evaluated_file)
+
+            # Normalize the path to fix mixed slashes
+            preview_path = os.path.normpath(preview_path)
+
+            # Truncate the preview path if it's too long
+            if len(preview_path) > 400:
+                preview_path = preview_path[:397] + "…"
+
+            # Update the preview text widget with the generated path
+            self.txt_prev.config(state="normal")
+            self.txt_prev.delete("1.0", "end")
+            self.txt_prev.insert("1.0", preview_path)
+            self.txt_prev.config(state="disabled")
+
+        except Exception as e:
+            print(f"Error refreshing preview: {e}")
+            self.txt_prev.config(state="normal")
+            self.txt_prev.delete("1.0", "end")
+            self.txt_prev.insert("1.0", "Error generating preview.")
+            self.txt_prev.config(state="disabled")
 
     # ───────────────────────────────────────── buttons
     def _save(self):
@@ -441,12 +258,35 @@ class SchemeEditor(tk.Toplevel):
             messagebox.showerror("Error", f"Could not open README: {e}")
 
 
-# stand‑alone test
-if __name__ == "__main__":
-    root = tk.Tk()
-    root.withdraw()
-    SchemeEditor(root, root_path=r"C:\Videos\Finished").wait_window()
+# Updated `open_naming_editor_popup` function
+def open_naming_editor_popup(app):
+    """
+    Opens the Naming‑Scheme Editor modal, seeds it with live metadata,
+    and keeps the GUI log + config.ini in sync.
+    """
+    saved = get_naming_scheme_from_config(app) or {
+        "folder": "%artist%/$year(date)",
+        "filename": "%artist% - %date% - %venue% - %city% [%format%] [%additional%]",
+    }
+
+    init_root = (
+        _extract_root(saved.get("folder", "")) or
+        _clean_root(app.output_dir.get() or "(Root)") or
+        "(Root)"
+    )
+
+    # Pass the correct metadata retrieval lambda
+    editor = SchemeEditor(
+        master=app,
+        root_path=init_root,
+        get_live_metadata=lambda: app._get_live_metadata(),  # Pass the method correctly
+        initial_scheme=saved,
+        on_save=lambda new_scheme: save_naming_scheme(new_scheme, app),
+    )
+
+    editor.grab_set()
+    editor.focus_set()
+    app.wait_window(editor)
+    
 
 
-# outside the class
-NamingEditor = SchemeEditor

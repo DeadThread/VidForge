@@ -1,17 +1,23 @@
-# utils/cache_manager.py
 import json
 import os
 from typing import Any, Dict, List, Callable
 from utils.metadata_manager import normalize_name
-
-CONFIG_DIR = "config"
-ASSETS_DIR = "assets"
-CACHE_FILE = os.path.join(CONFIG_DIR, 'cache.json')
-TXT_FILES = ["Artists.txt", "Cities.txt", "Venues.txt"]
+from constants import ASSETS_DIR, CONFIG_DIR, CACHE_FILE, CACHE_DROPDOWN_FILE, TXT_FILES, FORMAT_LIST, ADDITIONAL_LIST  # Importing constants
 
 def _ensure_dirs() -> None:
     os.makedirs(CONFIG_DIR, exist_ok=True)
     os.makedirs(ASSETS_DIR, exist_ok=True)
+
+def initialize_dropdown_cache() -> dict:
+    """Initialize the dropdown cache from the JSON file under /config directory."""
+    if os.path.exists(CACHE_DROPDOWN_FILE):
+        try:
+            with open(CACHE_DROPDOWN_FILE, "r") as f:
+                data = json.load(f)
+                return data  # Return the loaded data
+        except Exception as e:
+            print(f"Error loading dropdown cache: {e}")
+    return {}  # Return an empty dict if the file doesn't exist
 
 def load_cache(log_func: Callable[[str], None] = print) -> Dict[str, Any]:
     _ensure_dirs()
@@ -78,12 +84,84 @@ def cache_add_value(cache: Dict[str, Any], key: str, value: str, max_len: int = 
     cache[key] = lst[:max_len]
     save_cache(cache, log_func=lambda *_: None)  # silent write
 
-def save_naming_scheme(scheme: str):
-    """Save the naming scheme to a file."""
+def save_naming_scheme(scheme: Dict[str, str]) -> None:
+    """Save the naming scheme dict to a file."""
     _ensure_dirs()
     try:
         with open(os.path.join(CONFIG_DIR, "naming_scheme.json"), 'w', encoding='utf-8') as f:
-            json.dump({"naming_scheme": scheme}, f, indent=2, ensure_ascii=False)
+            json.dump(scheme, f, indent=2, ensure_ascii=False)
         print(f"[DEBUG] Naming scheme saved: {scheme}")
     except Exception as e:
         print(f"[ERROR] Failed to save naming scheme: {e}")
+
+def load_naming_scheme() -> dict:
+    """Load the naming scheme dict from file."""
+    path = os.path.join(CONFIG_DIR, "naming_scheme.json")
+    if not os.path.isfile(path):
+        return {}
+    try:
+        with open(path, encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"[ERROR] Failed to load naming scheme: {e}")
+        return {}
+
+def load_dropdown_cache() -> dict:
+    """Load dropdown history cache from file."""
+    if not os.path.isfile(CACHE_DROPDOWN_FILE):
+        return {}
+    try:
+        with open(CACHE_DROPDOWN_FILE, encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+def save_dropdown_cache(format_history: List[str], add_history: List[str]) -> None:
+    """Save dropdown history cache to file."""
+    data = {
+        "format_history": format_history,
+        "add_history": add_history,
+    }
+    try:
+        with open(CACHE_DROPDOWN_FILE, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        print(f"[cache_manager] Failed to save dropdown cache: {e}")
+
+# Cached dropdown helpers
+cache                = load_cache()
+DEFAULT_FORMATS      = FORMAT_LIST
+DEFAULT_ADDITIONALS  = ADDITIONAL_LIST
+
+def load_format_values() -> list[str]:
+    cached = cache_get_list(cache, "Format")
+    merged = list(DEFAULT_FORMATS)
+    for fmt in cached:
+        if fmt not in merged:
+            merged.append(fmt)
+    return merged
+
+def load_additional_values() -> list[str]:
+    vals = cache_get_list(cache, "Additional")
+    return vals if vals else DEFAULT_ADDITIONALS
+
+def _load_template_from_path(app, path):
+    # Placeholder: implement loading logic here
+    app._log(f"Loading template from: {path}")
+    # TODO: implement actual loading of the PSD template
+
+def save_selected_files(app):
+    selected_ids = app.tree.selection()
+    if not selected_ids:
+        app._log("No files selected to add to the queue.")
+        return
+
+    for item_id in selected_ids:
+        file_path = app.tree.set(item_id, "filepath")
+        if not file_path:
+            continue
+        app.current_fp = file_path  # set current file context
+
+        # Import save_current inside the function to avoid circular import
+        from utils.queue_helpers import save_current
+        save_current(app)  # call your existing queue_helpers save_current()

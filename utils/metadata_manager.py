@@ -3,15 +3,17 @@
 # -------------------------------------------------------------
 from utils.ref_file_manager import normalize_name
 from constants import FORMAT_LIST, ADDITIONAL_LIST  # ADDITIONAL_LIST used
+import os
+import json
 
 # -------------------------------------------------------------
 def build_normalized_map(raw_list):
-    """Return {normalized: original} for quick‑ups."""
+    """Return {normalized: original} for quick lookups."""
     return {normalize_name(item): item for item in raw_list}
 
 # -------------------------------------------------------------
 def gather_meta(app):
-    """Collect current GUI‑entered metadata from the app widgets."""
+    """Collect current GUI-entered metadata from the app widgets."""
 
     def safe_int(value, min_val=None, max_val=None):
         try:
@@ -120,3 +122,135 @@ def clear_fields(app):
         v.set("")
     app.v_template.set("Default")
     app.tpl_stage, app.tpl_artist = "folders", None
+
+# -------------------------------------------------------------
+def reload_metadata(app):
+    """
+    Refresh metadata lists from text files in assets/
+    """
+    def read_txt_lines(filename):
+        try:
+            with open(os.path.join(app.assets_dir, filename), "r", encoding="utf-8") as f:
+                return [line.strip() for line in f if line.strip()]
+        except Exception as e:
+            app._log(f"Error reading {filename}: {e}")
+            return []
+
+    # 1. Re-read all metadata files
+    artist_list = read_txt_lines("Artists.txt")
+    city_list   = read_txt_lines("Cities.txt")
+    venue_list  = read_txt_lines("Venues.txt")
+
+    # 2. Update internal dictionaries
+    app.artist = {normalize_name(a): a for a in artist_list}
+    app.city   = {normalize_name(c): c for c in city_list}
+    app.venue  = {normalize_name(v): v for v in venue_list}
+
+    # 4. Update dropdowns
+    app.cb_artist["values"] = artist_list
+    app.cb_city["values"]   = city_list
+    app.cb_venue["values"]  = venue_list
+
+    # 5. Clear invalid selections
+    if app.v_artist.get() not in artist_list:
+        app.v_artist.set("")
+    if app.v_city.get() not in city_list:
+        app.v_city.set("")
+    if app.v_venue.get() not in venue_list:
+        app.v_venue.set("")
+
+    app._log("Reference metadata refreshed from text files.")
+
+# -------------------------------------------------------------
+def extract_root_folder(path_pattern: str) -> str:
+    """Extract root folder from a path pattern."""
+    # Normalize slashes for consistent splitting
+    normalized = path_pattern.replace("\\", "/")
+
+    token_pos = normalized.find("%")
+    if token_pos == -1:
+        # no tokens, whole path is root
+        return normalized.rstrip("/")
+
+    # Take substring before first token (literal path)
+    root = normalized[:token_pos].rstrip("/")
+    return root
+
+# -------------------------------------------------------------
+def replace_tokens_in_path(path_template: str, md: dict, artist: str, date: str) -> str:
+    """Replace tokens in the given path template with metadata."""
+    year = md.get("year", "") or (date[:4] if date else "")
+    month = md.get("month", "")
+    day = md.get("day", "")
+
+    date_tok = ""
+    if year and month and day:
+        date_tok = f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+    elif year and month:
+        date_tok = f"{year}-{month.zfill(2)}"
+    elif year:
+        date_tok = year
+
+    repl = {
+        "%artist%": artist,
+        "%year%": year,
+        "%date%": date_tok or date,
+        "%venue%": md.get("venue", ""),
+        "%city%": md.get("city", ""),
+        "%format%": md.get("format", ""),
+        "%additional%": md.get("additional", ""),
+    }
+    out = path_template
+    for token, val in repl.items():
+        out = out.replace(token, val)
+    return out
+
+def evaluate_output_folder(naming_scheme, output_dir, metadata):
+    folder_template = naming_scheme.get("folder", "")
+    if not folder_template:
+        return output_dir or os.getcwd()
+    folder_path = replace_tokens_in_path(folder_template, metadata, metadata.get("artist", ""), metadata.get("date", ""))
+    if os.path.isabs(folder_path):
+        return folder_path
+    else:
+        return os.path.normpath(os.path.join(output_dir, folder_path))
+
+def get_live_metadata(app) -> dict:
+    """Gather live metadata from the app fields with default values."""
+    artist  = app.v_artist.get()  or "Phish"
+    year    = app.v_year.get()    or "2025"
+    month   = app.v_month.get()   or "06"
+    day     = app.v_day.get()     or "20"
+    date    = f"{year}-{month}-{day}"  # Construct the date string
+    venue   = app.v_venue.get()   or "SNHU Arena"
+    city    = app.v_city.get()    or "Manchester, NH"
+    fmt     = app.v_format.get()  or "2160p"
+    addl    = app.v_add.get()     or "SBD"
+    raw_root = app.output_dir.get() or "(Root)"
+    
+    return {
+        "artist":     artist,
+        "date":       date,
+        "venue":      venue,
+        "city":       city,
+        "format":     fmt,
+        "additional": addl,
+        "output_folder": raw_root,  # Ensure this is passed as well
+    }
+
+def _clean_root(path: str) -> str:
+    """Clean up the root path."""
+    if path in {"(Root)", ""}:
+        return ""
+    return path.removeprefix("(Root)/")
+
+def _extract_root(pattern: str) -> str | None:
+    """Extract the root folder from a pattern."""
+    if not pattern:
+        return None
+    norm = pattern.replace("\\", "/")
+    cuts = [p for p in (norm.find("%"), norm.find("$")) if p >= 0]
+    root = norm[:min(cuts)] if cuts else norm
+    root = root.rstrip("/")
+    return root or None
+

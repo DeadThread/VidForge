@@ -15,6 +15,10 @@ from typing import Dict, Sequence, List, Any
 from utils.logger_setup import logger
 from utils.helpers import touch
 from utils.text_utils import extract_date  # helper → pulls YYYY-MM-DD from meta/filename
+from utils.metadata_manager import reload_metadata
+from utils.cache_manager import load_dropdown_cache, save_dropdown_cache
+from utils.file_helpers import populate_tree
+from tkinter import messagebox
 
 # ────────────────────────────────────────────────────────────────────────
 FUNC_RE = re.compile(r"\$(\w+)\(([^)]*)\)")
@@ -42,7 +46,6 @@ def _truthy(s: str) -> bool:
     return bool(s) and s.lower() not in {"0", "false", "off", "no", "null"}
 
 
-# NEW ────────────────────────────────────────────────────────────────────
 def resolve_output_base(output_dir: str | None, fallback_root: str) -> str:
     """
     Translate the sentinel '(Root)' (or blank) to the actual root directory
@@ -51,7 +54,6 @@ def resolve_output_base(output_dir: str | None, fallback_root: str) -> str:
     if not output_dir or output_dir.strip() == "(Root)":
         return fallback_root
     return output_dir
-# ────────────────────────────────────────────────────────────────────────
 
 
 def _apply_scheme(
@@ -63,6 +65,7 @@ def _apply_scheme(
     filename: str = ""
 ) -> str:
     """Replace %tokens% and $func(…) inside *pattern*."""
+
     year, month, day = md.get("year", ""), md.get("month", ""), md.get("day", "")
     date_tok = (
         f"{year}-{month.zfill(2)}-{day.zfill(2)}" if year and month and day else
@@ -82,7 +85,8 @@ def _apply_scheme(
     }
 
     fmt_parts = repl["%format%"].split()
-    add_parts = repl["%additional%"].split()
+    # Split additional on commas, trim spaces and trailing commas
+    add_parts = [x.strip().rstrip(",") for x in repl["%additional%"].split(",") if x.strip()]
 
     def _list_token(prefix: str, parts: list[str], idx: int | None):
         return " ".join(parts) if idx is None else (parts[idx] if 0 <= idx < len(parts) else "")
@@ -93,12 +97,16 @@ def _apply_scheme(
         src = fmt_parts if base.lower().startswith("format") else add_parts
         return _list_token(base, src, idx)
 
+    # Handle numbered tokens with brackets first: e.g. [%additionalN1%]
+    pattern = re.sub(r"\[%(formatN|additionalN)(\d*)%]", _num_token_sub, pattern, flags=re.I)
+    # Handle unbracketed numbered tokens: %additionalN2%
     pattern = re.sub(r"%(formatN|additionalN)(\d*)%", _num_token_sub, pattern, flags=re.I)
 
-    out = pattern
+    # Replace regular tokens %artist%, %date%, etc.
     for tok, val in repl.items():
-        out = out.replace(tok, val)
+        pattern = pattern.replace(tok, val)
 
+    # Evaluate $func(args) repeatedly until stable
     def _func_sub(m: re.Match) -> str:
         fn = m.group(1).lower()
         args = _split_args(m.group(2))
@@ -189,12 +197,14 @@ def _apply_scheme(
         return m.group(0)  # unknown function → leave untouched
 
     prev = None
+    out = pattern
     while prev != out:
-        prev, out = out, FUNC_RE.sub(_func_sub, out)
+        prev = out
+        out = FUNC_RE.sub(_func_sub, out)
 
     # Cleanup final string
-    out = re.sub(r"\s*\[\s*]\s*", " ", out)
-    out = re.sub(r"(?:\s*-\s*){2,}", " - ", out)
+    out = re.sub(r"\s*\[\s*]\s*", " ", out)  # remove empty brackets
+    out = re.sub(r"(?:\s*-\s*){2,}", " - ", out)  # repeated dashes
     out = re.sub(r"\s{2,}", " ", out).strip()
 
     for sep in (" - ", "--", "- -"):
@@ -206,7 +216,6 @@ def _apply_scheme(
     return out
 
 
-# ────────────────────────────────────────────────────────────────────────
 def process_queue(
     *,
     queue: Sequence[str],
@@ -221,6 +230,7 @@ def process_queue(
     folder_scheme: str = "",
     filename_scheme: str = "%artist% - %date% - %venue% - %city% [%format%] [%additional%]",
     override_date_flags: List[bool] | None = None,
+    current_template_folder: str | None = None,
 ) -> None:
     if override_date_flags and len(override_date_flags) != len(queue):
         logger.warning("override_date_flags length mismatch → ignoring list")
@@ -290,7 +300,7 @@ def process_queue(
                     last_job=(idx == len(queue) - 1),
                     make_poster="Yes",
                     template_sel=md.get("template", "Default"),
-                    template_folder=templ_dir,
+                    template_folder=current_template_folder,
                 )
             else:
                 log_func(f"Make Poster? No → skip for {dest_fp}")
@@ -309,3 +319,98 @@ def process_queue(
             log_func(f"Error closing Photoshop: {exc}")
 
     log_func("Processing finished.")
+
+
+def process_queue_with_ui(app) -> None:
+    """
+    Wrapper to process queue with VideoTagger app UI integration.
+    """
+    if not app.queue:
+        messagebox.showinfo("Queue empty", "Add files first.")
+        return
+    if not app.root_dir.get():
+        messagebox.showerror("No root", "Pick root folder.")
+        return
+
+    app._log("Starting queue processing …")
+
+    # Extract folder & filename patterns
+    folder_pattern = ""
+    filename_pattern = ""
+    ns = app.naming_scheme
+
+    if isinstance(ns, dict):
+        folder_pattern = ns.get("folder", "")
+        filename_pattern = ns.get("filename", "")
+    elif isinstance(ns, str):
+        stripped = ns.strip()
+        if stripped.startswith("{") and stripped.endswith("}"):
+            try:
+                import json
+                ns_dict = json.loads(stripped)
+                if isinstance(ns_dict, dict):
+                    folder_pattern = ns_dict.get("folder", "")
+                    filename_pattern = ns_dict.get("filename", "")
+                else:
+                    filename_pattern = stripped
+            except json.JSONDecodeError:
+                filename_pattern = stripped
+        else:
+            filename_pattern = stripped
+
+    # Call core processing
+    process_queue(
+        queue=app.queue,
+        meta=app.meta,
+        root_dir=app.root_dir.get(),
+        log_func=app._log,
+        generate_poster_func=app._generate_poster,
+        close_photoshop_func=app._close_photoshop if hasattr(app, "_close_photoshop") else None,
+        tpl_map=app.tpl_map,
+        templ_dir=app.TEMPL_DIR if hasattr(app, "TEMPL_DIR") else "",
+        output_dir=app.output_dir.get() or None,
+        folder_scheme=folder_pattern,
+        filename_scheme=filename_pattern,
+        current_template_folder=getattr(app, "_current_artist", None),
+    )
+
+    # Clear UI queue
+    from utils.queue_helpers import clear_queue
+    clear_queue(app)
+    app._log("Queue processed and cleared.")
+
+    # Reload metadata
+    reload_metadata(app)
+    app._log("Metadata reloaded after queue processing.")
+
+    # Save dropdown cache - assuming your app.hist has keys 'format_history', 'add_history'
+    save_dropdown_cache(app.hist, app.queue)
+    app._log("Dropdown cache saved.")
+
+    # Update combobox history from cache
+    cache = load_dropdown_cache()
+    format_hist = cache.get("format_history", [])
+    add_hist = cache.get("add_history", [])
+
+    current_format = app.v_format.get().strip()
+    current_add = app.v_add.get().strip()
+
+    if current_format:
+        format_hist = [current_format] + [f for f in format_hist if f != current_format]
+    if current_add:
+        add_hist = [current_add] + [a for a in add_hist if a != current_add]
+
+    save_dropdown_cache(format_hist, add_hist)
+
+    app.ent_format['values'] = format_hist
+    app.ent_add['values'] = add_hist
+
+    app.v_format.set(current_format)
+    app.v_add.set(current_add)
+
+    # Reload metadata again if needed
+    reload_metadata(app)
+
+    # Refresh directory tree if root directory exists
+    if app.root_dir.get():
+        populate_tree(app, app.root_dir.get())

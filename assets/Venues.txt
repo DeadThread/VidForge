@@ -1,13 +1,18 @@
-XL Live
+Margaret Court Arena
+ICC Sydney Theatre
+The Mann
 Sweetwater Music Hall
-Ryman Auditorium
 Red Rocks Amphitheater
+XL Live
+Mountain Jam
+Mann Center
+NC Coliseum
+Charleston Coliseum
+Ryman Auditorium
 Moody Center
 Petersen Events Center
 SNHU Arena
-Mountain Jam
 Performance Pavilion
-Charleston Coliseum
 North Charleston Coliseum
 Superball
 Folsom Field
@@ -1226,7 +1231,6 @@ Majestic Valley Arena
 Malone Stadium
 Maltz Jupiter Theatre
 Mandeville Auditorium
-Mann Center
 Mansfield Theater
 Mansion Park
 Mansion Theater

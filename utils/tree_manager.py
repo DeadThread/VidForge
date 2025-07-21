@@ -11,8 +11,8 @@ from __future__ import annotations
 import os
 import tkinter as tk
 from tkinter import messagebox
-from utils.text_utils import infer_from_name
 import logging
+from tkinter import ttk
 
 log = logging.getLogger("vidforge")
 
@@ -78,3 +78,33 @@ def fast_populate_tree(app, root_path: str):
         app.tree._app_ref = app
         app.tree.bind("<<TreeviewOpen>>", _on_open)
         app.tree._lazy_bound = True
+
+
+# ─────────────────────────────────── Queue Setup ─────────────────────
+
+def setup_queue_tree(app):
+    """Sets up the queue tree in the provided app."""
+    frame = app.frame_queue
+    for w in frame.winfo_children():
+        w.destroy()
+
+    app.queue_tree = ttk.Treeview(frame,
+                                  columns=("original", "proposed"),
+                                  show="headings", selectmode="extended")
+    app.queue_tree.heading("original", text="Original Filename")
+    app.queue_tree.heading("proposed", text="Proposed Filename")
+    app.queue_tree.column("original", width=400, anchor="w")
+    app.queue_tree.column("proposed", width=600, anchor="w")
+
+    vsb = ttk.Scrollbar(frame, orient="vertical",
+                        command=app.queue_tree.yview)
+    hsb = ttk.Scrollbar(frame, orient="horizontal",
+                        command=app.queue_tree.xview)
+    app.queue_tree.configure(yscrollcommand=vsb.set,
+                             xscrollcommand=hsb.set)
+
+    app.queue_tree.grid(row=0, column=0, sticky="nsew")
+    vsb.grid(row=0, column=1, sticky="ns")
+    hsb.grid(row=1, column=0, sticky="ew")
+    frame.grid_rowconfigure(0, weight=1)
+    frame.grid_columnconfigure(0, weight=1)

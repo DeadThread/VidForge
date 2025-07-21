@@ -1,13 +1,16 @@
+Melbourne, Australia
+Philadelphia, PA
+Sydney, Australia
+Morrison, CO
 Harrisburg, PA
+Belleayre Mountain, NY
+North Charleston, SC
 Mill Valley, CA
 Nashville, TN
-Morrison, CO
 Austin, TX
 Pittsburgh, PA
 Manchester, NH
-Belleayre Mountain, NY
 Fort Wayne, IN
-North Charleston, SC
 Watkins Glen, NY
 Boulder, CO
 Columbus, OH
@@ -20945,7 +20948,6 @@ Phil Campbell, AL
 Philadelphia, MO
 Philadelphia, MS
 Philadelphia, NY
-Philadelphia, PA
 Philadelphia, TN
 Philip, SD
 Philipp, MS
