@@ -126,3 +126,11 @@ def prompt_photoshop_path_if_first_boot(app):
     # Your existing logic for this function goes here
     pass
 
+
+
+def _row(parent, lbl, var, r, col=0):
+    """Helper to create a label and combobox on the same row."""
+    tk.Label(parent, text=lbl).grid(row=r, column=col, sticky="w")
+    cb = ttk.Combobox(parent, textvariable=var, width=34, state="normal")  # editable combobox
+    cb.grid(row=r, column=col + 1, sticky="w", padx=4)
+    return cb

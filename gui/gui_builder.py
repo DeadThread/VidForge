@@ -68,7 +68,7 @@ GENERIC_DIR  = TEMPLATE_DIR / "Generic"
 #                       cached dropdown helpers
 # ───────────────────────────────────────────────────────────────────────
 
-# Directly use the functions from cache_manager.py
+# Load cache at module level so it can be reused throughout
 cache = load_cache()
 
 # Ensure the app is initialized here before using the naming scheme functions
@@ -96,6 +96,8 @@ def build_gui(app) -> None:
     setup_naming_scheme(app)
     initialize_cache(app)
 
+    global cache  # Use the module-level cache
+
     # ─────────────── Menu bar & Root Folder ────────────────
     menubar = build_menu_bar(app)
     app.config(menu=menubar)
@@ -111,8 +113,19 @@ def build_gui(app) -> None:
     # ─────────────── Metadata pane ────────────────
     meta = tk.Frame(left)  # Define 'meta' before using it
     meta.pack(fill="x", pady=(0, 2))
-    build_metadata_fields(meta, app)  # builds the artist/venue/city comboboxes
-    bind_artist_to_template_dropdown(app) 
+    
+    build_metadata_fields(meta, app)
+
+    # Populate values right after creating the fields
+    app.artist_history = cache_get_list(cache, "artist")
+    app.venue_history  = cache_get_list(cache, "venue")
+    app.city_history   = cache_get_list(cache, "city")
+
+    app.cb_artist["values"] = app.artist_history
+    app.cb_venue["values"]  = app.venue_history
+    app.cb_city["values"]   = app.city_history
+
+    bind_artist_to_template_dropdown(app)
 
     # ───────────────── FORMAT setup (row 1, columns 2-4) ─────────────────
     build_format(app, meta)
@@ -126,12 +139,12 @@ def build_gui(app) -> None:
     # ───────────── Make Poster & Template Dropdown ─────────────
     build_template_dropdown(app, meta)
 
-
     # ─────────────── LEFT vertical PanedWindow (files / queue) ────────────────
-    app.left_pane = ttk.PanedWindow(left, orient="vertical"); app.left_pane.pack(fill="both", expand=True)
+    app.left_pane = ttk.PanedWindow(left, orient="vertical")
+    app.left_pane.pack(fill="both", expand=True)
     app.files_frame = tk.Frame(app.left_pane)
     app.frame_queue = tk.Frame(app.left_pane)        # CHANGED – only one queue pane
-    app.left_pane.add(app.files_frame,     weight=2)
+    app.left_pane.add(app.files_frame, weight=2)
     app.left_pane.add(app.frame_queue, weight=1)
 
     tk.Label(app.files_frame, text="Video Files:").pack(anchor="w")
@@ -139,9 +152,8 @@ def build_gui(app) -> None:
     # ───── persist both splitters ─────
     install_pane_persistence(app.left_pane, app.config_parser, str(CONFIG_FILE),
                             section="Panes", option="video_queue_split", log_func=app._log)
-    install_pane_persistence(app.main,      app.config_parser, str(CONFIG_FILE),
+    install_pane_persistence(app.main, app.config_parser, str(CONFIG_FILE),
                             section="Panes", option="left_right_split", log_func=app._log)
-
 
     # ────────────────────────── Folder Tree ─────────────────────────
     build_folder_tree(app)  # This replaces the old tree + scrollbar code
@@ -151,13 +163,13 @@ def build_gui(app) -> None:
     btn_row.pack(anchor="w", pady=4)
 
     ttk.Button(btn_row, text="Save Selected",
-            command=lambda: save_selected_files(app)).pack(side="left", padx=4)
+               command=lambda: save_selected_files(app)).pack(side="left", padx=4)
     ttk.Button(btn_row, text="Process Queue",
-            command=app._process_queue).pack(side="left", padx=4)
+               command=app._process_queue).pack(side="left", padx=4)
     ttk.Button(btn_row, text="Remove Selected",
-            command=lambda: remove_selected(app)).pack(side="left", padx=4)
+               command=lambda: remove_selected(app)).pack(side="left", padx=4)
     ttk.Button(btn_row, text="Clear Queue",
-            command=lambda: clear_queue(app)).pack(side="left", padx=4)
+               command=lambda: clear_queue(app)).pack(side="left", padx=4)
 
     # ─────────────── Queue tree inside app.frame_queue ────────────────
     setup_queue_tree(app)

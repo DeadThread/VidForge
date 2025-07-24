@@ -6,7 +6,7 @@ import random
 from constants import ASSETS_DIR, GENERIC_DIR, CONFIG_FILE
 from tkinter import messagebox
 import re
-
+from gui.gui_helpers import _row
 
 def _load_template_from_path(app, template_path: str):
     """Function to load the template from the given path."""
@@ -73,14 +73,6 @@ def prompt_photoshop_path_if_first_boot(app) -> None:
 
     with open(CONFIG_FILE, "w", encoding="utf-8") as fh:
         cfg.write(fh)
-
-
-def _row(parent, lbl, var, r, col=0):
-    """Helper to create a label and combobox on the same row."""
-    tk.Label(parent, text=lbl).grid(row=r, column=col, sticky="w")
-    cb = ttk.Combobox(parent, textvariable=var, width=34, state="normal")  # editable combobox
-    cb.grid(row=r, column=col + 1, sticky="w", padx=4)
-    return cb
 
 
 def _normalize_name(name: str) -> str:
