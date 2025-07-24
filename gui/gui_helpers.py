@@ -61,6 +61,8 @@ def setup_autocomplete(app):
 
 
 def setup_custom_tab_order(app):
+    print("setup_custom_tab_order called")
+
     """
     Set up a custom tab order, skipping Clear Fields button & Override Date checkbox.
     """
@@ -76,8 +78,6 @@ def setup_custom_tab_order(app):
         app.cb_make_poster,
         app.cb_template,
     ]
-
-    setup_global_tab_order(app, tab_order)
 
     def on_tab_press(event):
         if event.widget == tab_order[-1]:
@@ -126,26 +126,3 @@ def prompt_photoshop_path_if_first_boot(app):
     # Your existing logic for this function goes here
     pass
 
-def setup_global_tab_order(root, tab_order):
-    """
-    Set up a custom tab order for the root widget.
-    """
-    def on_tab_press(event):
-        widget = event.widget
-        # Only handle if widget is in tab_order
-        if widget not in tab_order:
-            return  # allow default tab behavior
-
-        idx = tab_order.index(widget)
-
-        if event.state & 0x1:  # Shift pressed
-            next_idx = (idx - 1) % len(tab_order)
-        else:
-            next_idx = (idx + 1) % len(tab_order)
-
-        tab_order[next_idx].focus_set()
-        return "break"
-
-    # Bind globally on root for Tab and Shift+Tab keys
-    root.bind_all("<Tab>", on_tab_press, add="+")
-    root.bind_all("<Shift-Tab>", on_tab_press, add="+")

@@ -4,7 +4,7 @@ from datetime import datetime
 from utils.evaluator import Evaluator
 from constants import CONFIG_FILE, SAMPLE_META
 from pathlib import Path
-
+from gui.template_dropdown import _row
 # ═══════════════════════════════════════════════════════════════════════
 #                        naming‑scheme helpers
 # ═══════════════════════════════════════════════════════════════════════

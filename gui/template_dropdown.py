@@ -264,22 +264,13 @@ def build_template_dropdown_values(app):
     return values
 
 
-def build_metadata(meta, app):
+def bind_artist_to_template_dropdown(app):
     """
-    Build the metadata section with artist, venue, and city comboboxes.
-    Also, set up the artist selection logic for template PSDs.
-
-    Args:
-    - meta: The parent frame where the widgets will be placed.
-    - app: The main app instance, used to bind comboboxes and manage state.
+    Binds the artist combobox to update the PSD template combobox based on selection.
+    Requires `app.cb_artist`, `app.v_artist`, `app.cb_template_psd`, `app.v_template_psd`, and `app.tpl_map`.
     """
-
-    # Reuse _row here
-    app.v_artist = tk.StringVar()
-    app.cb_artist = _row(meta, "Artist:", app.v_artist, 0)
 
     def on_artist_selected(event=None):
-        """Handle artist selection and update the PSD template options."""
         artist = app.v_artist.get()
         psds = app.tpl_map.get(artist, [])
         app.cb_template_psd['values'] = psds
@@ -288,11 +279,6 @@ def build_metadata(meta, app):
             app.v_template_psd.set(psds[0])
         else:
             app.cb_template_psd.set('')
+            app.v_template_psd.set('')
 
     app.cb_artist.bind("<<ComboboxSelected>>", on_artist_selected)
-
-    app.v_venue = tk.StringVar()
-    app.cb_venue = _row(meta, "Venue:", app.v_venue, 1)
-
-    app.v_city = tk.StringVar()
-    app.cb_city = _row(meta, "City:", app.v_city, 2)

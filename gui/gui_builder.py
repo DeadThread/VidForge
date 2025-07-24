@@ -35,7 +35,6 @@ from gui.template_dropdown import (
     _select_random_template,
     set_poster_controls_state,
     prompt_photoshop_path_if_first_boot,
-    build_metadata,
 )
 
 from utils.cache_manager import (
@@ -56,6 +55,9 @@ from utils.template_manager import choose_psd, _load_template_from_path
 from utils.theme_manager import select_and_load_theme
 from utils.tree_manager import fast_populate_tree as populate_tree
 from utils.metadata_manager import clear_fields, reload_metadata
+from gui.build_comboboxes import build_metadata_fields
+from gui.template_dropdown import bind_artist_to_template_dropdown
+
 
 # ───────────────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -109,7 +111,8 @@ def build_gui(app) -> None:
     # ─────────────── Metadata pane ────────────────
     meta = tk.Frame(left)  # Define 'meta' before using it
     meta.pack(fill="x", pady=(0, 2))
-    build_metadata(meta, app)
+    build_metadata_fields(meta, app)  # builds the artist/venue/city comboboxes
+    bind_artist_to_template_dropdown(app) 
 
     # ───────────────── FORMAT setup (row 1, columns 2-4) ─────────────────
     build_format(app, meta)
@@ -173,3 +176,6 @@ def build_gui(app) -> None:
 
     # Use build_template_dropdown_values to construct the dropdown values
     dropdown_values = build_template_dropdown_values(app)
+
+    # Setup Custom Tab Order
+    setup_custom_tab_order(app)
