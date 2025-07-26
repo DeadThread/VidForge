@@ -1,23 +1,26 @@
 import json
 import os
 from typing import Any, Dict, List, Callable
+from configparser import ConfigParser
 from utils.metadata_manager import normalize_name
-from constants import ASSETS_DIR, CONFIG_DIR, CACHE_FILE, CACHE_DROPDOWN_FILE, TXT_FILES, FORMAT_LIST, ADDITIONAL_LIST  # Importing constants
+from constants import (
+    ASSETS_DIR,
+    CONFIG_DIR,
+    CONFIG_FILE,
+    CACHE_FILE,
+    CACHE_DROPDOWN_FILE,
+    TXT_FILES,
+    FORMAT_LIST,
+    ADDITIONAL_LIST,
+)
+
+# ───────────────────── Setup ─────────────────────
 
 def _ensure_dirs() -> None:
     os.makedirs(CONFIG_DIR, exist_ok=True)
     os.makedirs(ASSETS_DIR, exist_ok=True)
 
-def initialize_dropdown_cache() -> dict:
-    """Initialize the dropdown cache from the JSON file under /config directory."""
-    if os.path.exists(CACHE_DROPDOWN_FILE):
-        try:
-            with open(CACHE_DROPDOWN_FILE, "r") as f:
-                data = json.load(f)
-                return data  # Return the loaded data
-        except Exception as e:
-            print(f"Error loading dropdown cache: {e}")
-    return {}  # Return an empty dict if the file doesn't exist
+# ───────────────────── Cache ─────────────────────
 
 def load_cache(log_func: Callable[[str], None] = print) -> Dict[str, Any]:
     _ensure_dirs()
@@ -49,6 +52,39 @@ def save_cache(data: Dict[str, Any], log_func: Callable[[str], None] = print) ->
         log_func(f"Cache saved → {CACHE_FILE}")
     except Exception as exc:
         log_func(f"[cache_manager] Failed to write cache: {exc}")
+
+# ───────────────────── Dropdown Cache ─────────────────────
+
+def initialize_dropdown_cache() -> dict:
+    if os.path.exists(CACHE_DROPDOWN_FILE):
+        try:
+            with open(CACHE_DROPDOWN_FILE, "r") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Error loading dropdown cache: {e}")
+    return {}
+
+def load_dropdown_cache() -> dict:
+    if not os.path.isfile(CACHE_DROPDOWN_FILE):
+        return {}
+    try:
+        with open(CACHE_DROPDOWN_FILE, encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+def save_dropdown_cache(format_history: List[str], add_history: List[str]) -> None:
+    data = {
+        "format_history": format_history,
+        "add_history": add_history,
+    }
+    try:
+        with open(CACHE_DROPDOWN_FILE, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        print(f"[cache_manager] Failed to save dropdown cache: {e}")
+
+# ───────────────────── Text/Normalization ─────────────────────
 
 def _load_txt(name: str) -> List[str]:
     path = os.path.join(ASSETS_DIR, name)
@@ -84,54 +120,59 @@ def cache_add_value(cache: Dict[str, Any], key: str, value: str, max_len: int = 
     cache[key] = lst[:max_len]
     save_cache(cache, log_func=lambda *_: None)  # silent write
 
-def save_naming_scheme(scheme: Dict[str, str]) -> None:
-    """Save the naming scheme dict to a file."""
-    _ensure_dirs()
-    try:
-        with open(os.path.join(CONFIG_DIR, "naming_scheme.json"), 'w', encoding='utf-8') as f:
-            json.dump(scheme, f, indent=2, ensure_ascii=False)
-        print(f"[DEBUG] Naming scheme saved: {scheme}")
-    except Exception as e:
-        print(f"[ERROR] Failed to save naming scheme: {e}")
+# ───────────────────── Naming Scheme (INI) ─────────────────────
 
 def load_naming_scheme() -> dict:
-    """Load the naming scheme dict from file."""
-    path = os.path.join(CONFIG_DIR, "naming_scheme.json")
-    if not os.path.isfile(path):
-        return {}
+    """Load naming_scheme dict from config.ini."""
+    config = ConfigParser()
+    config.read(CONFIG_FILE)
     try:
-        with open(path, encoding='utf-8') as f:
-            return json.load(f)
+        # Use raw=True to prevent ConfigParser from interpreting % as interpolation tokens
+        raw = config.get("Settings", "naming_scheme", fallback=None, raw=True)
+        print("[DEBUG] Attempting to read naming_scheme from config.ini")
+        if raw:
+            scheme = json.loads(raw)
+            print(f"[DEBUG] Parsed naming_scheme JSON: {scheme}")
+            return scheme
     except Exception as e:
-        print(f"[ERROR] Failed to load naming scheme: {e}")
-        return {}
+        print(f"[ERROR] Failed to load naming_scheme from config.ini: {e}")
+    return {}
 
-def load_dropdown_cache() -> dict:
-    """Load dropdown history cache from file."""
-    if not os.path.isfile(CACHE_DROPDOWN_FILE):
-        return {}
+def save_naming_scheme(scheme: Dict[str, str]) -> None:
+    """Save naming_scheme dict to config.ini."""
+    config = ConfigParser()
+    config.read(CONFIG_FILE)
+    if not config.has_section("Settings"):
+        config.add_section("Settings")
     try:
-        with open(CACHE_DROPDOWN_FILE, encoding='utf-8') as f:
-            return json.load(f)
-    except Exception:
-        return {}
-
-def save_dropdown_cache(format_history: List[str], add_history: List[str]) -> None:
-    """Save dropdown history cache to file."""
-    data = {
-        "format_history": format_history,
-        "add_history": add_history,
-    }
-    try:
-        with open(CACHE_DROPDOWN_FILE, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
+        scheme_str = json.dumps(scheme, ensure_ascii=False)
+        config.set("Settings", "naming_scheme", scheme_str)
+        with open(CONFIG_FILE, "w", encoding="utf-8") as f:
+            config.write(f)
+        print(f"[DEBUG] Naming scheme saved to config.ini: {scheme_str}")
     except Exception as e:
-        print(f"[cache_manager] Failed to save dropdown cache: {e}")
+        print(f"[ERROR] Failed to save naming_scheme: {e}")
 
-# Cached dropdown helpers
-cache                = load_cache()
-DEFAULT_FORMATS      = FORMAT_LIST
-DEFAULT_ADDITIONALS  = ADDITIONAL_LIST
+def save_naming_scheme(scheme: Dict[str, str]) -> None:
+    """Save naming_scheme dict to config.ini."""
+    config = ConfigParser()
+    config.read(CONFIG_FILE)
+    if not config.has_section("Settings"):
+        config.add_section("Settings")
+    try:
+        scheme_str = json.dumps(scheme, ensure_ascii=False)
+        config.set("Settings", "naming_scheme", scheme_str)
+        with open(CONFIG_FILE, "w", encoding="utf-8") as f:
+            config.write(f)
+        print(f"[DEBUG] Naming scheme saved to config.ini: {scheme_str}")
+    except Exception as e:
+        print(f"[ERROR] Failed to save naming_scheme: {e}")
+
+# ───────────────────── Format Helpers ─────────────────────
+
+cache = load_cache()
+DEFAULT_FORMATS = FORMAT_LIST
+DEFAULT_ADDITIONALS = ADDITIONAL_LIST
 
 def load_format_values() -> list[str]:
     cached = cache_get_list(cache, "Format")
@@ -145,10 +186,11 @@ def load_additional_values() -> list[str]:
     vals = cache_get_list(cache, "Additional")
     return vals if vals else DEFAULT_ADDITIONALS
 
+# ───────────────────── External Template ─────────────────────
+
 def _load_template_from_path(app, path):
-    # Placeholder: implement loading logic here
     app._log(f"Loading template from: {path}")
-    # TODO: implement actual loading of the PSD template
+    # TODO: Load PSD or other template (placeholder)
 
 def save_selected_files(app):
     selected_ids = app.tree.selection()
@@ -160,8 +202,7 @@ def save_selected_files(app):
         file_path = app.tree.set(item_id, "filepath")
         if not file_path:
             continue
-        app.current_fp = file_path  # set current file context
+        app.current_fp = file_path
 
-        # Import save_current inside the function to avoid circular import
         from utils.queue_helpers import save_current
-        save_current(app)  # call your existing queue_helpers save_current()
+        save_current(app)

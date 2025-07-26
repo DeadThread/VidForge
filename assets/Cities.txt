@@ -1,3 +1,5 @@
+Forest Hills, NY
+Chicago, IL
 Melbourne, Australia
 Philadelphia, PA
 Sydney, Australia
@@ -4857,7 +4859,6 @@ Cheyney, PA
 Chicago Heights, IL
 Chicago Park, CA
 Chicago Ridge, IL
-Chicago, IL
 Chichester, NH
 Chichester, NY
 Chickamauga, GA
@@ -9252,7 +9253,6 @@ Forest Hill, LA
 Forest Hill, MD
 Forest Hill, WV
 Forest Hills, KY
-Forest Hills, NY
 Forest Home, AL
 Forest Junction, WI
 Forest Knolls, CA

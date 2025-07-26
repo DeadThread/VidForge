@@ -203,7 +203,6 @@ def _apply_scheme(
         out = FUNC_RE.sub(_func_sub, out)
 
     # Cleanup final string
-    out = re.sub(r"\s*\[\s*]\s*", " ", out)  # remove empty brackets
     out = re.sub(r"(?:\s*-\s*){2,}", " - ", out)  # repeated dashes
     out = re.sub(r"\s{2,}", " ", out).strip()
 

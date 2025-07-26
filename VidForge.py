@@ -85,31 +85,47 @@ class VideoTagger(tk.Tk):
 
         self.cache = load_cache(log_func=lambda m: None)
 
+# Load naming scheme from config
         saved_scheme = load_naming_scheme()
-        if saved_scheme:
+        print(f"[DEBUG] saved_scheme from load_naming_scheme(): {saved_scheme}")
+        print(f"[DEBUG] saved_scheme type: {type(saved_scheme)}, bool: {bool(saved_scheme)}")
+        
+        if saved_scheme and isinstance(saved_scheme, dict) and saved_scheme.get("folder") and saved_scheme.get("filename"):
+            # Valid scheme loaded successfully
+            print("[DEBUG] Using saved_scheme from cache_manager")
             self.naming_scheme = saved_scheme
         else:
-            raw_scheme = self.config_parser.get("Settings", "naming_scheme", fallback="")
+            # Fallback: try to load directly from config parser as backup
+            print("[DEBUG] saved_scheme invalid, trying fallback method")
+            raw_scheme = self.config_parser.get("Settings", "naming_scheme", fallback="", raw=True)
             try:
                 if raw_scheme.strip().startswith("{"):
                     self.naming_scheme = json.loads(raw_scheme)
                     if not isinstance(self.naming_scheme, dict):
                         raise ValueError("naming_scheme JSON must be an object")
+                    # Fix legacy folder scheme
                     if self.naming_scheme.get("folder") == "%artist%/%year%":
                         self.naming_scheme["folder"] = "%artist%/$year(date)"
+                    # Ensure both keys exist
                     self.naming_scheme.setdefault("folder", DEFAULT_FOLDER_SCHEME)
                     self.naming_scheme.setdefault("filename", DEFAULT_FILENAME_SCHEME)
+                    print(f"[DEBUG] Using parsed scheme from config: {self.naming_scheme}")
                 else:
+                    # Create default scheme
+                    print("[DEBUG] Creating default naming scheme")
                     self.naming_scheme = {
                         "folder": DEFAULT_FOLDER_SCHEME,
                         "filename": raw_scheme or DEFAULT_FILENAME_SCHEME,
                     }
             except Exception as e:
                 print(f"[WARN] Could not parse naming_scheme from config.ini: {e}")
+                print("[DEBUG] Using default naming scheme due to parse error")
                 self.naming_scheme = {
                     "folder": DEFAULT_FOLDER_SCHEME,
                     "filename": DEFAULT_FILENAME_SCHEME,
                 }
+        
+        print(f"[DEBUG] Final naming_scheme: {self.naming_scheme}")
 
         self._log = lambda msg: (logger.info(msg), appflow.info(msg))
 

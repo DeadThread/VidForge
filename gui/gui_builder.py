@@ -85,8 +85,28 @@ def initialize_app():
 # Setup naming scheme
 def setup_naming_scheme(app):
     """Set up the naming scheme for the app."""
-    naming_scheme = get_naming_scheme_from_config(app)
-    reset_naming_scheme_from_menu(app)
+    print("[DEBUG] setup_naming_scheme called in gui_builder")
+    
+    # Use the naming scheme already loaded by the main app
+    if hasattr(app, 'naming_scheme') and app.naming_scheme:
+        print(f"[DEBUG] gui_builder - using app.naming_scheme: {app.naming_scheme}")
+        
+        # Ensure the app has the individual scheme attributes
+        app.folder_scheme = app.naming_scheme.get("folder", "%artist%/$year(date)")
+        app.filename_scheme = app.naming_scheme.get("filename", "%artist% - %date% - %venue% - %city% [%format%] [%additional%]")
+        
+        # Handle output folder extraction
+        folder_pattern = app.naming_scheme.get("folder", "")
+        extracted_root = _extract_root(folder_pattern)
+        if extracted_root and extracted_root != app.output_dir.get():
+            print(f"[DEBUG] gui_builder - updating output_dir to extracted root: {extracted_root}")
+            app.output_dir.set(extracted_root)
+        
+        print("[DEBUG] gui_builder - naming scheme setup complete (using existing)")
+    else:
+        # Fallback: app doesn't have a naming scheme loaded
+        print("[DEBUG] gui_builder - no app.naming_scheme found, resetting to defaults")
+        reset_naming_scheme_from_menu(app)
 
 # ───────────────────────────────────────────────────────────────────────
 # Now you can call the setup_naming_scheme function within your GUI builder

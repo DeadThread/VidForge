@@ -1,7 +1,7 @@
 {
   "Artists.txt": [
-    "Billy Strings",
     "Phish",
+    "Billy Strings",
     "Umphrey's McGee",
     "Steve Kimock",
     "String Cheese Incident",
@@ -241,8 +241,8 @@
     "ZZ Top"
   ],
   "normalized_Artists.txt": {
-    "billystrings": "Billy Strings",
     "phish": "Phish",
+    "billystrings": "Billy Strings",
     "umphreysmcgee": "Umphrey's McGee",
     "stevekimock": "Steve Kimock",
     "stringcheeseincident": "String Cheese Incident",
@@ -481,6 +481,8 @@
     "zztop": "ZZ Top"
   },
   "Cities.txt": [
+    "Forest Hills, NY",
+    "Chicago, IL",
     "Melbourne, Australia",
     "Philadelphia, PA",
     "Sydney, Australia",
@@ -5340,7 +5342,6 @@
     "Chicago Heights, IL",
     "Chicago Park, CA",
     "Chicago Ridge, IL",
-    "Chicago, IL",
     "Chichester, NH",
     "Chichester, NY",
     "Chickamauga, GA",
@@ -9735,7 +9736,6 @@
     "Forest Hill, MD",
     "Forest Hill, WV",
     "Forest Hills, KY",
-    "Forest Hills, NY",
     "Forest Home, AL",
     "Forest Junction, WI",
     "Forest Knolls, CA",
@@ -30348,6 +30348,8 @@
     "Zwolle, LA"
   ],
   "normalized_Cities.txt": {
+    "foresthillsny": "Forest Hills, NY",
+    "chicagoil": "Chicago, IL",
     "melbourneaustralia": "Melbourne, Australia",
     "philadelphiapa": "Philadelphia, PA",
     "sydneyaustralia": "Sydney, Australia",
@@ -35206,7 +35208,6 @@
     "chicagoheightsil": "Chicago Heights, IL",
     "chicagoparkca": "Chicago Park, CA",
     "chicagoridgeil": "Chicago Ridge, IL",
-    "chicagoil": "Chicago, IL",
     "chichesternh": "Chichester, NH",
     "chichesterny": "Chichester, NY",
     "chickamaugaga": "Chickamauga, GA",
@@ -39599,7 +39600,6 @@
     "foresthillmd": "Forest Hill, MD",
     "foresthillwv": "Forest Hill, WV",
     "foresthillsky": "Forest Hills, KY",
-    "foresthillsny": "Forest Hills, NY",
     "foresthomeal": "Forest Home, AL",
     "forestjunctionwi": "Forest Junction, WI",
     "forestknollsca": "Forest Knolls, CA",
@@ -60207,6 +60207,7 @@
     "zwollela": "Zwolle, LA"
   },
   "Venues.txt": [
+    "United Center",
     "Margaret Court Arena",
     "ICC Sydney Theatre",
     "The Mann",
@@ -62319,7 +62320,6 @@
     "Union Bank & Trust Pavilion",
     "Union Event Center",
     "Union Transfer",
-    "United Center",
     "United Palace",
     "United Supermarkets Arena",
     "United Wireless Arena",
@@ -62489,6 +62489,7 @@
     "Morockshow"
   ],
   "normalized_Venues.txt": {
+    "unitedcenter": "United Center",
     "margaretcourtarena": "Margaret Court Arena",
     "iccsydneytheatre": "ICC Sydney Theatre",
     "themann": "The Mann",
@@ -64597,7 +64598,6 @@
     "unionbanktrustpavilion": "Union Bank & Trust Pavilion",
     "unioneventcenter": "Union Event Center",
     "uniontransfer": "Union Transfer",
-    "unitedcenter": "United Center",
     "unitedpalace": "United Palace",
     "unitedsupermarketsarena": "United Supermarkets Arena",
     "unitedwirelessarena": "United Wireless Arena",
@@ -64764,5 +64764,11 @@
     "etownhall": "eTown Hall",
     "jetbluepark": "jetBlue Park",
     "morockshow": "Morockshow"
-  }
+  },
+  "Format": [
+    "2160p"
+  ],
+  "Additional": [
+    "SBD, FLAC16"
+  ]
 }
