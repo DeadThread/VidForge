@@ -25,9 +25,11 @@ class Evaluator:
         def resolve(arg: str) -> str:
             arg = arg.strip()
             if arg.startswith("%") and arg.endswith("%"):
-                return self.meta.get(arg[1:-1], "")
+                value = self.meta.get(arg[1:-1], "")
+                return str(value) if value is not None else ""
             if arg in self.meta:
-                return self.meta.get(arg, "")
+                value = self.meta.get(arg, "")
+                return str(value) if value is not None else ""
             return arg
 
         # ── string helpers ───────────────────────────────────────────
@@ -139,8 +141,8 @@ class Evaluator:
         res = text
 
         # Handle %formatN#% tokens and %format%
-        fmts = [f.strip() for f in self.meta.get("format", "").split(",") if f.strip()]
-        adds = [a.strip() for a in self.meta.get("additional", "").split(",") if a.strip()]
+        fmts = [f.strip() for f in str(self.meta.get("format", "")).split(",") if f.strip()]
+        adds = [a.strip() for a in str(self.meta.get("additional", "")).split(",") if a.strip()]
 
         res = re.sub(
             r"%formatN(\d+)%",
@@ -162,12 +164,20 @@ class Evaluator:
         for k, v in self.meta.items():
             if k in ("format", "additional"):
                 continue
-            res = res.replace(f"%{k}%", v)
+            # Convert all values to strings to avoid TypeError
+            str_value = str(v) if v is not None else ""
+            res = res.replace(f"%{k}%", str_value)
 
         # Recursively evaluate $func(...) tokens until no changes
         prev = None
         while prev != res:
             prev = res
             res = self.FUNC_RE.sub(self._eval_func, res)
+
+        # Clean up empty brackets and extra spaces/separators
+        res = re.sub(r"\[\s*\]", "", res)           # empty [...]
+        res = re.sub(r"\s{2,}", " ", res)           # duplicate spaces
+        res = re.sub(r"(?:\s*-\s*){2,}", " - ", res)  # repeated ' - '
+        res = res.strip(" -")                       # leading/trailing seps
 
         return res

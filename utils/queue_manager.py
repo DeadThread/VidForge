@@ -84,8 +84,7 @@ def _apply_scheme(
         "%filename%": filename,
     }
 
-    fmt_parts = repl["%format%"].split()
-    # Split additional on commas, trim spaces and trailing commas
+    fmt_parts = [x.strip() for x in repl["%format%"].split(",") if x.strip()]
     add_parts = [x.strip().rstrip(",") for x in repl["%additional%"].split(",") if x.strip()]
 
     def _list_token(prefix: str, parts: list[str], idx: int | None):
@@ -97,9 +96,7 @@ def _apply_scheme(
         src = fmt_parts if base.lower().startswith("format") else add_parts
         return _list_token(base, src, idx)
 
-    # Handle numbered tokens with brackets first: e.g. [%additionalN1%]
-    pattern = re.sub(r"\[%(formatN|additionalN)(\d*)%]", _num_token_sub, pattern, flags=re.I)
-    # Handle unbracketed numbered tokens: %additionalN2%
+    # Handle numbered tokens: %additionalN1%, %formatN2%, etc.
     pattern = re.sub(r"%(formatN|additionalN)(\d*)%", _num_token_sub, pattern, flags=re.I)
 
     # Replace regular tokens %artist%, %date%, etc.
@@ -202,7 +199,7 @@ def _apply_scheme(
         prev = out
         out = FUNC_RE.sub(_func_sub, out)
 
-    # Cleanup final string
+    # Cleanup final string: remove repeated dashes, duplicate spaces, leading/trailing separators
     out = re.sub(r"(?:\s*-\s*){2,}", " - ", out)  # repeated dashes
     out = re.sub(r"\s{2,}", " ", out).strip()
 
@@ -211,6 +208,9 @@ def _apply_scheme(
             out = out[len(sep):].lstrip()
         while out.endswith(sep):
             out = out[:-len(sep)].rstrip()
+
+    # Remove empty brackets left after replacements (important!)
+    out = re.sub(r"\[\s*\]", "", out)
 
     return out
 
@@ -227,7 +227,7 @@ def process_queue(
     templ_dir,
     output_dir: str | None = None,
     folder_scheme: str = "",
-    filename_scheme: str = "%artist% - %date% - %venue% - %city% [%format%] [%additional%]",
+    filename_scheme: str = "%artist% - %date% - %venue% - %city% [%format%] [%additionalN1%] [%additionalN2%]",
     override_date_flags: List[bool] | None = None,
     current_template_folder: str | None = None,
 ) -> None:
@@ -237,6 +237,17 @@ def process_queue(
 
     for idx, src in enumerate(queue):
         md = meta.get(src, {})
+
+        # Fix/add additionalN1 and additionalN2 keys to metadata
+        if "additionalN1" not in md or "additionalN2" not in md:
+            if "additional" in md and md["additional"]:
+                parts = [x.strip() for x in md["additional"].split(",") if x.strip()]
+                md["additionalN1"] = parts[0] if len(parts) > 0 else ""
+                md["additionalN2"] = parts[1] if len(parts) > 1 else ""
+            else:
+                md["additionalN1"] = md.get("additionalN1", "")
+                md["additionalN2"] = md.get("additionalN2", "")
+
         date = md.get("date") or extract_date(os.path.basename(src))
         if not date:
             log_func(f"Skip {src}: no date found")

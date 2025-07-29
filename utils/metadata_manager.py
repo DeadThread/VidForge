@@ -4,12 +4,36 @@
 from utils.ref_file_manager import normalize_name
 from constants import FORMAT_LIST, ADDITIONAL_LIST  # ADDITIONAL_LIST used
 import os
+import re
 import json
 
 # -------------------------------------------------------------
 def build_normalized_map(raw_list):
     """Return {normalized: original} for quick lookups."""
     return {normalize_name(item): item for item in raw_list}
+
+# -------------------------------------------------------------
+def extract_date_from_filename(filename):
+    """Extract date in YYYY-MM-DD format from filename."""
+    # Look for date patterns like 2025-07-22, 2025.07.22, 20250722, etc.
+    date_patterns = [
+        r'(\d{4})-(\d{1,2})-(\d{1,2})',  # 2025-07-22
+        r'(\d{4})\.(\d{1,2})\.(\d{1,2})', # 2025.07.22
+        r'(\d{4})(\d{2})(\d{2})',        # 20250722
+    ]
+    
+    for pattern in date_patterns:
+        match = re.search(pattern, filename)
+        if match:
+            year, month, day = match.groups()
+            return f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+    return ""
+
+def extract_venue_from_filename(filename):
+    """Extract venue from filename if it follows expected patterns."""
+    # This is a basic implementation - you might need to customize based on your filename patterns
+    # For now, this will return empty string as venue extraction is complex
+    return ""
 
 # -------------------------------------------------------------
 def gather_meta(app):
@@ -29,17 +53,39 @@ def gather_meta(app):
     day   = safe_int(app.v_day.get(),   1,    31)
 
     date_str = ""
+    venue_str = app.v_venue.get().strip()
+    
     if app.v_override_date.get():
+        # Use manually entered date
         if year and month and day:
             date_str = f"{year.zfill(4)}-{month.zfill(2)}-{day.zfill(2)}"
         elif year and month:
             date_str = f"{year.zfill(4)}-{month.zfill(2)}"
         elif year:
             date_str = year.zfill(4)
+    else:
+        # Extract date from filename if no manual override
+        if hasattr(app, 'current_fp') and app.current_fp:
+            filename = os.path.basename(app.current_fp)
+            extracted_date = extract_date_from_filename(filename)
+            if extracted_date:
+                date_str = extracted_date
+                # Also update the year/month/day fields for consistency
+                date_parts = extracted_date.split('-')
+                if len(date_parts) >= 1:
+                    year = date_parts[0]
+                if len(date_parts) >= 2:
+                    month = date_parts[1]
+                if len(date_parts) >= 3:
+                    day = date_parts[2]
+            
+            # Extract venue if not manually set and if we can parse it from filename
+            if not venue_str:
+                venue_str = extract_venue_from_filename(filename)
 
     return {
         "artist":     app.v_artist.get().strip(),
-        "venue":      app.v_venue.get().strip(),
+        "venue":      venue_str,
         "city":       app.v_city.get().strip(),
         "format":     app.v_format.get().strip(),
         "additional": app.v_add.get().strip(),
@@ -253,4 +299,3 @@ def _extract_root(pattern: str) -> str | None:
     root = norm[:min(cuts)] if cuts else norm
     root = root.rstrip("/")
     return root or None
-

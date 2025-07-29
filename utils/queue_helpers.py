@@ -22,24 +22,20 @@ import tkinter as tk
 from utils.cache_manager import load_cache, cache_add_value, cache_get_list
 from utils.metadata_manager import gather_meta
 from utils.ref_file_manager import add_to_reference
+from utils.evaluator import Evaluator
 
 logger = logging.getLogger("vidforge")
 
 # ──────────────────────────────────────────────────────────────────────
-# 1.  Template evaluator
+# 1.  Template evaluator (DEPRECATED - using utils.evaluator.Evaluator now)
 # ──────────────────────────────────────────────────────────────────────
 class SchemeEvaluator:
     """
-    Substitute %tokens% (and a few $functions()) in a template string.
-
-    • Supported %tokens% (case‑sensitive):
-        %artist%  %venue%  %date%  %city%  %format%  %additional%
-
-    • $year(date)   → four‑digit year pulled from meta['year']
-      (you can add more $funcs later if needed).
-
-    • %date% is produced from y/m/d parts if present.  Empty tokens are
-      removed neatly (no leftover “[]”, doubled separators, etc.).
+    DEPRECATED: Use utils.evaluator.Evaluator instead.
+    
+    This class is kept for backwards compatibility but should not be used
+    for new functionality. The new Evaluator class supports advanced tokens
+    like %additionalN1%, %formatN2%, etc.
     """
 
     _TOKEN_KEYS = (
@@ -130,7 +126,7 @@ def get_full_output_folder(app, meta: dict) -> str:
                   (os.path.dirname(app.current_fp) if app.current_fp else os.getcwd())
 
     folder_tpl = _folder_template_from_scheme(app.naming_scheme)
-    evaluated  = SchemeEvaluator(meta).evaluate(folder_tpl)
+    evaluated  = Evaluator(meta).eval(folder_tpl)
 
     logger.debug("base_folder          : %s", base_folder)
     logger.debug("folder_tpl           : %s", folder_tpl)
@@ -175,7 +171,8 @@ def save_current(app):
         except Exception:
             fname_tpl = app.naming_scheme  # legacy flat string
 
-    proposed_name = SchemeEvaluator(meta).evaluate(fname_tpl)
+    # Use the new Evaluator instead of SchemeEvaluator
+    proposed_name = Evaluator(meta).eval(fname_tpl)
     original_name = os.path.basename(app.current_fp)
 
     # queue‑tree update --------------------------------------
