@@ -25,7 +25,7 @@
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/vidforge.git
+git clone https://github.com/deadthread/vidforge.git
 cd vidforge
 ```
 
