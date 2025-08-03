@@ -1,4 +1,4 @@
-# VidForge + SchemeEditor - Complete README
+[![VidForge Screenshots](https://i.imgur.com/Szo3tsc.png)](https://imgur.com/a/XOPU0n3)
 
 ## Overview
 
