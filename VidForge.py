@@ -20,7 +20,7 @@ from gui.gui_builder import (
     load_dropdown_cache,
     save_dropdown_cache,
 )
-from gui.naming_editor import SchemeEditor
+from scheme_editor.scheme_editor import SchemeEditor
 from utils.artist_aliases import load_artist_aliases, open_alias_editor, save_artist_aliases
 from utils.cache_manager import (
     cache_add_value,
@@ -126,6 +126,18 @@ class VideoTagger(tk.Tk):
                 }
         
         print(f"[DEBUG] Final naming_scheme: {self.naming_scheme}")
+
+        # Save the determined naming scheme to config.ini if it was created from defaults
+        if not saved_scheme or not isinstance(saved_scheme, dict) or not saved_scheme.get("folder") or not saved_scheme.get("filename"):
+            print("[DEBUG] Saving initial naming scheme to config.ini")
+            save_naming_scheme(self.naming_scheme)
+            # Also update the config_parser for immediate use
+            if not self.config_parser.has_section("Settings"):
+                self.config_parser.add_section("Settings")
+            self.config_parser.set("Settings", "naming_scheme", json.dumps(self.naming_scheme, ensure_ascii=False))
+            with open(CONFIG_FILE, "w", encoding="utf-8") as f:
+                self.config_parser.write(f)
+            print("[DEBUG] Initial naming scheme saved to config.ini")
 
         self._log = lambda msg: (logger.info(msg), appflow.info(msg))
 

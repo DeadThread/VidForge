@@ -279,8 +279,8 @@ def process_queue(
         # Create folder
         os.makedirs(dest_dir, exist_ok=True)
 
-        ext = os.path.splitext(src)[1]
-        dest_fp = os.path.join(dest_dir, dest_base + ext)
+        ext = os.path.splitext(src)[1].lstrip()  # Remove leading whitespace from extension
+        dest_fp = os.path.join(dest_dir, dest_base.rstrip() + ext)  # Remove trailing space from base, add clean extension
 
         try:
             # Move/rename if different path
