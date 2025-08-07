@@ -1,0 +1,607 @@
+2025-06-26 06:34:12,730 [DEBUG] normalize_name(Umphrey's McGee) -> umphreysmcgee
+2025-06-26 06:34:12,731 [DEBUG] normalize_name(Dogs In A Pile) -> dogsinapile
+2025-06-26 06:34:12,731 [DEBUG] normalize_name(Spafford) -> spafford
+2025-06-26 06:34:12,731 [DEBUG] normalize_name(Phish) -> phish
+2025-06-26 06:34:12,731 [DEBUG] normalize_name(Grace Bowers) -> gracebowers
+2025-06-26 06:34:12,731 [DEBUG] normalize_name(Aaron Lee Tasjan) -> aaronleetasjan
+2025-06-26 06:34:12,732 [DEBUG] normalize_name(Abraxas Pool) -> abraxaspool
+2025-06-26 06:34:12,732 [DEBUG] normalize_name(Adam Gardner) -> adamgardner
+2025-06-26 06:34:12,732 [DEBUG] normalize_name(Adrian Belew Power Trio) -> adrianbelewpowertrio
+2025-06-26 06:34:12,732 [DEBUG] normalize_name(Airborne Toxic Event) -> airbornetoxicevent
+2025-06-26 06:34:12,732 [DEBUG] normalize_name(Alabama Shakes) -> alabamashakes
+2025-06-26 06:34:12,732 [DEBUG] normalize_name(Albert Castiglia) -> albertcastiglia
+2025-06-26 06:34:12,732 [DEBUG] normalize_name(Anderson East) -> andersoneast
+2025-06-26 06:34:12,732 [DEBUG] normalize_name(Ani DiFranco) -> anidifranco
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Animal Collective) -> animalcollective
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Apollo Suns) -> apollosuns
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Arkells) -> arkells
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Art Brut) -> artbrut
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Ashley Campbell) -> ashleycampbell
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Awolnation) -> awolnation
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Band of Horses) -> bandofhorses
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Ben Folds) -> benfolds
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Big Gigantic) -> biggigantic
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Billy & The Kids) -> billythekids
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Billy Strings) -> billystrings
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Black Crowes) -> blackcrowes
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Black Joe Lewis & The Honeybears) -> blackjoelewisthehoneybears
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Black Pumas) -> blackpumas
+2025-06-26 06:34:12,733 [DEBUG] normalize_name(Blues Traveler) -> bluestraveler
+2025-06-26 06:34:12,734 [DEBUG] normalize_name(Bob Weir & RatDog) -> bobweirratdog
+2025-06-26 06:34:12,734 [DEBUG] normalize_name(Bon Iver) -> boniver
+2025-06-26 06:34:12,734 [DEBUG] normalize_name(Brandi Carlile) -> brandicarlile
+2025-06-26 06:34:12,734 [DEBUG] normalize_name(Brantley Gilbert) -> brantleygilbert
+2025-06-26 06:34:12,734 [DEBUG] normalize_name(Brett Dennen) -> brettdennen
+2025-06-26 06:34:12,734 [DEBUG] normalize_name(Brother Ali) -> brotherali
+2025-06-26 06:34:12,734 [DEBUG] normalize_name(CBDB) -> cbdb
+2025-06-26 06:34:12,734 [DEBUG] normalize_name(Chris Robinson Brotherhood) -> chrisrobinsonbrotherhood
+2025-06-26 06:34:12,734 [DEBUG] normalize_name(Clutch) -> clutch
+2025-06-26 06:34:12,735 [DEBUG] normalize_name(Cody Jinks) -> codyjinks
+2025-06-26 06:34:12,735 [DEBUG] normalize_name(Dan Deacon) -> dandeacon
+2025-06-26 06:34:12,735 [DEBUG] normalize_name(Daniel Donato) -> danieldonato
+2025-06-26 06:34:12,735 [DEBUG] normalize_name(Dave Matthews Band) -> davematthewsband
+2025-06-26 06:34:12,735 [DEBUG] normalize_name(Dead & Company) -> deadcompany
+2025-06-26 06:34:12,735 [DEBUG] normalize_name(Deer Tick) -> deertick
+2025-06-26 06:34:12,735 [DEBUG] normalize_name(Derek Trucks Band) -> derektrucksband
+2025-06-26 06:34:12,735 [DEBUG] normalize_name(Devon Gilfillian) -> devongilfillian
+2025-06-26 06:34:12,735 [DEBUG] normalize_name(Doom Flamingo) -> doomflamingo
+2025-06-26 06:34:12,735 [DEBUG] normalize_name(Drive-By Truckers) -> drivebytruckers
+2025-06-26 06:34:12,735 [DEBUG] normalize_name(Dustin Kensrue) -> dustinkensrue
+2025-06-26 06:34:12,736 [DEBUG] normalize_name(Eagles of Death Metal) -> eaglesofdeathmetal
+2025-06-26 06:34:12,736 [DEBUG] normalize_name(Eggy) -> eggy
+2025-06-26 06:34:12,736 [DEBUG] normalize_name(Eminence Ensemble) -> eminenceensemble
+2025-06-26 06:34:12,736 [DEBUG] normalize_name(Fleet Foxes) -> fleetfoxes
+2025-06-26 06:34:12,736 [DEBUG] normalize_name(Foxing) -> foxing
+2025-06-26 06:34:12,736 [DEBUG] normalize_name(Foxygen) -> foxygen
+2025-06-26 06:34:12,736 [DEBUG] normalize_name(Frank Turner) -> frankturner
+2025-06-26 06:34:12,736 [DEBUG] normalize_name(Future Islands) -> futureislands
+2025-06-26 06:34:12,736 [DEBUG] normalize_name(Galactic) -> galactic
+2025-06-26 06:34:12,737 [DEBUG] normalize_name(Gary Clark Jr.) -> garyclarkjr
+2025-06-26 06:34:12,737 [DEBUG] normalize_name(Ghost Light) -> ghostlight
+2025-06-26 06:34:12,737 [DEBUG] normalize_name(Goose) -> goose
+2025-06-26 06:34:12,737 [DEBUG] normalize_name(Gov't Mule) -> govtmule
+2025-06-26 06:34:12,737 [DEBUG] normalize_name(Grateful Dead) -> gratefuldead
+2025-06-26 06:34:12,737 [DEBUG] normalize_name(Greensky Bluegrass) -> greenskybluegrass
+2025-06-26 06:34:12,737 [DEBUG] normalize_name(Hiss Golden Messenger) -> hissgoldenmessenger
+2025-06-26 06:34:12,737 [DEBUG] normalize_name(Holly Bowling) -> hollybowling
+2025-06-26 06:34:12,737 [DEBUG] normalize_name(Horseshoes & Hand Grenades) -> horseshoeshandgrenades
+2025-06-26 06:34:12,737 [DEBUG] normalize_name(Hot Buttered Rum) -> hotbutteredrum
+2025-06-26 06:34:12,738 [DEBUG] normalize_name(Houndmouth) -> houndmouth
+2025-06-26 06:34:12,738 [DEBUG] normalize_name(House of Waters) -> houseofwaters
+2025-06-26 06:34:12,738 [DEBUG] normalize_name(Iron & Wine) -> ironwine
+2025-06-26 06:34:12,738 [DEBUG] normalize_name(Iron Maiden) -> ironmaiden
+2025-06-26 06:34:12,738 [DEBUG] normalize_name(J. Roddy Walston & The Business) -> jroddywalstonthebusiness
+2025-06-26 06:34:12,738 [DEBUG] normalize_name(Jack Johnson) -> jackjohnson
+2025-06-26 06:34:12,738 [DEBUG] normalize_name(James Bay) -> jamesbay
+2025-06-26 06:34:12,738 [DEBUG] normalize_name(Jamestown Revival) -> jamestownrevival
+2025-06-26 06:34:12,738 [DEBUG] normalize_name(Jason Isbell and the 400 Unit) -> jasonisbellandthe400unit
+2025-06-26 06:34:12,738 [DEBUG] normalize_name(Jimi Hendrix) -> jimihendrix
+2025-06-26 06:34:12,739 [DEBUG] normalize_name(Joe Russo’s Almost Dead) -> joerussosalmostdead
+2025-06-26 06:34:12,739 [DEBUG] normalize_name(John Butler Trio) -> johnbutlertrio
+2025-06-26 06:34:12,739 [DEBUG] normalize_name(John Moreland) -> johnmoreland
+2025-06-26 06:34:12,739 [DEBUG] normalize_name(Jon Bellion) -> jonbellion
+2025-06-26 06:34:12,739 [DEBUG] normalize_name(Jonathan Wilson) -> jonathanwilson
+2025-06-26 06:34:12,739 [DEBUG] normalize_name(Jonas Brothers) -> jonasbrothers
+2025-06-26 06:34:12,739 [DEBUG] normalize_name(Joseph) -> joseph
+2025-06-26 06:34:12,739 [DEBUG] normalize_name(Joshua Radin) -> joshuaradin
+2025-06-26 06:34:12,739 [DEBUG] normalize_name(Joywave) -> joywave
+2025-06-26 06:34:12,739 [DEBUG] normalize_name(Julia Holter) -> juliaholter
+2025-06-26 06:34:12,740 [DEBUG] normalize_name(Jungle) -> jungle
+2025-06-26 06:34:12,740 [DEBUG] normalize_name(Kaleo) -> kaleo
+2025-06-26 06:34:12,740 [DEBUG] normalize_name(Karina Rykman) -> karinarykman
+2025-06-26 06:34:12,740 [DEBUG] normalize_name(Keller Williams) -> kellerwilliams
+2025-06-26 06:34:12,740 [DEBUG] normalize_name(King Crimson) -> kingcrimson
+2025-06-26 06:34:12,740 [DEBUG] normalize_name(Kings of Leon) -> kingsofleon
+2025-06-26 06:34:12,740 [DEBUG] normalize_name(Kodaline) -> kodaline
+2025-06-26 06:34:12,740 [DEBUG] normalize_name(Lake Street Dive) -> lakestreetdive
+2025-06-26 06:34:12,740 [DEBUG] normalize_name(Lake Trout) -> laketrout
+2025-06-26 06:34:12,740 [DEBUG] normalize_name(Larry Keel Experience) -> larrykeelexperience
+2025-06-26 06:34:12,741 [DEBUG] normalize_name(Laroo) -> laroo
+2025-06-26 06:34:12,741 [DEBUG] normalize_name(Leon Bridges) -> leonbridges
+2025-06-26 06:34:12,741 [DEBUG] normalize_name(Lettuce) -> lettuce
+2025-06-26 06:34:12,741 [DEBUG] normalize_name(Little Feat) -> littlefeat
+2025-06-26 06:34:12,741 [DEBUG] normalize_name(Lotus) -> lotus
+2025-06-26 06:34:12,741 [DEBUG] normalize_name(Lucero) -> lucero
+2025-06-26 06:34:12,741 [DEBUG] normalize_name(Lucy Dacus) -> lucydacus
+2025-06-26 06:34:12,741 [DEBUG] normalize_name(Lukas Nelson) -> lukasnelson
+2025-06-26 06:34:12,742 [DEBUG] normalize_name(Lukas Nelson & Promise of the Real) -> lukasnelsonpromiseofthereal
+2025-06-26 06:34:12,742 [DEBUG] normalize_name(Madisen Ward and the Mama Bear) -> madisenwardandthemamabear
+2025-06-26 06:34:12,742 [DEBUG] normalize_name(Maggie Rogers) -> maggierogers
+2025-06-26 06:34:12,742 [DEBUG] normalize_name(Mandolin Orange) -> mandolinorange
+2025-06-26 06:34:12,742 [DEBUG] normalize_name(Marcus King) -> marcusking
+2025-06-26 06:34:12,742 [DEBUG] normalize_name(Marcus King Band) -> marcuskingband
+2025-06-26 06:34:12,742 [DEBUG] normalize_name(Martin Sexton) -> martinsexton
+2025-06-26 06:34:12,742 [DEBUG] normalize_name(Melvin Seals and JGB) -> melvinsealsandjgb
+2025-06-26 06:34:12,742 [DEBUG] normalize_name(Metrognome) -> metrognome
+2025-06-26 06:34:12,742 [DEBUG] normalize_name(Michael Franti & Spearhead) -> michaelfrantispearhead
+2025-06-26 06:34:12,743 [DEBUG] normalize_name(Mike Gordon) -> mikegordon
+2025-06-26 06:34:12,743 [DEBUG] normalize_name(Mondo Cozmo) -> mondocozmo
+2025-06-26 06:34:12,743 [DEBUG] normalize_name(Moody Blues) -> moodyblues
+2025-06-26 06:34:12,743 [DEBUG] normalize_name(Moon Taxi) -> moontaxi
+2025-06-26 06:34:12,743 [DEBUG] normalize_name(My Morning Jacket) -> mymorningjacket
+2025-06-26 06:34:12,743 [DEBUG] normalize_name(Naked & Famous) -> nakedfamous
+2025-06-26 06:34:12,743 [DEBUG] normalize_name(Nathaniel Rateliff) -> nathanielrateliff
+2025-06-26 06:34:12,743 [DEBUG] normalize_name(Nathaniel Rateliff & The Night Sweats) -> nathanielrateliffthenightsweats
+2025-06-26 06:34:12,743 [DEBUG] normalize_name(Neighbor) -> neighbor
+2025-06-26 06:34:12,743 [DEBUG] normalize_name(Nick Mason’s Saucerful of Secrets) -> nickmasonssaucerfulofsecrets
+2025-06-26 06:34:12,743 [DEBUG] normalize_name(Nicki Bluhm) -> nickibluhm
+2025-06-26 06:34:12,744 [DEBUG] normalize_name(Night Moves) -> nightmoves
+2025-06-26 06:34:12,744 [DEBUG] normalize_name(Old Crow Medicine Show) -> oldcrowmedicineshow
+2025-06-26 06:34:12,744 [DEBUG] normalize_name(Omar Apollo) -> omarapollo
+2025-06-26 06:34:12,744 [DEBUG] normalize_name(Oysterhead) -> oysterhead
+2025-06-26 06:34:12,744 [DEBUG] normalize_name(Passenger) -> passenger
+2025-06-26 06:34:12,744 [DEBUG] normalize_name(Pigeons Playing Ping Pong) -> pigeonsplayingpingpong
+2025-06-26 06:34:12,744 [DEBUG] normalize_name(Pixies) -> pixies
+2025-06-26 06:34:12,744 [DEBUG] normalize_name(Rainbow Kitten Surprise) -> rainbowkittensurprise
+2025-06-26 06:34:12,744 [DEBUG] normalize_name(Railroad Earth) -> railroadearth
+2025-06-26 06:34:12,745 [DEBUG] normalize_name(Robert Plant and the Sensational Space Shifters) -> robertplantandthesensationalspaceshifters
+2025-06-26 06:34:12,745 [DEBUG] normalize_name(Robert Randolph & The Family Band) -> robertrandolphthefamilyband
+2025-06-26 06:34:12,745 [DEBUG] normalize_name(Ryan Adams) -> ryanadams
+2025-06-26 06:34:12,745 [DEBUG] normalize_name(Saint Motel) -> saintmotel
+2025-06-26 06:34:12,745 [DEBUG] normalize_name(Sam Bush Band) -> sambushband
+2025-06-26 06:34:12,745 [DEBUG] normalize_name(Sammy Hagar) -> sammyhagar
+2025-06-26 06:34:12,745 [DEBUG] normalize_name(Sasha) -> sasha
+2025-06-26 06:34:12,745 [DEBUG] normalize_name(Scary Goldings) -> scarygoldings
+2025-06-26 06:34:12,745 [DEBUG] normalize_name(Shakey Graves) -> shakeygraves
+2025-06-26 06:34:12,745 [DEBUG] normalize_name(Slightly Stoopid) -> slightlystoopid
+2025-06-26 06:34:12,745 [DEBUG] normalize_name(Snarky Puppy) -> snarkypuppy
+2025-06-26 06:34:12,745 [DEBUG] normalize_name(SOJA) -> soja
+2025-06-26 06:34:12,746 [DEBUG] normalize_name(Soulive) -> soulive
+2025-06-26 06:34:12,746 [DEBUG] normalize_name(Southside Johnny & The Asbury Jukes) -> southsidejohnnytheasburyjukes
+2025-06-26 06:34:12,746 [DEBUG] normalize_name(Steep Canyon Rangers) -> steepcanyonrangers
+2025-06-26 06:34:12,746 [DEBUG] normalize_name(Stephen Malkmus & The Jicks) -> stephenmalkmusthejicks
+2025-06-26 06:34:12,746 [DEBUG] normalize_name(Steve Kimock) -> stevekimock
+2025-06-26 06:34:12,746 [DEBUG] normalize_name(Steve Miller Band) -> stevemillerband
+2025-06-26 06:34:12,746 [DEBUG] normalize_name(Stick Figure) -> stickfigure
+2025-06-26 06:34:12,746 [DEBUG] normalize_name(String Cheese Incident) -> stringcheeseincident
+2025-06-26 06:34:12,746 [DEBUG] normalize_name(Sugarland) -> sugarland
+2025-06-26 06:34:12,746 [DEBUG] normalize_name(TAND) -> tand
+2025-06-26 06:34:12,747 [DEBUG] normalize_name(Tedeschi Trucks Band) -> tedeschitrucksband
+2025-06-26 06:34:12,747 [DEBUG] normalize_name(The Allman Brothers Band) -> theallmanbrothersband
+2025-06-26 06:34:12,747 [DEBUG] normalize_name(The Avett Brothers) -> theavettbrothers
+2025-06-26 06:34:12,747 [DEBUG] normalize_name(The Black Keys) -> theblackkeys
+2025-06-26 06:34:12,747 [DEBUG] normalize_name(The Dead) -> thedead
+2025-06-26 06:34:12,747 [DEBUG] normalize_name(The Disco Biscuits) -> thediscobiscuits
+2025-06-26 06:34:12,747 [DEBUG] normalize_name(The Floozies) -> thefloozies
+2025-06-26 06:34:12,747 [DEBUG] normalize_name(The Greyboy Allstars) -> thegreyboyallstars
+2025-06-26 06:34:12,747 [DEBUG] normalize_name(The Head and the Heart) -> theheadandtheheart
+2025-06-26 06:34:12,747 [DEBUG] normalize_name(The Infamous Stringdusters) -> theinfamousstringdusters
+2025-06-26 06:34:12,747 [DEBUG] normalize_name(The Jayhawks) -> thejayhawks
+2025-06-26 06:34:12,748 [DEBUG] normalize_name(The Lumineers) -> thelumineers
+2025-06-26 06:34:12,748 [DEBUG] normalize_name(The Main Squeeze) -> themainsqueeze
+2025-06-26 06:34:12,748 [DEBUG] normalize_name(The Motet) -> themotet
+2025-06-26 06:34:12,748 [DEBUG] normalize_name(The National) -> thenational
+2025-06-26 06:34:12,748 [DEBUG] normalize_name(The New Mastersounds) -> thenewmastersounds
+2025-06-26 06:34:12,748 [DEBUG] normalize_name(The Revivalists) -> therevivalists
+2025-06-26 06:34:12,748 [DEBUG] normalize_name(The Soul Rebels) -> thesoulrebels
+2025-06-26 06:34:12,748 [DEBUG] normalize_name(The String Cheese Incident) -> thestringcheeseincident
+2025-06-26 06:34:12,748 [DEBUG] normalize_name(The War on Drugs) -> thewarondrugs
+2025-06-26 06:34:12,748 [DEBUG] normalize_name(The White Buffalo) -> thewhitebuffalo
+2025-06-26 06:34:12,749 [DEBUG] normalize_name(The Wood Brothers) -> thewoodbrothers
+2025-06-26 06:34:12,749 [DEBUG] normalize_name(The Word) -> theword
+2025-06-26 06:34:12,749 [DEBUG] normalize_name(The Zombies) -> thezombies
+2025-06-26 06:34:12,749 [DEBUG] normalize_name(Thievery Corporation) -> thieverycorporation
+2025-06-26 06:34:12,749 [DEBUG] normalize_name(Trey Anastasio Band) -> treyanastasioband
+2025-06-26 06:34:12,749 [DEBUG] normalize_name(Turkuaz) -> turkuaz
+2025-06-26 06:34:12,749 [DEBUG] normalize_name(Twiddle) -> twiddle
+2025-06-26 06:34:12,749 [DEBUG] normalize_name(Umphrey’s McGee) -> umphreysmcgee
+2025-06-26 06:34:12,749 [DEBUG] normalize_name(Vulfpeck) -> vulfpeck
+2025-06-26 06:34:12,750 [DEBUG] normalize_name(Widespread Panic) -> widespreadpanic
+2025-06-26 06:34:12,750 [DEBUG] normalize_name(Yak Attack) -> yakattack
+2025-06-26 06:34:12,750 [DEBUG] normalize_name(Yam Yam) -> yamyam
+2025-06-26 06:34:12,750 [DEBUG] normalize_name(YES) -> yes
+2025-06-26 06:34:12,750 [DEBUG] normalize_name(Yonder Mountain String Band) -> yondermountainstringband
+2025-06-26 06:34:12,750 [DEBUG] normalize_name(Zach Deputy) -> zachdeputy
+2025-06-26 06:34:12,750 [DEBUG] normalize_name(Zappa Plays Zappa) -> zappaplayszappa
+2025-06-26 06:34:12,750 [DEBUG] normalize_name(Zella Day) -> zelladay
+2025-06-26 06:34:12,750 [DEBUG] normalize_name(Zero 7) -> zero7
+2025-06-26 06:34:12,750 [DEBUG] normalize_name(ZZ Top) -> zztop
+2025-06-26 06:34:12,756 [DEBUG] normalize_name(Albany, NY) -> albanyny
+2025-06-26 06:34:12,756 [DEBUG] normalize_name(Albuquerque, NM) -> albuquerquenm
+2025-06-26 06:34:12,757 [DEBUG] normalize_name(Altoona, PA) -> altoonapa
+2025-06-26 06:34:12,757 [DEBUG] normalize_name(Amarillo, TX) -> amarillotx
+2025-06-26 06:34:12,757 [DEBUG] normalize_name(Anchorage, AK) -> anchorageak
+2025-06-26 06:34:12,757 [DEBUG] normalize_name(Ann Arbor, MI) -> annarbormi
+2025-06-26 06:34:12,757 [DEBUG] normalize_name(Appleton, WI) -> appletonwi
+2025-06-26 06:34:12,757 [DEBUG] normalize_name(Ardmore, PA) -> ardmorepa
+2025-06-26 06:34:12,757 [DEBUG] normalize_name(Asbury Park, NJ) -> asburyparknj
+2025-06-26 06:34:12,757 [DEBUG] normalize_name(Asheville, NC) -> ashevillenc
+2025-06-26 06:34:12,757 [DEBUG] normalize_name(Athens, GA) -> athensga
+2025-06-26 06:34:12,758 [DEBUG] normalize_name(Atlanta, GA) -> atlantaga
+2025-06-26 06:34:12,758 [DEBUG] normalize_name(Augusta, ME) -> augustame
+2025-06-26 06:34:12,758 [DEBUG] normalize_name(Austin, TX) -> austintx
+2025-06-26 06:34:12,758 [DEBUG] normalize_name(Bakersfield, CA) -> bakersfieldca
+2025-06-26 06:34:12,758 [DEBUG] normalize_name(Baltimore, MD) -> baltimoremd
+2025-06-26 06:34:12,758 [DEBUG] normalize_name(Bangor, ME) -> bangorme
+2025-06-26 06:34:12,758 [DEBUG] normalize_name(Barre, VT) -> barrevt
+2025-06-26 06:34:12,758 [DEBUG] normalize_name(Baton Rouge, LA) -> batonrougela
+2025-06-26 06:34:12,758 [DEBUG] normalize_name(Beaumont, TX) -> beaumonttx
+2025-06-26 06:34:12,758 [DEBUG] normalize_name(Benton Harbor, MI) -> bentonharbormi
+2025-06-26 06:34:12,759 [DEBUG] normalize_name(Bethesda, MD) -> bethesdamd
+2025-06-26 06:34:12,759 [DEBUG] normalize_name(Bellingham, WA) -> bellinghamwa
+2025-06-26 06:34:12,759 [DEBUG] normalize_name(Bend, OR) -> bendor
+2025-06-26 06:34:12,759 [DEBUG] normalize_name(Billings, MT) -> billingsmt
+2025-06-26 06:34:12,759 [DEBUG] normalize_name(Binghamton, NY) -> binghamtonny
+2025-06-26 06:34:12,759 [DEBUG] normalize_name(Birmingham, AL) -> birminghamal
+2025-06-26 06:34:12,759 [DEBUG] normalize_name(Bloomington, IN) -> bloomingtonin
+2025-06-26 06:34:12,759 [DEBUG] normalize_name(Boise, ID) -> boiseid
+2025-06-26 06:34:12,759 [DEBUG] normalize_name(Boulder, CO) -> boulderco
+2025-06-26 06:34:12,759 [DEBUG] normalize_name(Bossier City, LA) -> bossiercityla
+2025-06-26 06:34:12,760 [DEBUG] normalize_name(Bowling Green, KY) -> bowlinggreenky
+2025-06-26 06:34:12,760 [DEBUG] normalize_name(Bremerton, WA) -> bremertonwa
+2025-06-26 06:34:12,760 [DEBUG] normalize_name(Bridgeport, CT) -> bridgeportct
+2025-06-26 06:34:12,760 [DEBUG] normalize_name(Bristol, TN) -> bristoltn
+2025-06-26 06:34:12,760 [DEBUG] normalize_name(Brooklyn, NY) -> brooklynny
+2025-06-26 06:34:12,760 [DEBUG] normalize_name(Broomfield, CO) -> broomfieldco
+2025-06-26 06:34:12,760 [DEBUG] normalize_name(Brownsville, TX) -> brownsvilletx
+2025-06-26 06:34:12,760 [DEBUG] normalize_name(Buffalo, NY) -> buffalony
+2025-06-26 06:34:12,760 [DEBUG] normalize_name(Canton, OH) -> cantonoh
+2025-06-26 06:34:12,760 [DEBUG] normalize_name(Cape Cod, MA) -> capecodma
+2025-06-26 06:34:12,761 [DEBUG] normalize_name(Cape Girardeau, MO) -> capegirardeaumo
+2025-06-26 06:34:12,761 [DEBUG] normalize_name(Carbondale, IL) -> carbondaleil
+2025-06-26 06:34:12,761 [DEBUG] normalize_name(Carrollton, GA) -> carrolltonga
+2025-06-26 06:34:12,761 [DEBUG] normalize_name(Casper, WY) -> casperwy
+2025-06-26 06:34:12,761 [DEBUG] normalize_name(Cedar Rapids, IA) -> cedarrapidsia
+2025-06-26 06:34:12,761 [DEBUG] normalize_name(Champaign, IL) -> champaignil
+2025-06-26 06:34:12,761 [DEBUG] normalize_name(Charleston, SC) -> charlestonsc
+2025-06-26 06:34:12,761 [DEBUG] normalize_name(Charlottesville, VA) -> charlottesvilleva
+2025-06-26 06:34:12,761 [DEBUG] normalize_name(Chattanooga, TN) -> chattanoogatn
+2025-06-26 06:34:12,761 [DEBUG] normalize_name(Chesapeake, VA) -> chesapeakeva
+2025-06-26 06:34:12,762 [DEBUG] normalize_name(Chicago, IL) -> chicagoil
+2025-06-26 06:34:12,762 [DEBUG] normalize_name(Chico, CA) -> chicoca
+2025-06-26 06:34:12,762 [DEBUG] normalize_name(Cincinnati, OH) -> cincinnatioh
+2025-06-26 06:34:12,762 [DEBUG] normalize_name(Clarksville, TN) -> clarksvilletn
+2025-06-26 06:34:12,762 [DEBUG] normalize_name(Cleveland, OH) -> clevelandoh
+2025-06-26 06:34:12,762 [DEBUG] normalize_name(College Station, TX) -> collegestationtx
+2025-06-26 06:34:12,762 [DEBUG] normalize_name(Columbia, SC) -> columbiasc
+2025-06-26 06:34:12,762 [DEBUG] normalize_name(Columbus, OH) -> columbusoh
+2025-06-26 06:34:12,762 [DEBUG] normalize_name(Concord, CA) -> concordca
+2025-06-26 06:34:12,763 [DEBUG] normalize_name(Corpus Christi, TX) -> corpuschristitx
+2025-06-26 06:34:12,763 [DEBUG] normalize_name(Covington, KY) -> covingtonky
+2025-06-26 06:34:12,763 [DEBUG] normalize_name(Crestview, FL) -> crestviewfl
+2025-06-26 06:34:12,763 [DEBUG] normalize_name(Davenport, IA) -> davenportia
+2025-06-26 06:34:12,763 [DEBUG] normalize_name(Dallas, TX) -> dallastx
+2025-06-26 06:34:12,763 [DEBUG] normalize_name(Dayton, OH) -> daytonoh
+2025-06-26 06:34:12,763 [DEBUG] normalize_name(Decatur, IL) -> decaturil
+2025-06-26 06:34:12,763 [DEBUG] normalize_name(Del Rio, TX) -> delriotx
+2025-06-26 06:34:12,763 [DEBUG] normalize_name(Delaware, OH) -> delawareoh
+2025-06-26 06:34:12,763 [DEBUG] normalize_name(Denver, CO) -> denverco
+2025-06-26 06:34:12,764 [DEBUG] normalize_name(Denton, TX) -> dentontx
+2025-06-26 06:34:12,764 [DEBUG] normalize_name(Des Moines, IA) -> desmoinesia
+2025-06-26 06:34:12,764 [DEBUG] normalize_name(Detroit, MI) -> detroitmi
+2025-06-26 06:34:12,764 [DEBUG] normalize_name(Dothan, AL) -> dothanal
+2025-06-26 06:34:12,764 [DEBUG] normalize_name(Dover, DE) -> doverde
+2025-06-26 06:34:12,764 [DEBUG] normalize_name(Dubuque, IA) -> dubuqueia
+2025-06-26 06:34:12,764 [DEBUG] normalize_name(Duluth, MN) -> duluthmn
+2025-06-26 06:34:12,764 [DEBUG] normalize_name(Durham, NC) -> durhamnc
+2025-06-26 06:34:12,764 [DEBUG] normalize_name(Eau Claire, WI) -> eauclairewi
+2025-06-26 06:34:12,764 [DEBUG] normalize_name(East Troy, WI) -> easttroywi
+2025-06-26 06:34:12,764 [DEBUG] normalize_name(Eden Prairie, MN) -> edenprairiemn
+2025-06-26 06:34:12,765 [DEBUG] normalize_name(Eugene, OR) -> eugeneor
+2025-06-26 06:34:12,765 [DEBUG] normalize_name(Evansville, IN) -> evansvillein
+2025-06-26 06:34:12,765 [DEBUG] normalize_name(Fairbanks, AK) -> fairbanksak
+2025-06-26 06:34:12,765 [DEBUG] normalize_name(Fargo, ND) -> fargond
+2025-06-26 06:34:12,765 [DEBUG] normalize_name(Fayetteville, AR) -> fayettevillear
+2025-06-26 06:34:12,765 [DEBUG] normalize_name(Flagstaff, AZ) -> flagstaffaz
+2025-06-26 06:34:12,765 [DEBUG] normalize_name(Flint, MI) -> flintmi
+2025-06-26 06:34:12,765 [DEBUG] normalize_name(Fort Collins, CO) -> fortcollinsco
+2025-06-26 06:34:12,765 [DEBUG] normalize_name(Fort Lauderdale, FL) -> fortlauderdalefl
+2025-06-26 06:34:12,766 [DEBUG] normalize_name(Fort Wayne, IN) -> fortwaynein
+2025-06-26 06:34:12,766 [DEBUG] normalize_name(Fort Worth, TX) -> fortworthtx
+2025-06-26 06:34:12,766 [DEBUG] normalize_name(Fresno, CA) -> fresnoca
+2025-06-26 06:34:12,766 [DEBUG] normalize_name(Gainesville, FL) -> gainesvillefl
+2025-06-26 06:34:12,766 [DEBUG] normalize_name(Gallup, NM) -> gallupnm
+2025-06-26 06:34:12,766 [DEBUG] normalize_name(Gillette, WY) -> gillettewy
+2025-06-26 06:34:12,766 [DEBUG] normalize_name(Glendale, AZ) -> glendaleaz
+2025-06-26 06:34:12,766 [DEBUG] normalize_name(Grand Junction, CO) -> grandjunctionco
+2025-06-26 06:34:12,766 [DEBUG] normalize_name(Grand Rapids, MI) -> grandrapidsmi
+2025-06-26 06:34:12,766 [DEBUG] normalize_name(Great Falls, MT) -> greatfallsmt
+2025-06-26 06:34:12,766 [DEBUG] normalize_name(Greeley, CO) -> greeleyco
+2025-06-26 06:34:12,767 [DEBUG] normalize_name(Green Bay, WI) -> greenbaywi
+2025-06-26 06:34:12,767 [DEBUG] normalize_name(Greenville, SC) -> greenvillesc
+2025-06-26 06:34:12,767 [DEBUG] normalize_name(Gulfport, MS) -> gulfportms
+2025-06-26 06:34:12,767 [DEBUG] normalize_name(Hagerstown, MD) -> hagerstownmd
+2025-06-26 06:34:12,767 [DEBUG] normalize_name(Hammond, IN) -> hammondin
+2025-06-26 06:34:12,767 [DEBUG] normalize_name(Hampton, VA) -> hamptonva
+2025-06-26 06:34:12,767 [DEBUG] normalize_name(Harrisburg, PA) -> harrisburgpa
+2025-06-26 06:34:12,767 [DEBUG] normalize_name(Hartford, CT) -> hartfordct
+2025-06-26 06:34:12,767 [DEBUG] normalize_name(Hattiesburg, MS) -> hattiesburgms
+2025-06-26 06:34:12,767 [DEBUG] normalize_name(Helena, MT) -> helenamt
+2025-06-26 06:34:12,767 [DEBUG] normalize_name(Hickory, NC) -> hickorync
+2025-06-26 06:34:12,767 [DEBUG] normalize_name(High Point, NC) -> highpointnc
+2025-06-26 06:34:12,768 [DEBUG] normalize_name(Hilo, HI) -> hilohi
+2025-06-26 06:34:12,768 [DEBUG] normalize_name(Hilton Head, SC) -> hiltonheadsc
+2025-06-26 06:34:12,768 [DEBUG] normalize_name(Holland, MI) -> hollandmi
+2025-06-26 06:34:12,768 [DEBUG] normalize_name(Holyoke, MA) -> holyokema
+2025-06-26 06:34:12,768 [DEBUG] normalize_name(Houma, LA) -> houmala
+2025-06-26 06:34:12,768 [DEBUG] normalize_name(Huntington, WV) -> huntingtonwv
+2025-06-26 06:34:12,768 [DEBUG] normalize_name(Huntsville, AL) -> huntsvilleal
+2025-06-26 06:34:12,768 [DEBUG] normalize_name(Indianapolis, IN) -> indianapolisin
+2025-06-26 06:34:12,768 [DEBUG] normalize_name(Irvine, CA) -> irvineca
+2025-06-26 06:34:12,768 [DEBUG] normalize_name(Jacksonville, FL) -> jacksonvillefl
+2025-06-26 06:34:12,769 [DEBUG] normalize_name(Kansas City, MO) -> kansascitymo
+2025-06-26 06:34:12,769 [DEBUG] normalize_name(Las Vegas, NV) -> lasvegasnv
+2025-06-26 06:34:12,769 [DEBUG] normalize_name(Lexington, KY) -> lexingtonky
+2025-06-26 06:34:12,769 [DEBUG] normalize_name(Little Rock, AR) -> littlerockar
+2025-06-26 06:34:12,769 [DEBUG] normalize_name(Louisville, KY) -> louisvilleky
+2025-06-26 06:34:12,769 [DEBUG] normalize_name(Madison, WI) -> madisonwi
+2025-06-26 06:34:12,769 [DEBUG] normalize_name(Memphis, TN) -> memphistn
+2025-06-26 06:34:12,769 [DEBUG] normalize_name(Mesa, AZ) -> mesaaz
+2025-06-26 06:34:12,769 [DEBUG] normalize_name(Minneapolis, MN) -> minneapolismn
+2025-06-26 06:34:12,769 [DEBUG] normalize_name(Mobile, AL) -> mobileal
+2025-06-26 06:34:12,770 [DEBUG] normalize_name(Montclair, NJ) -> montclairnj
+2025-06-26 06:34:12,770 [DEBUG] normalize_name(Nashville, TN) -> nashvilletn
+2025-06-26 06:34:12,770 [DEBUG] normalize_name(Noblesville, IN) -> noblesvillein
+2025-06-26 06:34:12,770 [DEBUG] normalize_name(Norfolk, VA) -> norfolkva
+2025-06-26 06:34:12,770 [DEBUG] normalize_name(Norva, VA) -> norvava
+2025-06-26 06:34:12,770 [DEBUG] normalize_name(Oak Mountain, AL) -> oakmountainal
+2025-06-26 06:34:12,770 [DEBUG] normalize_name(Oakdale, CT) -> oakdalect
+2025-06-26 06:34:12,770 [DEBUG] normalize_name(Oakland, CA) -> oaklandca
+2025-06-26 06:34:12,770 [DEBUG] normalize_name(Oklahoma City, OK) -> oklahomacityok
+2025-06-26 06:34:12,771 [DEBUG] normalize_name(Olympia, WA) -> olympiawa
+2025-06-26 06:34:12,771 [DEBUG] normalize_name(Orlando, FL) -> orlandofl
+2025-06-26 06:34:12,771 [DEBUG] normalize_name(Philadelphia, PA) -> philadelphiapa
+2025-06-26 06:34:12,771 [DEBUG] normalize_name(Phoenix, AZ) -> phoenixaz
+2025-06-26 06:34:12,771 [DEBUG] normalize_name(Pittsburgh, PA) -> pittsburghpa
+2025-06-26 06:34:12,771 [DEBUG] normalize_name(Portland, ME) -> portlandme
+2025-06-26 06:34:12,771 [DEBUG] normalize_name(Portland, OR) -> portlandor
+2025-06-26 06:34:12,771 [DEBUG] normalize_name(Raleigh, NC) -> raleighnc
+2025-06-26 06:34:12,771 [DEBUG] normalize_name(Redmond, WA) -> redmondwa
+2025-06-26 06:34:12,771 [DEBUG] normalize_name(Reno, NV) -> renonv
+2025-06-26 06:34:12,771 [DEBUG] normalize_name(Richmond, VA) -> richmondva
+2025-06-26 06:34:12,772 [DEBUG] normalize_name(Riverside, CA) -> riversideca
+2025-06-26 06:34:12,772 [DEBUG] normalize_name(Rochester, NY) -> rochesterny
+2025-06-26 06:34:12,772 [DEBUG] normalize_name(Sacramento, CA) -> sacramentoca
+2025-06-26 06:34:12,772 [DEBUG] normalize_name(Saratoga Springs, NY) -> saratogaspringsny
+2025-06-26 06:34:12,772 [DEBUG] normalize_name(Savannah, GA) -> savannahga
+2025-06-26 06:34:12,772 [DEBUG] normalize_name(Seattle, WA) -> seattlewa
+2025-06-26 06:34:12,772 [DEBUG] normalize_name(Sebastian, FL) -> sebastianfl
+2025-06-26 06:34:12,772 [DEBUG] normalize_name(Silver Legacy Resort Casino, NV) -> silverlegacyresortcasinonv
+2025-06-26 06:34:12,772 [DEBUG] normalize_name(Silver Spring, MD) -> silverspringmd
+2025-06-26 06:34:12,772 [DEBUG] normalize_name(Skokie, IL) -> skokieil
+2025-06-26 06:34:12,773 [DEBUG] normalize_name(Southgate, KY) -> southgateky
+2025-06-26 06:34:12,773 [DEBUG] normalize_name(St. Louis, MO) -> stlouismo
+2025-06-26 06:34:12,773 [DEBUG] normalize_name(St. Paul, MN) -> stpaulmn
+2025-06-26 06:34:12,773 [DEBUG] normalize_name(Tampa, FL) -> tampafl
+2025-06-26 06:34:12,773 [DEBUG] normalize_name(Tempe, AZ) -> tempeaz
+2025-06-26 06:34:12,773 [DEBUG] normalize_name(Tinley Park, IL) -> tinleyparkil
+2025-06-26 06:34:12,773 [DEBUG] normalize_name(Toledo, OH) -> toledooh
+2025-06-26 06:34:12,773 [DEBUG] normalize_name(Tucson, AZ) -> tucsonaz
+2025-06-26 06:34:12,773 [DEBUG] normalize_name(Tulsa, OK) -> tulsaok
+2025-06-26 06:34:12,773 [DEBUG] normalize_name(Tuscaloosa, AL) -> tuscaloosaal
+2025-06-26 06:34:12,774 [DEBUG] normalize_name(Utica, NY) -> uticany
+2025-06-26 06:34:12,774 [DEBUG] normalize_name(Vero Beach, FL) -> verobeachfl
+2025-06-26 06:34:12,774 [DEBUG] normalize_name(Virginia Beach, VA) -> virginiabeachva
+2025-06-26 06:34:12,774 [DEBUG] normalize_name(Waco, TX) -> wacotx
+2025-06-26 06:34:12,774 [DEBUG] normalize_name(Warwick, RI) -> warwickri
+2025-06-26 06:34:12,774 [DEBUG] normalize_name(Washington, DC) -> washingtondc
+2025-06-26 06:34:12,774 [DEBUG] normalize_name(Waterloo, IA) -> waterlooia
+2025-06-26 06:34:12,774 [DEBUG] normalize_name(Wausau, WI) -> wausauwi
+2025-06-26 06:34:12,774 [DEBUG] normalize_name(West Palm Beach, FL) -> westpalmbeachfl
+2025-06-26 06:34:12,774 [DEBUG] normalize_name(West Springfield, MA) -> westspringfieldma
+2025-06-26 06:34:12,774 [DEBUG] normalize_name(West Warwick, RI) -> westwarwickri
+2025-06-26 06:34:12,774 [DEBUG] normalize_name(Westbury, NY) -> westburyny
+2025-06-26 06:34:12,775 [DEBUG] normalize_name(White River Junction, VT) -> whiteriverjunctionvt
+2025-06-26 06:34:12,775 [DEBUG] normalize_name(Wilkes-Barre, PA) -> wilkesbarrepa
+2025-06-26 06:34:12,775 [DEBUG] normalize_name(Williamsburg, VA) -> williamsburgva
+2025-06-26 06:34:12,775 [DEBUG] normalize_name(Worcester, MA) -> worcesterma
+2025-06-26 06:34:12,775 [DEBUG] normalize_name(Yakima, WA) -> yakimawa
+2025-06-26 06:34:12,775 [DEBUG] normalize_name(Yuma, AZ) -> yumaaz
+2025-06-26 06:34:12,775 [DEBUG] normalize_name(Marrakech, Morocco) -> marrakechmorocco
+2025-06-26 06:34:12,775 [DEBUG] normalize_name(Moroc, CO) -> morocco
+2025-06-26 06:34:12,775 [DEBUG] normalize_name(Manchester, NH) -> manchesternh
+2025-06-26 06:34:12,782 [DEBUG] normalize_name(Alpine Valley Music Theater) -> alpinevalleymusictheater
+2025-06-26 06:34:12,782 [DEBUG] normalize_name(Aragon Ballroom) -> aragonballroom
+2025-06-26 06:34:12,782 [DEBUG] normalize_name(Arvest Bank Theatre) -> arvestbanktheatre
+2025-06-26 06:34:12,782 [DEBUG] normalize_name(Ascend Amphitheater) -> ascendamphitheater
+2025-06-26 06:34:12,782 [DEBUG] normalize_name(Asheville Civic Center) -> ashevilleciviccenter
+2025-06-26 06:34:12,782 [DEBUG] normalize_name(Austin City Limits Live at The Moody Theater) -> austincitylimitsliveatthemoodytheater
+2025-06-26 06:34:12,782 [DEBUG] normalize_name(Ballroom at Warehouse Live) -> ballroomatwarehouselive
+2025-06-26 06:34:12,783 [DEBUG] normalize_name(Benedum Center) -> benedumcenter
+2025-06-26 06:34:12,783 [DEBUG] normalize_name(Bill Graham Civic Auditorium) -> billgrahamcivicauditorium
+2025-06-26 06:34:12,783 [DEBUG] normalize_name(BOK Center) -> bokcenter
+2025-06-26 06:34:12,783 [DEBUG] normalize_name(Boston Garden) -> bostongarden
+2025-06-26 06:34:12,783 [DEBUG] normalize_name(Boston Opera House) -> bostonoperahouse
+2025-06-26 06:34:12,783 [DEBUG] normalize_name(Bowery Ballroom) -> boweryballroom
+2025-06-26 06:34:12,783 [DEBUG] normalize_name(Bridgestone Arena) -> bridgestonearena
+2025-06-26 06:34:12,783 [DEBUG] normalize_name(Brooklyn Steel) -> brooklynsteel
+2025-06-26 06:34:12,783 [DEBUG] normalize_name(Budweiser Events Center) -> budweisereventscenter
+2025-06-26 06:34:12,783 [DEBUG] normalize_name(Cain’s Ballroom) -> cainsballroom
+2025-06-26 06:34:12,784 [DEBUG] normalize_name(Cal Expo Amphitheater) -> calexpoamphitheater
+2025-06-26 06:34:12,784 [DEBUG] normalize_name(Calvin Theatre) -> calvintheatre
+2025-06-26 06:34:12,784 [DEBUG] normalize_name(Capitol Theatre) -> capitoltheatre
+2025-06-26 06:34:12,784 [DEBUG] normalize_name(Carolina Theatre) -> carolinatheatre
+2025-06-26 06:34:12,784 [DEBUG] normalize_name(Catoosa Amphitheater) -> catoosaamphitheater
+2025-06-26 06:34:12,784 [DEBUG] normalize_name(Cat’s Cradle) -> catscradle
+2025-06-26 06:34:12,784 [DEBUG] normalize_name(Center Stage Theater) -> centerstagetheater
+2025-06-26 06:34:12,784 [DEBUG] normalize_name(Chastain Park Amphitheater) -> chastainparkamphitheater
+2025-06-26 06:34:12,785 [DEBUG] normalize_name(Chicago Theatre) -> chicagotheatre
+2025-06-26 06:34:12,785 [DEBUG] normalize_name(Civic Center Music Hall) -> civiccentermusichall
+2025-06-26 06:34:12,785 [DEBUG] normalize_name(Civic Center Plaza) -> civiccenterplaza
+2025-06-26 06:34:12,785 [DEBUG] normalize_name(City National Grove of Anaheim) -> citynationalgroveofanaheim
+2025-06-26 06:34:12,785 [DEBUG] normalize_name(City Winery) -> citywinery
+2025-06-26 06:34:12,785 [DEBUG] normalize_name(Columbia City Theater) -> columbiacitytheater
+2025-06-26 06:34:12,785 [DEBUG] normalize_name(Columbus Civic Center) -> columbusciviccenter
+2025-06-26 06:34:12,785 [DEBUG] normalize_name(Comerica Theatre) -> comericatheatre
+2025-06-26 06:34:12,785 [DEBUG] normalize_name(Concord Pavilion) -> concordpavilion
+2025-06-26 06:34:12,785 [DEBUG] normalize_name(Congress Theatre) -> congresstheatre
+2025-06-26 06:34:12,786 [DEBUG] normalize_name(Constitution Hall) -> constitutionhall
+2025-06-26 06:34:12,786 [DEBUG] normalize_name(Cricket Wireless Amphitheater) -> cricketwirelessamphitheater
+2025-06-26 06:34:12,786 [DEBUG] normalize_name(Crown Theater) -> crowntheater
+2025-06-26 06:34:12,786 [DEBUG] normalize_name(Crosby Theater) -> crosbytheater
+2025-06-26 06:34:12,786 [DEBUG] normalize_name(Daily’s Place Amphitheater) -> dailysplaceamphitheater
+2025-06-26 06:34:12,786 [DEBUG] normalize_name(DTE Energy Music Theatre) -> dteenergymusictheatre
+2025-06-26 06:34:12,786 [DEBUG] normalize_name(E Center) -> ecenter
+2025-06-26 06:34:12,786 [DEBUG] normalize_name(EagleBank Arena) -> eaglebankarena
+2025-06-26 06:34:12,786 [DEBUG] normalize_name(Eden Prairie Center) -> edenprairiecenter
+2025-06-26 06:34:12,786 [DEBUG] normalize_name(Eldorado Amphitheater) -> eldoradoamphitheater
+2025-06-26 06:34:12,787 [DEBUG] normalize_name(Elgin Theatre) -> elgintheatre
+2025-06-26 06:34:12,787 [DEBUG] normalize_name(Empire Polo Club) -> empirepoloclub
+2025-06-26 06:34:12,787 [DEBUG] normalize_name(Ernest N. Morial Convention Center) -> ernestnmorialconventioncenter
+2025-06-26 06:34:12,787 [DEBUG] normalize_name(Essig Museum of Entomology) -> essigmuseumofentomology
+2025-06-26 06:34:12,787 [DEBUG] normalize_name(Fargo Civic Center) -> fargociviccenter
+2025-06-26 06:34:12,787 [DEBUG] normalize_name(FedExForum) -> fedexforum
+2025-06-26 06:34:12,787 [DEBUG] normalize_name(Fillmore Auditorium) -> fillmoreauditorium
+2025-06-26 06:34:12,787 [DEBUG] normalize_name(Fillmore Detroit) -> fillmoredetroit
+2025-06-26 06:34:12,787 [DEBUG] normalize_name(Fillmore Miami Beach) -> fillmoremiamibeach
+2025-06-26 06:34:12,787 [DEBUG] normalize_name(Fillmore New York at Irving Plaza) -> fillmorenewyorkatirvingplaza
+2025-06-26 06:34:12,788 [DEBUG] normalize_name(Fillmore Silver Spring) -> fillmoresilverspring
+2025-06-26 06:34:12,788 [DEBUG] normalize_name(Filmore West) -> filmorewest
+2025-06-26 06:34:12,788 [DEBUG] normalize_name(First Avenue) -> firstavenue
+2025-06-26 06:34:12,788 [DEBUG] normalize_name(Fox Theatre) -> foxtheatre
+2025-06-26 06:34:12,788 [DEBUG] normalize_name(Foxwoods Resort Casino) -> foxwoodsresortcasino
+2025-06-26 06:34:12,788 [DEBUG] normalize_name(Frank Erwin Center) -> frankerwincenter
+2025-06-26 06:34:12,788 [DEBUG] normalize_name(Freeman Coliseum) -> freemancoliseum
+2025-06-26 06:34:12,788 [DEBUG] normalize_name(Frye Festival Hall) -> fryefestivalhall
+2025-06-26 06:34:12,788 [DEBUG] normalize_name(Gexa Energy Pavilion) -> gexaenergypavilion
+2025-06-26 06:34:12,788 [DEBUG] normalize_name(Gila River Arena) -> gilariverarena
+2025-06-26 06:34:12,788 [DEBUG] normalize_name(Grand Prairie Arts Council) -> grandprairieartscouncil
+2025-06-26 06:34:12,788 [DEBUG] normalize_name(Grand Rapids Civic Theatre) -> grandrapidscivictheatre
+2025-06-26 06:34:12,789 [DEBUG] normalize_name(Great American Music Hall) -> greatamericanmusichall
+2025-06-26 06:34:12,789 [DEBUG] normalize_name(Greek Theatre) -> greektheatre
+2025-06-26 06:34:12,789 [DEBUG] normalize_name(Greensboro Coliseum Complex) -> greensborocoliseumcomplex
+2025-06-26 06:34:12,789 [DEBUG] normalize_name(Gulf Coast Coliseum) -> gulfcoastcoliseum
+2025-06-26 06:34:12,789 [DEBUG] normalize_name(Hammerstein Ballroom) -> hammersteinballroom
+2025-06-26 06:34:12,789 [DEBUG] normalize_name(Hammond Civic Center) -> hammondciviccenter
+2025-06-26 06:34:12,789 [DEBUG] normalize_name(Hard Rock Live) -> hardrocklive
+2025-06-26 06:34:12,789 [DEBUG] normalize_name(Harlow’s) -> harlows
+2025-06-26 06:34:12,789 [DEBUG] normalize_name(Harrah’s Cherokee Casino Resort) -> harrahscherokeecasinoresort
+2025-06-26 06:34:12,789 [DEBUG] normalize_name(Harris Center for the Arts) -> harriscenterforthearts
+2025-06-26 06:34:12,790 [DEBUG] normalize_name(Hawthorn Theater) -> hawthorntheater
+2025-06-26 06:34:12,790 [DEBUG] normalize_name(Heidelberg Theatre) -> heidelbergtheatre
+2025-06-26 06:34:12,790 [DEBUG] normalize_name(Hershey Theatre) -> hersheytheatre
+2025-06-26 06:34:12,790 [DEBUG] normalize_name(Highline Ballroom) -> highlineballroom
+2025-06-26 06:34:12,790 [DEBUG] normalize_name(Hollywood Bowl) -> hollywoodbowl
+2025-06-26 06:34:12,790 [DEBUG] normalize_name(House of Blues Boston) -> houseofbluesboston
+2025-06-26 06:34:12,790 [DEBUG] normalize_name(House of Blues Chicago) -> houseofblueschicago
+2025-06-26 06:34:12,790 [DEBUG] normalize_name(House of Blues Dallas) -> houseofbluesdallas
+2025-06-26 06:34:12,790 [DEBUG] normalize_name(House of Blues Houston) -> houseofblueshouston
+2025-06-26 06:34:12,791 [DEBUG] normalize_name(House of Blues Las Vegas) -> houseofblueslasvegas
+2025-06-26 06:34:12,791 [DEBUG] normalize_name(House of Blues New Orleans) -> houseofbluesneworleans
+2025-06-26 06:34:12,791 [DEBUG] normalize_name(House of Blues Orlando) -> houseofbluesorlando
+2025-06-26 06:34:12,791 [DEBUG] normalize_name(House of Blues San Diego) -> houseofbluessandiego
+2025-06-26 06:34:12,791 [DEBUG] normalize_name(House of Blues Sunset Strip) -> houseofbluessunsetstrip
+2025-06-26 06:34:12,791 [DEBUG] normalize_name(House of Blues Washington DC) -> houseofblueswashingtondc
+2025-06-26 06:34:12,791 [DEBUG] normalize_name(Huntington Bank Pavilion at Northerly Island) -> huntingtonbankpavilionatnortherlyisland
+2025-06-26 06:34:12,792 [DEBUG] normalize_name(Icon Theatre) -> icontheatre
+2025-06-26 06:34:12,792 [DEBUG] normalize_name(Izod Center) -> izodcenter
+2025-06-26 06:34:12,792 [DEBUG] normalize_name(Joyce Theater) -> joycetheater
+2025-06-26 06:34:12,792 [DEBUG] normalize_name(Keller Auditorium) -> kellerauditorium
+2025-06-26 06:34:12,792 [DEBUG] normalize_name(Koka Booth Amphitheatre) -> kokaboothamphitheatre
+2025-06-26 06:34:12,792 [DEBUG] normalize_name(La Zona Rosa) -> lazonarosa
+2025-06-26 06:34:12,792 [DEBUG] normalize_name(Lammermoor Theater) -> lammermoortheater
+2025-06-26 06:34:12,792 [DEBUG] normalize_name(Landmark Theatre) -> landmarktheatre
+2025-06-26 06:34:12,793 [DEBUG] normalize_name(Levy Theater) -> levytheater
+2025-06-26 06:34:12,793 [DEBUG] normalize_name(Liberty Hall) -> libertyhall
+2025-06-26 06:34:12,793 [DEBUG] normalize_name(Liberty Theatre) -> libertytheatre
+2025-06-26 06:34:12,793 [DEBUG] normalize_name(Lincoln Theatre) -> lincolntheatre
+2025-06-26 06:34:12,793 [DEBUG] normalize_name(Lisner Auditorium) -> lisnerauditorium
+2025-06-26 06:34:12,793 [DEBUG] normalize_name(Live Nation Amphitheater) -> livenationamphitheater
+2025-06-26 06:34:12,793 [DEBUG] normalize_name(Loft at City Winery) -> loftatcitywinery
+2025-06-26 06:34:12,793 [DEBUG] normalize_name(Louisville Palace) -> louisvillepalace
+2025-06-26 06:34:12,793 [DEBUG] normalize_name(Love’s Jazz & Arts Center) -> lovesjazzartscenter
+2025-06-26 06:34:12,793 [DEBUG] normalize_name(Majestic Theatre) -> majestictheatre
+2025-06-26 06:34:12,794 [DEBUG] normalize_name(Marquee Theatre) -> marqueetheatre
+2025-06-26 06:34:12,794 [DEBUG] normalize_name(Masquerade) -> masquerade
+2025-06-26 06:34:12,794 [DEBUG] normalize_name(McDonald Theatre) -> mcdonaldtheatre
+2025-06-26 06:34:12,794 [DEBUG] normalize_name(Memorial Auditorium) -> memorialauditorium
+2025-06-26 06:34:12,794 [DEBUG] normalize_name(Merriweather Post Pavilion) -> merriweatherpostpavilion
+2025-06-26 06:34:12,794 [DEBUG] normalize_name(Metropolitan Opera House) -> metropolitanoperahouse
+2025-06-26 06:34:12,794 [DEBUG] normalize_name(MGM Grand Garden Arena) -> mgmgrandgardenarena
+2025-06-26 06:34:12,794 [DEBUG] normalize_name(Mohegan Sun Arena) -> mohegansunarena
+2025-06-26 06:34:12,794 [DEBUG] normalize_name(Molson Canadian Amphitheatre) -> molsoncanadianamphitheatre
+2025-06-26 06:34:12,794 [DEBUG] normalize_name(Moody Theater) -> moodytheater
+2025-06-26 06:34:12,795 [DEBUG] normalize_name(Mosaic Music Hall) -> mosaicmusichall
+2025-06-26 06:34:12,795 [DEBUG] normalize_name(Music Hall of Williamsburg) -> musichallofwilliamsburg
+2025-06-26 06:34:12,795 [DEBUG] normalize_name(Nassau Coliseum) -> nassaucoliseum
+2025-06-26 06:34:12,795 [DEBUG] normalize_name(National Auditorium) -> nationalauditorium
+2025-06-26 06:34:12,795 [DEBUG] normalize_name(Navarro Theater) -> navarrotheater
+2025-06-26 06:34:12,795 [DEBUG] normalize_name(Neptune Theatre) -> neptunetheatre
+2025-06-26 06:34:12,795 [DEBUG] normalize_name(New World Stages) -> newworldstages
+2025-06-26 06:34:12,795 [DEBUG] normalize_name(Norva) -> norva
+2025-06-26 06:34:12,795 [DEBUG] normalize_name(O2 Arena) -> o2arena
+2025-06-26 06:34:12,795 [DEBUG] normalize_name(Oak Mountain Amphitheatre) -> oakmountainamphitheatre
+2025-06-26 06:34:12,796 [DEBUG] normalize_name(Oakdale Theatre) -> oakdaletheatre
+2025-06-26 06:34:12,796 [DEBUG] normalize_name(Oakland Arena) -> oaklandarena
+2025-06-26 06:34:12,796 [DEBUG] normalize_name(Ocean Resort Casino) -> oceanresortcasino
+2025-06-26 06:34:12,796 [DEBUG] normalize_name(Oregon Zoo Amphitheater) -> oregonzooamphitheater
+2025-06-26 06:34:12,796 [DEBUG] normalize_name(Orpheum Theatre) -> orpheumtheatre
+2025-06-26 06:34:12,796 [DEBUG] normalize_name(Palace Theatre) -> palacetheatre
+2025-06-26 06:34:12,796 [DEBUG] normalize_name(Palace Theater) -> palacetheater
+2025-06-26 06:34:12,796 [DEBUG] normalize_name(Paramount Theatre) -> paramounttheatre
+2025-06-26 06:34:12,796 [DEBUG] normalize_name(Peabody Opera House) -> peabodyoperahouse
+2025-06-26 06:34:12,796 [DEBUG] normalize_name(Pepsi Center) -> pepsicenter
+2025-06-26 06:34:12,796 [DEBUG] normalize_name(Petco Park) -> petcopark
+2025-06-26 06:34:12,796 [DEBUG] normalize_name(Phoenix Concert Theatre) -> phoenixconcerttheatre
+2025-06-26 06:34:12,797 [DEBUG] normalize_name(Phoenix Symphony Hall) -> phoenixsymphonyhall
+2025-06-26 06:34:12,797 [DEBUG] normalize_name(Playstation Theater) -> playstationtheater
+2025-06-26 06:34:12,797 [DEBUG] normalize_name(Prudential Center) -> prudentialcenter
+2025-06-26 06:34:12,797 [DEBUG] normalize_name(Puyallup Fairgrounds) -> puyallupfairgrounds
+2025-06-26 06:34:12,797 [DEBUG] normalize_name(RBC Center) -> rbccenter
+2025-06-26 06:34:12,797 [DEBUG] normalize_name(Ritz Theater) -> ritztheater
+2025-06-26 06:34:12,797 [DEBUG] normalize_name(Riverbend Music Center) -> riverbendmusiccenter
+2025-06-26 06:34:12,797 [DEBUG] normalize_name(Riverside Theater) -> riversidetheater
+2025-06-26 06:34:12,797 [DEBUG] normalize_name(Ryman Auditorium) -> rymanauditorium
+2025-06-26 06:34:12,797 [DEBUG] normalize_name(Saban Theatre) -> sabantheatre
+2025-06-26 06:34:12,797 [DEBUG] normalize_name(Saratoga Performing Arts Center) -> saratogaperformingartscenter
+2025-06-26 06:34:12,797 [DEBUG] normalize_name(Sears Centre Arena) -> searscentrearena
+2025-06-26 06:34:12,798 [DEBUG] normalize_name(Shank Hall) -> shankhall
+2025-06-26 06:34:12,798 [DEBUG] normalize_name(Shoreline Amphitheatre) -> shorelineamphitheatre
+2025-06-26 06:34:12,798 [DEBUG] normalize_name(Showbox SoDo) -> showboxsodo
+2025-06-26 06:34:12,798 [DEBUG] normalize_name(Showbox Theatre) -> showboxtheatre
+2025-06-26 06:34:12,798 [DEBUG] normalize_name(Silver Legacy Resort Casino) -> silverlegacyresortcasino
+2025-06-26 06:34:12,798 [DEBUG] normalize_name(Silver Spring Civic Center) -> silverspringciviccenter
+2025-06-26 06:34:12,798 [DEBUG] normalize_name(Smart Financial Centre) -> smartfinancialcentre
+2025-06-26 06:34:12,798 [DEBUG] normalize_name(SNHU Arena) -> snhuarena
+2025-06-26 06:34:12,799 [DEBUG] normalize_name(Soldier Field) -> soldierfield
+2025-06-26 06:34:12,799 [DEBUG] normalize_name(Somerville Theatre) -> somervilletheatre
+2025-06-26 06:34:12,799 [DEBUG] normalize_name(Southgate House Revival) -> southgatehouserevival
+2025-06-26 06:34:12,799 [DEBUG] normalize_name(State Theatre) -> statetheatre
+2025-06-26 06:34:12,799 [DEBUG] normalize_name(Stifel Theatre) -> stifeltheatre
+2025-06-26 06:34:12,799 [DEBUG] normalize_name(Stockton Arena) -> stocktonarena
+2025-06-26 06:34:12,799 [DEBUG] normalize_name(Stone Pony) -> stonepony
+2025-06-26 06:34:12,799 [DEBUG] normalize_name(Stone Pony Summerstage) -> stoneponysummerstage
+2025-06-26 06:34:12,799 [DEBUG] normalize_name(Storyville) -> storyville
+2025-06-26 06:34:12,799 [DEBUG] normalize_name(Straz Center for the Performing Arts) -> strazcenterfortheperformingarts
+2025-06-26 06:34:12,799 [DEBUG] normalize_name(Sunset Amphitheatre) -> sunsetamphitheatre
+2025-06-26 06:34:12,800 [DEBUG] normalize_name(Sunset Tavern) -> sunsettavern
+2025-06-26 06:34:12,800 [DEBUG] normalize_name(Susquehanna Bank Center) -> susquehannabankcenter
+2025-06-26 06:34:12,800 [DEBUG] normalize_name(Tabernacle) -> tabernacle
+2025-06-26 06:34:12,800 [DEBUG] normalize_name(Tampa Theatre) -> tampatheatre
+2025-06-26 06:34:12,800 [DEBUG] normalize_name(Teragram Ballroom) -> teragramballroom
+2025-06-26 06:34:12,800 [DEBUG] normalize_name(The Anthem) -> theanthem
+2025-06-26 06:34:12,800 [DEBUG] normalize_name(The Basement East) -> thebasementeast
+2025-06-26 06:34:12,800 [DEBUG] normalize_name(The Beacon Theatre) -> thebeacontheatre
+2025-06-26 06:34:12,800 [DEBUG] normalize_name(The Birchmere) -> thebirchmere
+2025-06-26 06:34:12,800 [DEBUG] normalize_name(The Fillmore) -> thefillmore
+2025-06-26 06:34:12,800 [DEBUG] normalize_name(The Fox Theatre) -> thefoxtheatre
+2025-06-26 06:34:12,801 [DEBUG] normalize_name(The Independent) -> theindependent
+2025-06-26 06:34:12,801 [DEBUG] normalize_name(The Joint) -> thejoint
+2025-06-26 06:34:12,801 [DEBUG] normalize_name(The Masonic) -> themasonic
+2025-06-26 06:34:12,801 [DEBUG] normalize_name(The Met Philadelphia) -> themetphiladelphia
+2025-06-26 06:34:12,801 [DEBUG] normalize_name(The Midland) -> themidland
+2025-06-26 06:34:12,801 [DEBUG] normalize_name(The Norva) -> thenorva
+2025-06-26 06:34:12,801 [DEBUG] normalize_name(The Pageant) -> thepageant
+2025-06-26 06:34:12,801 [DEBUG] normalize_name(The Paramount) -> theparamount
+2025-06-26 06:34:12,801 [DEBUG] normalize_name(The Regency Ballroom) -> theregencyballroom
+2025-06-26 06:34:12,801 [DEBUG] normalize_name(The Roxy Theatre) -> theroxytheatre
+2025-06-26 06:34:12,801 [DEBUG] normalize_name(The Showbox) -> theshowbox
+2025-06-26 06:34:12,802 [DEBUG] normalize_name(The Sinclair) -> thesinclair
+2025-06-26 06:34:12,802 [DEBUG] normalize_name(The Tabernacle) -> thetabernacle
+2025-06-26 06:34:12,802 [DEBUG] normalize_name(The Wiltern) -> thewiltern
+2025-06-26 06:34:12,802 [DEBUG] normalize_name(Thalia Hall) -> thaliahall
+2025-06-26 06:34:12,802 [DEBUG] normalize_name(Théâtre du Châtelet) -> théâtreduchâtelet
+2025-06-26 06:34:12,802 [DEBUG] normalize_name(Three Rivers Stadium) -> threeriversstadium
+2025-06-26 06:34:12,802 [DEBUG] normalize_name(Trocadero Theatre) -> trocaderotheatre
+2025-06-26 06:34:12,802 [DEBUG] normalize_name(Troubadour) -> troubadour
+2025-06-26 06:34:12,802 [DEBUG] normalize_name(U.S. Bank Arena) -> usbankarena
+2025-06-26 06:34:12,803 [DEBUG] normalize_name(United Center) -> unitedcenter
+2025-06-26 06:34:12,803 [DEBUG] normalize_name(Union Transfer) -> uniontransfer
+2025-06-26 06:34:12,803 [DEBUG] normalize_name(Venue 578) -> venue578
+2025-06-26 06:34:12,803 [DEBUG] normalize_name(Wells Fargo Center) -> wellsfargocenter
+2025-06-26 06:34:12,803 [DEBUG] normalize_name(Wilbur Theatre) -> wilburtheatre
+2025-06-26 06:34:12,803 [DEBUG] normalize_name(Worcester Palladium) -> worcesterpalladium
+2025-06-26 06:34:12,803 [DEBUG] normalize_name(Ziggy’s) -> ziggys
+2025-06-26 06:34:12,803 [DEBUG] normalize_name(Petersen Events Center) -> peterseneventscenter
+2025-06-26 06:34:12,803 [DEBUG] normalize_name(Morockshow) -> morockshow
+2025-06-26 07:11:39,939 [INFO] Could not close Photoshop: Command '['taskkill', '/F', '/IM', 'Photoshop.exe']' returned non-zero exit status 128.

@@ -1,0 +1,127 @@
+2025-06-25 21:14:27,306 Scanning Z:/Test-Folder
+2025-06-25 21:14:32,328 Saved metadata: Z:/Test-Folder\Phish - 2025-06-21 - SNHU Arena - Manchester, NH [2160p].mkv
+2025-06-25 21:14:33,117 Starting processing …
+2025-06-25 21:14:33,133 Moved: Z:/Test-Folder\Phish - 2025-06-21 - SNHU Arena - Manchester, NH [2160p].mkv → Z:/Test-Folder\Phish\2025\Phish - 2025-06-21 - SNHU Arena - Manchester, NH [2160p]\Phish - 2025-06-21 - SNHU Arena - Manchester, NH [2160p].mkv
+2025-06-25 21:14:33,140 JSX created: Z:/Test-Folder\Phish\2025\Phish - 2025-06-21 - SNHU Arena - Manchester, NH [2160p]\poster_gen.jsx
+2025-06-25 21:14:41,157 Poster PNG created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-21 - SNHU Arena - Manchester, NH [2160p]/Poster.png
+2025-06-25 21:14:41,159 Poster PSD created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-21 - SNHU Arena - Manchester, NH [2160p]/Poster.psd
+2025-06-25 21:14:41,167 JSX deleted.
+2025-06-25 21:14:41,315 Photoshop closed.
+2025-06-25 21:14:41,325 Processing finished.
+2025-06-25 21:15:17,707 Scanning Z:/Test-Folder
+2025-06-25 21:15:33,980 Saved metadata: Z:/Test-Folder\Phish 2025-06-21.SNHU.Arena.Manchester.NH.untouched.vod.trimmed.2160.6500kbs.sky.mkv.mkv
+2025-06-25 21:15:39,610 Saved metadata: Z:/Test-Folder\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY.mp4
+2025-06-25 21:15:42,289 Starting processing …
+2025-06-25 21:15:56,536 Could not close Photoshop: Command '['taskkill', '/F', '/IM', 'Photoshop.exe']' returned non-zero exit status 128.
+2025-06-25 21:16:30,243 Scanning Z:/Test-Folder
+2025-06-25 21:16:32,660 Saved metadata: Z:/Test-Folder\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY.mp4
+2025-06-25 21:16:34,428 Saved metadata: Z:/Test-Folder\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p].mp4
+2025-06-25 21:16:35,869 Starting processing …
+2025-06-25 21:16:36,222 Moved: Z:/Test-Folder\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY.mp4 → Z:/Test-Folder\Billy Strings\2025\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p]\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p].mp4
+2025-06-25 21:16:36,228 JSX created: Z:/Test-Folder\Billy Strings\2025\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p]\poster_gen.jsx
+2025-06-25 21:16:42,239 Poster PNG created: Z:/Test-Folder/Billy Strings/2025/Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p]/Poster.png
+2025-06-25 21:16:42,241 Poster PSD created: Z:/Test-Folder/Billy Strings/2025/Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p]/Poster.psd
+2025-06-25 21:16:42,285 JSX deleted.
+2025-06-25 21:16:42,418 Moved: Z:/Test-Folder\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p].mp4 → Z:/Test-Folder\Umphrey’s McGee\2025\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p]\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p].mp4
+2025-06-25 21:16:42,530 JSX created: Z:/Test-Folder\Umphrey’s McGee\2025\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p]\poster_gen.jsx
+2025-06-25 21:16:46,544 Poster PNG created: Z:/Test-Folder/Umphrey’s McGee/2025/Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p]/Poster.png
+2025-06-25 21:16:46,545 Poster PSD created: Z:/Test-Folder/Umphrey’s McGee/2025/Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p]/Poster.psd
+2025-06-25 21:16:46,549 JSX deleted.
+2025-06-25 21:16:46,627 Photoshop closed.
+2025-06-25 21:16:46,628 Processing finished.
+2025-06-25 21:24:00,228 Photoshop closed.
+2025-06-25 21:41:14,698 Scanning Z:/Test-Folder
+2025-06-25 21:41:20,688 Saved metadata: Z:/Test-Folder\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p].mkv
+2025-06-25 21:41:21,455 Starting processing …
+2025-06-25 21:41:21,492 Moved: Z:/Test-Folder\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p].mkv → Z:/Test-Folder\Grace Bowers\2025\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p]\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p].mkv
+2025-06-25 21:41:21,496 Using Generic.psd poster template
+2025-06-25 21:41:21,502 JSX created: Z:/Test-Folder\Grace Bowers\2025\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p]\poster_gen.jsx
+2025-06-25 21:41:23,516 Poster PNG created: Z:/Test-Folder/Grace Bowers/2025/Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p]/Poster.png
+2025-06-25 21:41:23,517 Poster PSD created: Z:/Test-Folder/Grace Bowers/2025/Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p]/Poster.psd
+2025-06-25 21:41:23,520 JSX deleted.
+2025-06-25 21:41:23,615 Photoshop closed.
+2025-06-25 21:41:23,620 Processing finished.
+2025-06-25 21:42:33,524 Scanning Z:/Test-Folder
+2025-06-25 21:42:36,932 Saved metadata: Z:/Test-Folder\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p].mp4
+2025-06-25 21:42:39,762 Saved metadata: Z:/Test-Folder\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p].mkv
+2025-06-25 21:42:42,486 Saved metadata: Z:/Test-Folder\Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p].mkv
+2025-06-25 21:42:48,814 Saved metadata: Z:/Test-Folder\Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p].mkv
+2025-06-25 21:42:52,228 Saved metadata: Z:/Test-Folder\Phish 2025-06-21.SNHU.Arena.Manchester.NH.untouched.vod.trimmed.1080.6500kbs.sky.mkv
+2025-06-25 21:42:54,739 Saved metadata: Z:/Test-Folder\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p].mp4
+2025-06-25 21:42:56,461 Starting processing …
+2025-06-25 21:42:56,491 Moved: Z:/Test-Folder\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p].mp4 → Z:/Test-Folder\Billy Strings\2025\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p]\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p].mp4
+2025-06-25 21:42:56,497 JSX created: Z:/Test-Folder\Billy Strings\2025\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p]\poster_gen.jsx
+2025-06-25 21:43:02,545 Poster PNG created: Z:/Test-Folder/Billy Strings/2025/Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p]/Poster.png
+2025-06-25 21:43:02,548 Poster PSD created: Z:/Test-Folder/Billy Strings/2025/Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p]/Poster.psd
+2025-06-25 21:43:02,552 JSX deleted.
+2025-06-25 21:43:02,578 Moved: Z:/Test-Folder\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p].mkv → Z:/Test-Folder\Grace Bowers\2025\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p]\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p].mkv
+2025-06-25 21:43:02,584 Using Generic.psd poster template
+2025-06-25 21:43:02,591 JSX created: Z:/Test-Folder\Grace Bowers\2025\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p]\poster_gen.jsx
+2025-06-25 21:43:06,604 Poster PNG created: Z:/Test-Folder/Grace Bowers/2025/Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p]/Poster.png
+2025-06-25 21:43:06,605 Poster PSD created: Z:/Test-Folder/Grace Bowers/2025/Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p]/Poster.psd
+2025-06-25 21:43:06,650 JSX deleted.
+2025-06-25 21:43:06,717 Moved: Z:/Test-Folder\Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p].mkv → Z:/Test-Folder\Phish\2025\Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p]\Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p].mkv
+2025-06-25 21:43:06,787 JSX created: Z:/Test-Folder\Phish\2025\Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p]\poster_gen.jsx
+2025-06-25 21:43:08,799 Poster PNG created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p]/Poster.png
+2025-06-25 21:43:08,800 Poster PSD created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p]/Poster.psd
+2025-06-25 21:43:08,889 JSX deleted.
+2025-06-25 21:43:08,906 Moved: Z:/Test-Folder\Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p].mkv → Z:/Test-Folder\Phish\2025\Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p]\Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p].mkv
+2025-06-25 21:43:08,981 JSX created: Z:/Test-Folder\Phish\2025\Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p]\poster_gen.jsx
+2025-06-25 21:43:10,996 Poster PNG created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p]/Poster.png
+2025-06-25 21:43:10,998 Poster PSD created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p]/Poster.psd
+2025-06-25 21:43:11,003 JSX deleted.
+2025-06-25 21:43:11,125 Moved: Z:/Test-Folder\Phish 2025-06-21.SNHU.Arena.Manchester.NH.untouched.vod.trimmed.1080.6500kbs.sky.mkv → Z:/Test-Folder\Phish\2025\Phish - 2025-06-21 - SNHU Arena - Manchester, NH [1080p]\Phish - 2025-06-21 - SNHU Arena - Manchester, NH [1080p].mkv
+2025-06-25 21:43:11,161 JSX created: Z:/Test-Folder\Phish\2025\Phish - 2025-06-21 - SNHU Arena - Manchester, NH [1080p]\poster_gen.jsx
+2025-06-25 21:43:13,177 Poster PNG created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-21 - SNHU Arena - Manchester, NH [1080p]/Poster.png
+2025-06-25 21:43:13,177 Poster PSD created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-21 - SNHU Arena - Manchester, NH [1080p]/Poster.psd
+2025-06-25 21:43:13,182 JSX deleted.
+2025-06-25 21:43:13,206 Moved: Z:/Test-Folder\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p].mp4 → Z:/Test-Folder\Umphrey’s McGee\2025\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p]\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p].mp4
+2025-06-25 21:43:13,214 JSX created: Z:/Test-Folder\Umphrey’s McGee\2025\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p]\poster_gen.jsx
+2025-06-25 21:43:15,229 Poster PNG created: Z:/Test-Folder/Umphrey’s McGee/2025/Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p]/Poster.png
+2025-06-25 21:43:15,230 Poster PSD created: Z:/Test-Folder/Umphrey’s McGee/2025/Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p]/Poster.psd
+2025-06-25 21:43:15,234 JSX deleted.
+2025-06-25 21:43:15,310 Photoshop closed.
+2025-06-25 21:43:15,318 Processing finished.
+2025-06-25 21:44:13,215 Could not close Photoshop: Command '['taskkill', '/F', '/IM', 'Photoshop.exe']' returned non-zero exit status 128.
+2025-06-25 21:48:16,727 Scanning Z:/Test-Folder
+2025-06-25 21:48:26,728 Saved metadata: Z:/Test-Folder\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p].mp4
+2025-06-25 21:48:30,499 Saved metadata: Z:/Test-Folder\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p].mkv
+2025-06-25 21:48:33,056 Saved metadata: Z:/Test-Folder\Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p].mkv
+2025-06-25 21:48:35,043 Saved metadata: Z:/Test-Folder\Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p].mkv
+2025-06-25 21:48:36,591 Saved metadata: Z:/Test-Folder\Phish 2025-06-21.SNHU.Arena.Manchester.NH.untouched.vod.trimmed.1080.6500kbs.sky.mkv.mkv
+2025-06-25 21:48:38,694 Saved metadata: Z:/Test-Folder\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p].mp4
+2025-06-25 21:48:42,957 Starting processing …
+2025-06-25 21:48:43,007 Moved: Z:/Test-Folder\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p].mp4 → Z:/Test-Folder\Billy Strings\2025\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p]\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p].mp4
+2025-06-25 21:48:43,013 JSX created: Z:/Test-Folder\Billy Strings\2025\Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p]\poster_gen.jsx
+2025-06-25 21:48:45,024 Poster PNG created: Z:/Test-Folder/Billy Strings/2025/Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p]/Poster.png
+2025-06-25 21:48:45,025 Poster PSD created: Z:/Test-Folder/Billy Strings/2025/Billy Strings - 2025-06-21 - Rupp Arena - Lexington, KY [1080p]/Poster.psd
+2025-06-25 21:48:45,029 JSX deleted.
+2025-06-25 21:48:45,045 Moved: Z:/Test-Folder\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p].mkv → Z:/Test-Folder\Grace Bowers\2025\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p]\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p].mkv
+2025-06-25 21:48:45,050 Using Generic.psd poster template
+2025-06-25 21:48:45,065 JSX created: Z:/Test-Folder\Grace Bowers\2025\Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p]\poster_gen.jsx
+2025-06-25 21:48:47,077 Poster PNG created: Z:/Test-Folder/Grace Bowers/2025/Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p]/Poster.png
+2025-06-25 21:48:47,078 Poster PSD created: Z:/Test-Folder/Grace Bowers/2025/Grace Bowers - 2025-06-21 - Mountain Jam - Highmount, NY [1080p]/Poster.psd
+2025-06-25 21:48:47,082 JSX deleted.
+2025-06-25 21:48:47,116 Moved: Z:/Test-Folder\Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p].mkv → Z:/Test-Folder\Phish\2025\Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p]\Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p].mkv
+2025-06-25 21:48:47,123 JSX created: Z:/Test-Folder\Phish\2025\Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p]\poster_gen.jsx
+2025-06-25 21:48:49,134 Poster PNG created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p]/Poster.png
+2025-06-25 21:48:49,135 Poster PSD created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-22 - SNHU Arena - Manchester, NH [2160p]/Poster.psd
+2025-06-25 21:48:49,139 JSX deleted.
+2025-06-25 21:48:49,157 Moved: Z:/Test-Folder\Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p].mkv → Z:/Test-Folder\Phish\2025\Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p]\Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p].mkv
+2025-06-25 21:48:49,167 JSX created: Z:/Test-Folder\Phish\2025\Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p]\poster_gen.jsx
+2025-06-25 21:48:51,179 Poster PNG created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p]/Poster.png
+2025-06-25 21:48:51,180 Poster PSD created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-24 - Petersen Events Center - Pittsburgh, PA [1080p]/Poster.psd
+2025-06-25 21:48:51,184 JSX deleted.
+2025-06-25 21:48:51,194 Moved: Z:/Test-Folder\Phish 2025-06-21.SNHU.Arena.Manchester.NH.untouched.vod.trimmed.1080.6500kbs.sky.mkv.mkv → Z:/Test-Folder\Phish\2025\Phish - 2025-06-21 - SNHU Arena - Manchester, NH [1080p]\Phish - 2025-06-21 - SNHU Arena - Manchester, NH [1080p].mkv
+2025-06-25 21:48:51,202 JSX created: Z:/Test-Folder\Phish\2025\Phish - 2025-06-21 - SNHU Arena - Manchester, NH [1080p]\poster_gen.jsx
+2025-06-25 21:48:53,213 Poster PNG created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-21 - SNHU Arena - Manchester, NH [1080p]/Poster.png
+2025-06-25 21:48:53,214 Poster PSD created: Z:/Test-Folder/Phish/2025/Phish - 2025-06-21 - SNHU Arena - Manchester, NH [1080p]/Poster.psd
+2025-06-25 21:48:53,218 JSX deleted.
+2025-06-25 21:48:53,236 Moved: Z:/Test-Folder\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p].mp4 → Z:/Test-Folder\Umphrey’s McGee\2025\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p]\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p].mp4
+2025-06-25 21:48:53,245 JSX created: Z:/Test-Folder\Umphrey’s McGee\2025\Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p]\poster_gen.jsx
+2025-06-25 21:48:55,257 Poster PNG created: Z:/Test-Folder/Umphrey’s McGee/2025/Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p]/Poster.png
+2025-06-25 21:48:55,259 Poster PSD created: Z:/Test-Folder/Umphrey’s McGee/2025/Umphrey’s McGee - 2025-04-20 - Morockshow - Marrakech, Morocco [1080p]/Poster.psd
+2025-06-25 21:48:55,262 JSX deleted.
+2025-06-25 21:48:55,335 Photoshop closed.
+2025-06-25 21:48:55,344 Processing finished.
+2025-06-25 21:50:26,271 Could not close Photoshop: Command '['taskkill', '/F', '/IM', 'Photoshop.exe']' returned non-zero exit status 128.

@@ -1,0 +1,194 @@
+Albany, NY
+Albuquerque, NM
+Altoona, PA
+Amarillo, TX
+Anchorage, AK
+Ann Arbor, MI
+Appleton, WI
+Ardmore, PA
+Asbury Park, NJ
+Asheville, NC
+Athens, GA
+Atlanta, GA
+Augusta, ME
+Austin, TX
+Bakersfield, CA
+Baltimore, MD
+Bangor, ME
+Barre, VT
+Baton Rouge, LA
+Beaumont, TX
+Benton Harbor, MI
+Bethesda, MD
+Bellingham, WA
+Bend, OR
+Billings, MT
+Binghamton, NY
+Birmingham, AL
+Bloomington, IN
+Boise, ID
+Boulder, CO
+Bossier City, LA
+Bowling Green, KY
+Bremerton, WA
+Bridgeport, CT
+Bristol, TN
+Brooklyn, NY
+Broomfield, CO
+Brownsville, TX
+Buffalo, NY
+Canton, OH
+Cape Cod, MA
+Cape Girardeau, MO
+Carbondale, IL
+Carrollton, GA
+Casper, WY
+Cedar Rapids, IA
+Champaign, IL
+Charleston, SC
+Charlottesville, VA
+Chattanooga, TN
+Chesapeake, VA
+Chicago, IL
+Chico, CA
+Cincinnati, OH
+Clarksville, TN
+Cleveland, OH
+College Station, TX
+Columbia, SC
+Columbus, OH
+Concord, CA
+Corpus Christi, TX
+Covington, KY
+Crestview, FL
+Davenport, IA
+Dallas, TX
+Dayton, OH
+Decatur, IL
+Del Rio, TX
+Delaware, OH
+Denver, CO
+Denton, TX
+Des Moines, IA
+Detroit, MI
+Dothan, AL
+Dover, DE
+Dubuque, IA
+Duluth, MN
+Durham, NC
+Eau Claire, WI
+East Troy, WI
+Eden Prairie, MN
+Eugene, OR
+Evansville, IN
+Fairbanks, AK
+Fargo, ND
+Fayetteville, AR
+Flagstaff, AZ
+Flint, MI
+Fort Collins, CO
+Fort Lauderdale, FL
+Fort Wayne, IN
+Fort Worth, TX
+Fresno, CA
+Gainesville, FL
+Gallup, NM
+Gillette, WY
+Glendale, AZ
+Grand Junction, CO
+Grand Rapids, MI
+Great Falls, MT
+Greeley, CO
+Green Bay, WI
+Greenville, SC
+Gulfport, MS
+Hagerstown, MD
+Hammond, IN
+Hampton, VA
+Harrisburg, PA
+Hartford, CT
+Hattiesburg, MS
+Helena, MT
+Hickory, NC
+High Point, NC
+Hilo, HI
+Hilton Head, SC
+Holland, MI
+Holyoke, MA
+Houma, LA
+Huntington, WV
+Huntsville, AL
+Indianapolis, IN
+Irvine, CA
+Jacksonville, FL
+Kansas City, MO
+Las Vegas, NV
+Lexington, KY
+Little Rock, AR
+Louisville, KY
+Madison, WI
+Memphis, TN
+Mesa, AZ
+Minneapolis, MN
+Mobile, AL
+Montclair, NJ
+Nashville, TN
+Noblesville, IN
+Norfolk, VA
+Norva, VA
+Oak Mountain, AL
+Oakdale, CT
+Oakland, CA
+Oklahoma City, OK
+Olympia, WA
+Orlando, FL
+Philadelphia, PA
+Phoenix, AZ
+Pittsburgh, PA
+Portland, ME
+Portland, OR
+Raleigh, NC
+Redmond, WA
+Reno, NV
+Richmond, VA
+Riverside, CA
+Rochester, NY
+Sacramento, CA
+Saratoga Springs, NY
+Savannah, GA
+Seattle, WA
+Sebastian, FL
+Silver Legacy Resort Casino, NV
+Silver Spring, MD
+Skokie, IL
+Southgate, KY
+St. Louis, MO
+St. Paul, MN
+Tampa, FL
+Tempe, AZ
+Tinley Park, IL
+Toledo, OH
+Tucson, AZ
+Tulsa, OK
+Tuscaloosa, AL
+Utica, NY
+Vero Beach, FL
+Virginia Beach, VA
+Waco, TX
+Warwick, RI
+Washington, DC
+Waterloo, IA
+Wausau, WI
+West Palm Beach, FL
+West Springfield, MA
+West Warwick, RI
+Westbury, NY
+White River Junction, VT
+Wilkes-Barre, PA
+Williamsburg, VA
+Worcester, MA
+Yakima, WA
+Yuma, AZ
+Marrakech, Morocco
+Moroc, CO
+Manchester, NH
